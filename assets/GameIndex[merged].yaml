@@ -162,7 +162,7 @@ PAPX-90211:
   gameFixes:
     - SoftwareRendererFMVHack # Black FMV.
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing position.
+    halfPixelOffset: 2 # Fixes post-processing position.
 PAPX-90212:
   name: "Boku to Maou [Trial]"
   region: "NTSC-J"
@@ -218,7 +218,7 @@ PAPX-90230:
   name: "Arc the Lad - Seirei no Tasogare - Premiere Disc [ShopDemo]"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     textureInsideRT: 1 # Fixes on screen garbage.
 PAPX-90231:
   name: "Kaitou Sly Cooper [Trial]"
@@ -636,6 +636,8 @@ PCPX-96322:
 PCPX-96323:
   name: "Toro to Kyuujitsu [Demo Movie]"
   region: "NTSC-J"
+  gsHWFixes:
+    textureInsideRT: 1 # Fixes depth shadow stenciling effects.
 PCPX-96324:
   name: "Dual Hearts [Trial]"
   region: "NTSC-J"
@@ -651,7 +653,7 @@ PCPX-96330:
   name: "Arc the Lad - Seirei no Tasogare - Premiere Disc [ShopTrial]"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     textureInsideRT: 1 # Fixes on screen garbage.
 PCPX-96554:
   name: "Games of Our Style - Tokyo Game Show 2003 Disc"
@@ -1026,7 +1028,7 @@ SCAJ-20019:
   name: "Arc the Lad - Twilight of the Spirits"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     textureInsideRT: 1 # Fixes on screen garbage.
 SCAJ-20020:
   name: "Drag-on Dragoon"
@@ -1081,15 +1083,13 @@ SCAJ-20026:
   region: "NTSC-Unk"
 SCAJ-20027:
   name: "Tenchu 3"
-  region: "NTSC-Unk"
+  region: "NTSC-J"
   gsHWFixes:
     halfPixelOffset: 2 # Helps align post effects.
     autoFlush: 1 # Fixes missing effects.
 SCAJ-20028:
   name: "Tales of Destiny 2"
   region: "NTSC-Unk"
-  speedHacks:
-    mvuFlagSpeedHack: 0 # Fixes graphical corruptions.
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
@@ -1119,7 +1119,7 @@ SCAJ-20038:
   name: "Arc the Lad - Jing Ling Zhi Huang Hun"
   region: "NTSC-C"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     textureInsideRT: 1 # Fixes on screen garbage.
 SCAJ-20039:
   name: "Sidewinder V"
@@ -1484,7 +1484,7 @@ SCAJ-20108:
   name: "Arc the Lad - Generation"
   region: "NTSC-Unk"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     textureInsideRT: 1 # Fixes on screen garbage.
 SCAJ-20109:
   name: "Ratchet & Clank 3 - Up Your Arsenal"
@@ -1955,7 +1955,6 @@ SCAJ-20177:
     halfPixelOffset: 1 # Reduces bloom misalignment.
     roundSprite: 1 # Fixes area transition vertical lines and lessens red forest vertical lines.
     textureInsideRT: 1
-    cpuSpriteRenderBW: 1
 SCAJ-20178:
   name: "Ape Escape - Million Monkeys"
   region: "NTSC-Unk"
@@ -1968,6 +1967,7 @@ SCAJ-20179:
     halfPixelOffset: 1 # Fixes lighting misalignment and reduces ground shadows (probably texture cache issue).
     roundSprite: 2 # Fixes font artifacts.
     texturePreloading: 0 # Performs much better with it off.
+    textureInsideRT: 1
 SCAJ-20180:
   name: "Xenosaga Episode III - Also Sprach Zarathustra [Disc 2 of 2]"
   region: "NTSC-Unk"
@@ -1976,6 +1976,7 @@ SCAJ-20180:
     halfPixelOffset: 1 # Fixes lighting misalignment and reduces ground shadows (probably texture cache issue).
     roundSprite: 2 # Fixes font artifacts.
     texturePreloading: 0 # Performs much better with it off.
+    textureInsideRT: 1
 SCAJ-20181:
   name: "Minna no Tennis"
   region: "NTSC-Unk"
@@ -2081,7 +2082,6 @@ SCAJ-20197:
     halfPixelOffset: 1 # Reduces bloom misalignment.
     roundSprite: 1 # Fixes area transition vertical lines and lessens red forest vertical lines.
     textureInsideRT: 1
-    cpuSpriteRenderBW: 1
 SCAJ-20198:
   name: "Everybody's Tennis [PlayStation 2 the Best]"
   region: "NTSC-Unk"
@@ -2293,7 +2293,7 @@ SCCS-40007:
   name: "Arc the Lad - Seirei no Tasogare"
   region: "NTSC-C"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     textureInsideRT: 1 # Fixes on screen garbage.
 SCCS-40009:
   name: "Dragon Ball Z 2"
@@ -4248,13 +4248,16 @@ SCES-50139:
     eeRoundMode: 0 # Fixes crash when using the Subaru.
   gameFixes:
     - EETimingHack # Fix in-game Freeze.
+  gsHWFixes:
+    halfPixelOffset: 2 # Aligns distant blur layer.
+    autoFlush: 1 # Better aligns car shadows.
 SCES-50240:
   name: "Extermination"
   region: "PAL-M5"
   gameFixes:
     - SoftwareRendererFMVHack # Black FMV.
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing position.
+    halfPixelOffset: 2 # Fixes post-processing position.
 SCES-50241:
   name: "The Bouncer"
   region: "PAL-M6"
@@ -4988,7 +4991,7 @@ SCES-51910:
   region: "PAL-M5"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     textureInsideRT: 1 # Fixes on screen garbage.
 SCES-51920:
   name: "Forbidden Siren"
@@ -5564,6 +5567,8 @@ SCES-53409:
 SCES-53422:
   name: "Stuart Little 3 - Big Photo Adventure"
   region: "PAL-M9"
+  gameFixes:
+    - InstantDMAHack # Fixes loading screen corruption.
   gsHWFixes:
     autoFlush: 1 # Fixes missing effects.
 SCES-53449:
@@ -6005,6 +6010,8 @@ SCES-54638:
 SCES-54639:
   name: "AFL Premiership 2007"
   region: "PAL-A"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes post positioning.
 SCES-54676:
   name: "Buzz! Junior - RoboJam"
   region: "PAL-M7"
@@ -6550,8 +6557,6 @@ SCKA-20008:
   name: "Tales of Destiny 2"
   region: "NTSC-K"
   compat: 5
-  speedHacks:
-    mvuFlagSpeedHack: 0 # Fixes graphical corruptions.
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
@@ -6582,7 +6587,7 @@ SCKA-20012:
   name: "Arc the Lad - Jeongryeongui Hwanghon"
   region: "NTSC-K"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     textureInsideRT: 1 # Fixes on screen garbage.
 SCKA-20013:
   name: "SOCOM - U.S. Navy SEALs"
@@ -6888,8 +6893,6 @@ SCKA-20053:
 SCKA-20054:
   name: "Tales of Destiny 2 [PlayStation 2 Big Hit Series]"
   region: "NTSC-K"
-  speedHacks:
-    mvuFlagSpeedHack: 0 # Fixes graphical corruptions.
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
@@ -6992,6 +6995,8 @@ SCKA-20066:
 SCKA-20067:
   name: "Stuart Little 3 - Big Photo Adventure"
   region: "NTSC-K"
+  gameFixes:
+    - InstantDMAHack # Fixes loading screen corruption.
   gsHWFixes:
     autoFlush: 1 # Fixes missing effects.
 SCKA-20068:
@@ -7074,7 +7079,6 @@ SCKA-20079:
     halfPixelOffset: 1 # Reduces bloom misalignment.
     roundSprite: 1 # Fixes area transition vertical lines and lessens red forest vertical lines.
     textureInsideRT: 1
-    cpuSpriteRenderBW: 1
 SCKA-20081:
   name: "Tekken 5 [PlayStation 2 Big Hit Series]"
   region: "NTSC-K"
@@ -7381,6 +7385,7 @@ SCKA-20142:
   region: "NTSC-K"
   gsHWFixes:
     textureInsideRT: 1 # Needed for mipmapping to function correctly.
+    mipmap: 0 # Currently causes texture corruption.
 SCKA-20171:
   name: "Let's Bravo Music"
   region: "NTSC-K"
@@ -7737,7 +7742,7 @@ SCPS-15011:
   gameFixes:
     - SoftwareRendererFMVHack # Black FMV.
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing position.
+    halfPixelOffset: 2 # Fixes post-processing position.
 SCPS-15012:
   name: "Surveillance"
   region: "NTSC-J"
@@ -7757,6 +7762,8 @@ SCPS-15015:
   name: "Toro to Kyuujitsu"
   region: "NTSC-J"
   compat: 5
+  gsHWFixes:
+    textureInsideRT: 1 # Fixes depth shadow stenciling effects.
 SCPS-15016:
   name: "Minna no Golf 3"
   region: "NTSC-J"
@@ -7902,13 +7909,13 @@ SCPS-15040:
   name: "Arc the Lad - Twilight of the Spirits [Limited Edition]"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     textureInsideRT: 1 # Fixes on screen garbage.
 SCPS-15041:
   name: "Arc the Lad - Twilight of the Spirits"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     textureInsideRT: 1 # Fixes on screen garbage.
 SCPS-15042:
   name: "Deka Voice [with Microphone]"
@@ -8011,7 +8018,7 @@ SCPS-15058:
   name: "Arc the Lad - Generation"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     textureInsideRT: 1 # Fixes on screen garbage.
 SCPS-15059:
   name: "Minna no Golf 4"
@@ -8586,7 +8593,7 @@ SCPS-19202:
   gameFixes:
     - SoftwareRendererFMVHack # Black FMV.
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing position.
+    halfPixelOffset: 2 # Fixes post-processing position.
 SCPS-19203:
   name: "Dark Cloud [PlayStation 2 the Best]"
   region: "NTSC-J"
@@ -9309,8 +9316,6 @@ SCPS-55049:
 SCPS-55050:
   name: "Tales of Destiny 2"
   region: "NTSC-J"
-  speedHacks:
-    mvuFlagSpeedHack: 0 # Fixes graphical corruptions.
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
@@ -9437,7 +9442,7 @@ SCPS-56016:
   gameFixes:
     - GIFFIFOHack
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing position.
+    halfPixelOffset: 2 # Fixes post-processing position.
     autoFlush: 1 # Corrects shadows (Currently still broken even with this).
 SCPS-72001:
   name: "GRAN TURISMO3 A-spec [MEGA HITS!]"
@@ -9449,7 +9454,7 @@ SCUS-10380:
   name: "LEGO Batman - The Videogame"
   region: "NTSC-U"
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SCUS-21052:
   name: "Disney/Pixar Monsters, Inc."
   region: "NTSC-U"
@@ -9461,7 +9466,7 @@ SCUS-21295:
     vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SCUS-90174:
   name: "Disney/Pixar Toy Story 3 [PlayStation 2 Bundle]"
   region: "NTSC-U"
@@ -9536,7 +9541,7 @@ SCUS-97112:
   gameFixes:
     - SoftwareRendererFMVHack # Black FMV.
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing position.
+    halfPixelOffset: 2 # Fixes post-processing position.
 SCUS-97113:
   name: "Ico"
   region: "NTSC-U"
@@ -10039,7 +10044,7 @@ SCUS-97231:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     textureInsideRT: 1 # Fixes on screen garbage.
 SCUS-97232:
   name: "The Getaway [Demo]"
@@ -10218,7 +10223,7 @@ SCUS-97274:
   name: "Jak II [Video Demo]"
   region: "NTSC-U"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
     cpuSpriteRenderBW: 4 # Fixes character and water textures.
     autoFlush: 1 # Fixes lighting.
 SCUS-97275:
@@ -10253,7 +10258,7 @@ SCUS-97282:
   name: "Arc the Lad - Twilight of the Spirits [Demo]"
   region: "NTSC-U"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     textureInsideRT: 1 # Fixes on screen garbage.
 SCUS-97292:
   name: "Amplitude [Demo]"
@@ -11561,6 +11566,7 @@ SCUS-97657:
   compat: 5
   gsHWFixes:
     textureInsideRT: 1 # Needed for mipmapping to function correctly.
+    mipmap: 0 # Currently causes texture corruption.
 SCUS-97660:
   name: "SingStar - Latino"
   region: "NTSC-U"
@@ -11743,7 +11749,7 @@ SLAJ-25058:
   name: "GoldenEye - Rogue Agent"
   region: "NTSC-Unk"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes offset post processing.
+    halfPixelOffset: 2 # Fixes offset post-processing.
 SLAJ-25059:
   name: "NBA Street V3"
   region: "NTSC-Unk"
@@ -11900,6 +11906,8 @@ SLAJ-25095:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes lighting misalignment.
     mergeSprite: 1 # Removes occasional vertical lines.
+    autoFlush: 1
+    mipmap: 0
 SLAJ-25096:
   name: "Musou Orochi"
   region: "NTSC-Unk"
@@ -11929,6 +11937,8 @@ SLAJ-25115:
 SLAJ-35001:
   name: "Sakura Wars"
   region: "NTSC-Unk"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes recrusive drawing to the top left.
 SLAJ-35003:
   name: "Sakura Taisen - Atsuki Chishio Ni"
   region: "NTSC-C"
@@ -12004,6 +12014,8 @@ SLED-50884:
 SLED-50895:
   name: "Medal of Honor - Frontline [Demo]"
   region: "PAL-E"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes misaligned blur.
 SLED-50904:
   name: "Dynasty Warriors 3"
   region: "PAL-Unk"
@@ -12093,13 +12105,15 @@ SLED-51472:
   name: "Tom Clancy's Splinter Cell"
   region: "PAL-Unk"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLED-51645:
   name: "Def Jam - Vendetta [Demo]"
   region: "PAL-E"
 SLED-51651:
-  name: "Starsky & Hutch"
+  name: "Starsky & Hutch [Demo]"
   region: "PAL-E"
+  gsHWFixes:
+    halfPixelOffset: 2 # Aligns shadows better.
 SLED-51676:
   name: "Warhammer 40,000 - Fire Warrior [Demo]"
   region: "PAL"
@@ -12243,7 +12257,7 @@ SLED-52488:
     InstantVU1SpeedHack: 1 # Fixes SPS.
   gsHWFixes:
     autoFlush: 1 # Fixes debris and blending on lower part of screen during monster transformation.
-    halfPixelOffset: 2 # Aligns post processing, might sometimes cause edge bleed which must be cropped.
+    halfPixelOffset: 2 # Aligns post-processing, might sometimes cause edge bleed which must be cropped.
 SLED-52506:
   name: "Mashed - Drive to Survive [Demo]"
   region: "PAL-M5"
@@ -12429,7 +12443,7 @@ SLED-53591:
   name: "Fahrenheit [Demo]"
   region: "PAL-E"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLED-53619:
   name: "Tom Clancy's Rainbow Six - Lockdown"
   region: "PAL-Unk"
@@ -12443,7 +12457,7 @@ SLED-53627:
   region: "PAL-Unk"
   gsHWFixes:
     autoFlush: 1 # Fixes debris and blending on lower part of screen during monster transformation.
-    halfPixelOffset: 2 # Aligns post processing, might sometimes cause edge bleed which must be cropped.
+    halfPixelOffset: 2 # Aligns post-processing, might sometimes cause edge bleed which must be cropped.
 SLED-53637:
   name: "Burnout Revenge [Demo]"
   region: "PAL-M2"
@@ -12490,7 +12504,7 @@ SLED-53723:
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
-    textureInsideRT: 1 # Fixes post processing effects.
+    textureInsideRT: 1 # Fixes post-processing effects.
 SLED-53731:
   name: "Battlefield 2 - Modern Combat [Demo]"
   region: "PAL-E"
@@ -12505,13 +12519,13 @@ SLED-53732:
   gameFixes:
     - EETimingHack # Fixes garbage textures flashing on the character model.
   gsHWFixes:
-    autoFlush: 1 # Fixes missing post processing.
-    halfPixelOffset: 1 # Aligns post processing.
+    autoFlush: 1 # Fixes missing post-processing.
+    halfPixelOffset: 1 # Aligns post-processing.
 SLED-53745:
   name: "Total Overdose [Demo]"
   region: "PAL-M5"
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLED-53770:
   name: "The Sims 2 [Demo]"
   region: "PAL-E"
@@ -12573,7 +12587,7 @@ SLED-53980:
   name: "Urban Chaos - Riot Response [Demo]"
   region: "PAL-E"
   gsHWFixes:
-    halfPixelOffset: 2 #  Fixes edge garbage thin lines and post processing alignment.
+    halfPixelOffset: 2 #  Fixes edge garbage thin lines and post-processing alignment.
     autoFlush: 1 # Fixes misaligned lights at native resolution.
 SLED-53983:
   name: "Fight Night Round 3 [Demo]"
@@ -12586,9 +12600,9 @@ SLED-54022:
   gameFixes:
     - SoftwareRendererFMVHack # Fixes broken FMVs on repeat plays.
   gsHWFixes:
-    textureInsideRT: 1 # Needed for post processing effects.
+    textureInsideRT: 1 # Needed for post-processing effects.
     autoFlush: 1 # Fixes bloom intensity.
-    halfPixelOffset: 2 # Fixes offset post processing.
+    halfPixelOffset: 2 # Fixes offset post-processing.
 SLED-54032:
   name: "Sonic Riders [Demo]"
   region: "PAL-E"
@@ -12610,7 +12624,7 @@ SLED-54315:
   name: "LEGO Star Wars II - The Original Trilogy [Demo]"
   region: "PAL-M5"
   gsHWFixes:
-    halfPixelOffset: 1 # Aligns post processing.
+    halfPixelOffset: 1 # Aligns post-processing.
 SLED-54327:
   name: "FIFA 07"
   region: "PAL-M7"
@@ -14164,6 +14178,7 @@ SLES-50672:
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     roundSprite: 1
+    gpuPaletteConversion: 1
 SLES-50677:
   name: "Shadow Hearts"
   region: "PAL-E"
@@ -14192,6 +14207,8 @@ SLES-50684:
   name: "Medal of Honor - Frontline"
   region: "PAL-M3"
   compat: 5
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes misaligned blur.
 SLES-50686:
   name: "Iron Aces 2 - Birds of Prey"
   region: "PAL-E"
@@ -14688,9 +14705,13 @@ SLES-50843:
 SLES-50845:
   name: "Medal of Honor - En Première Ligne"
   region: "PAL-F"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes misaligned blur.
 SLES-50846:
   name: "Medal of Honor - Frontline"
   region: "PAL-G"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes misaligned blur.
 SLES-50848:
   name: "Speed Kings"
   region: "PAL-M5"
@@ -14961,7 +14982,7 @@ SLES-50978:
   region: "PAL-M5"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLES-50981:
   name: "RC Sports Copter Challenge"
   region: "PAL-E"
@@ -15291,7 +15312,7 @@ SLES-51128:
   region: "PAL-M5"
   compat: 5
   gsHWFixes:
-    textureInsideRT: 1 # Needed for post processing effects.
+    textureInsideRT: 1 # Needed for post-processing effects.
     roundSprite: 1 # Fixes upscaling lines.
 SLES-51130:
   name: "Tony Hawk's Pro Skater 4"
@@ -15418,7 +15439,6 @@ SLES-51192:
     cpuFramebufferConversion: 1 # Fixes right side of the screen from garbage textures.
     textureInsideRT: 1
     halfPixelOffset: 2
-    texturePreloading: 0
 SLES-51193:
   name: "Harry Potter et la Chambre des Secrets"
   region: "PAL-F"
@@ -15429,7 +15449,6 @@ SLES-51193:
     cpuFramebufferConversion: 1 # Fixes right side of the screen from garbage textures.
     textureInsideRT: 1
     halfPixelOffset: 2
-    texturePreloading: 0
 SLES-51194:
   name: "Harry Potter und die Kammer des Schreckens"
   region: "PAL-G"
@@ -15440,7 +15459,6 @@ SLES-51194:
     cpuFramebufferConversion: 1 # Fixes right side of the screen from garbage textures.
     textureInsideRT: 1
     halfPixelOffset: 2
-    texturePreloading: 0
 SLES-51195:
   name: "Harry Potter y la Cámara Secreta"
   region: "PAL-S"
@@ -15451,7 +15469,6 @@ SLES-51195:
     cpuFramebufferConversion: 1 # Fixes right side of the screen from garbage textures.
     textureInsideRT: 1
     halfPixelOffset: 2
-    texturePreloading: 0
 SLES-51196:
   name: "Harry Potter e La Camera dei Secreti"
   region: "PAL-I"
@@ -15462,7 +15479,6 @@ SLES-51196:
     cpuFramebufferConversion: 1 # Fixes right side of the screen from garbage textures.
     textureInsideRT: 1
     halfPixelOffset: 2
-    texturePreloading: 0
 SLES-51197:
   name: "FIFA 2003"
   region: "PAL-M7"
@@ -15518,7 +15534,6 @@ SLES-51214:
     cpuFramebufferConversion: 1 # Fixes right side of the screen from garbage textures.
     textureInsideRT: 1
     halfPixelOffset: 2
-    texturePreloading: 0
 SLES-51215:
   name: "Harry Potter og Mysteriekammeret"
   region: "PAL-NO"
@@ -15529,7 +15544,6 @@ SLES-51215:
     cpuFramebufferConversion: 1 # Fixes right side of the screen from garbage textures.
     textureInsideRT: 1
     halfPixelOffset: 2
-    texturePreloading: 0
 SLES-51216:
   name: "Harry Potter ja Salaisuuksien Kammio"
   region: "PAL-FI"
@@ -15540,7 +15554,6 @@ SLES-51216:
     cpuFramebufferConversion: 1 # Fixes right side of the screen from garbage textures.
     textureInsideRT: 1
     halfPixelOffset: 2
-    texturePreloading: 0
 SLES-51217:
   name: "Harry Potter och Hemligheternas Kammare"
   region: "PAL-SW"
@@ -15551,7 +15564,6 @@ SLES-51217:
     cpuFramebufferConversion: 1 # Fixes right side of the screen from garbage textures.
     textureInsideRT: 1
     halfPixelOffset: 2
-    texturePreloading: 0
 SLES-51218:
   name: "Harry Potter en de Geheime Kamer"
   region: "PAL-NL"
@@ -15562,7 +15574,6 @@ SLES-51218:
     cpuFramebufferConversion: 1 # Fixes right side of the screen from garbage textures.
     textureInsideRT: 1
     halfPixelOffset: 2
-    texturePreloading: 0
 SLES-51219:
   name: "Harry Potter ea Camara dos Segredos"
   region: "PAL-P"
@@ -15573,7 +15584,6 @@ SLES-51219:
     cpuFramebufferConversion: 1 # Fixes right side of the screen from garbage textures.
     textureInsideRT: 1
     halfPixelOffset: 2
-    texturePreloading: 0
 SLES-51220:
   name: "TY the Tasmanian Tiger"
   region: "PAL-M5"
@@ -16206,7 +16216,7 @@ SLES-51466:
   region: "PAL-M5"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLES-51467:
   name: "Freedom Fighters"
   region: "PAL-E"
@@ -16319,6 +16329,7 @@ SLES-51525:
     disablePartialInvalidation: 1 # Fixes perfomrance issues.
     textureInsideRT: 1
     roundSprite: 1
+    gpuPaletteConversion: 1
 SLES-51526:
   name: "Fallout - Brotherhood of Steel"
   region: "PAL-M3"
@@ -16327,6 +16338,7 @@ SLES-51526:
     disablePartialInvalidation: 1 # Fixes performace issues.
     textureInsideRT: 1
     roundSprite: 1
+    gpuPaletteConversion: 1
 SLES-51547:
   name: "Next Generation Tennis 2003"
   region: "PAL-M5"
@@ -16434,9 +16446,13 @@ SLES-51617:
   name: "Starsky & Hutch"
   region: "PAL-M5"
   compat: 5
+  gsHWFixes:
+    halfPixelOffset: 2 # Aligns shadows better.
 SLES-51618:
   name: "Starsky & Hutch"
   region: "PAL-I-S"
+  gsHWFixes:
+    halfPixelOffset: 2 # Aligns shadows better.
 SLES-51619:
   name: "Clock Tower 3"
   region: "PAL-M5"
@@ -16605,7 +16621,7 @@ SLES-51693:
   region: "PAL-E-F-G"
   gsHWFixes:
     autoFlush: 1 # Fixes debris and blending on lower part of screen during monster transformation.
-    halfPixelOffset: 2 # Aligns post processing, might sometimes cause edge bleed which must be cropped.
+    halfPixelOffset: 2 # Aligns post-processing, might sometimes cause edge bleed which must be cropped.
 SLES-51696:
   name: "Dragon's Lair 3D - Special Edition"
   region: "PAL-M5"
@@ -16783,6 +16799,8 @@ SLES-51783:
   name: "Starsky & Hutch"
   region: "PAL-F-G"
   compat: 5
+  gsHWFixes:
+    halfPixelOffset: 2 # Aligns shadows better.
 SLES-51785:
   name: "Cool Shot"
   region: "PAL-E"
@@ -16994,7 +17012,7 @@ SLES-51848:
     vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     autoFlush: 1 # Fixes bloom positioning.
 SLES-51850:
   name: "Basketball Xciting"
@@ -17006,7 +17024,7 @@ SLES-51851:
     vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     autoFlush: 1 # Fixes bloom positioning.
 SLES-51852:
   name: "Tony Hawk's Underground"
@@ -17016,7 +17034,7 @@ SLES-51852:
     vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     autoFlush: 1 # Fixes bloom positioning.
 SLES-51853:
   name: "Tony Hawk's Underground"
@@ -17025,7 +17043,7 @@ SLES-51853:
     vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     autoFlush: 1 # Fixes bloom positioning.
 SLES-51854:
   name: "Tony Hawk's Underground"
@@ -17034,7 +17052,7 @@ SLES-51854:
     vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     autoFlush: 1 # Fixes bloom positioning.
 SLES-51855:
   name: "Tank Elite"
@@ -17255,7 +17273,7 @@ SLES-51931:
   region: "PAL-M5"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     autoFlush: 1 # Fixes sun intensity.
 SLES-51932:
   name: "The Adventures of Jimmy Neutron - Boy Genius - Jet Fusion"
@@ -17625,7 +17643,7 @@ SLES-52096:
   name: "Firefighter F.D. 18"
   region: "PAL-M5"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     roundSprite: 1 # Fixes sprite misaligment.
 SLES-52097:
   name: "SWAT - Global Strike Team"
@@ -17836,6 +17854,7 @@ SLES-52187:
     texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
+    gpuPaletteConversion: 1
 SLES-52188:
   name: "Baldur's Gate - Dark Alliance II"
   region: "PAL-M3"
@@ -17845,13 +17864,14 @@ SLES-52188:
     texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
+    gpuPaletteConversion: 1
 SLES-52190:
   name: "RPM Tuning"
   region: "PAL-M6"
   compat: 5
   gsHWFixes:
     autoFlush: 1
-    halfPixelOffset: 2 # Corrects post processing positioning.
+    halfPixelOffset: 2 # Corrects post-processing positioning.
 SLES-52202:
   name: "Downhill Domination"
   region: "PAL-M5"
@@ -18155,6 +18175,7 @@ SLES-52325:
     textureInsideRT: 1
     halfPixelOffset: 2
     roundSprite: 1
+    gpuPaletteConversion: 1
 SLES-52326:
   name: "Spawn - Armageddon"
   region: "PAL-M5"
@@ -18256,6 +18277,7 @@ SLES-52373:
     textureInsideRT: 1
     halfPixelOffset: 2
     roundSprite: 1
+    gpuPaletteConversion: 1
 SLES-52374:
   name: "Fight Night 2004"
   region: "PAL-M3"
@@ -18398,7 +18420,7 @@ SLES-52439:
   compat: 5
   gsHWFixes:
     autoFlush: 1 # Fixes debris and blending on lower part of screen during monster transformation.
-    halfPixelOffset: 2 # Aligns post processing, might sometimes cause edge bleed which must be cropped.
+    halfPixelOffset: 2 # Aligns post-processing, might sometimes cause edge bleed which must be cropped.
 SLES-52440:
   name: "Harry Potter and the Prisoner of Azkaban"
   region: "PAL-M7"
@@ -18641,7 +18663,7 @@ SLES-52531:
     InstantVU1SpeedHack: 1 # Fixes SPS.
   gsHWFixes:
     autoFlush: 1 # Fixes debris and blending on lower part of screen during monster transformation.
-    halfPixelOffset: 2 # Aligns post processing, might sometimes cause edge bleed which must be cropped.
+    halfPixelOffset: 2 # Aligns post-processing, might sometimes cause edge bleed which must be cropped.
 SLES-52532:
   name: "Aces of War"
   region: "PAL-E"
@@ -18707,17 +18729,17 @@ SLES-52545:
   region: "PAL-M3"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Corrects post processing positioning.
+    halfPixelOffset: 2 # Corrects post-processing positioning.
 SLES-52546:
   name: "Star Wars - Battlefront"
   region: "PAL-F"
   gsHWFixes:
-    halfPixelOffset: 2 # Corrects post processing positioning.
+    halfPixelOffset: 2 # Corrects post-processing positioning.
 SLES-52547:
   name: "Star Wars - Battlefront"
   region: "PAL-G"
   gsHWFixes:
-    halfPixelOffset: 2 # Corrects post processing positioning.
+    halfPixelOffset: 2 # Corrects post-processing positioning.
 SLES-52551:
   name: "Samurai Warriors"
   region: "PAL-E"
@@ -18938,7 +18960,7 @@ SLES-52621:
     vu1RoundMode: 0
   gsHWFixes:
     preloadFrameData: 1 # Fixes missing loading screens.
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     autoFlush: 1 # Fixes bloom positioning.
 SLES-52622:
   name: "Tony Hawk's Underground 2"
@@ -18948,7 +18970,7 @@ SLES-52622:
     vu1RoundMode: 0
   gsHWFixes:
     preloadFrameData: 1 # Fixes missing loading screens.
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     autoFlush: 1 # Fixes bloom positioning.
 SLES-52624:
   name: "X-Men Legends"
@@ -19474,7 +19496,7 @@ SLES-52803:
   name: "Der Herr der Ringe - Das dritte Zeitalter"
   region: "PAL-G"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLES-52804:
   name: "Il Signore degli Anelli - La Terza Era"
   region: "PAL-I"
@@ -19714,22 +19736,23 @@ SLES-52894:
     texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
+    gpuPaletteConversion: 1
 SLES-52895:
   name: "Nickelodeon The SpongeBob SquarePants Movie"
   region: "PAL-E"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLES-52896:
   name: "Nickelodeon SpongeBob SquarePants - The Movie"
   region: "PAL-F-N"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLES-52897:
   name: "Nickelodeon SpongeBob - Il Film"
   region: "PAL-I"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLES-52898:
   name: "King of Fighters - Maximum Impact"
   region: "PAL-E-JP"
@@ -19957,22 +19980,22 @@ SLES-52974:
   name: "GoldenEye - Rogue Agent"
   region: "PAL-M4"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes offset post processing.
+    halfPixelOffset: 2 # Fixes offset post-processing.
 SLES-52975:
   name: "GoldenEye - Au Service du Mal"
   region: "PAL-F"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes offset post processing.
+    halfPixelOffset: 2 # Fixes offset post-processing.
 SLES-52976:
   name: "GoldenEye - Rogue Agent"
   region: "PAL-G"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes offset post processing.
+    halfPixelOffset: 2 # Fixes offset post-processing.
 SLES-52977:
   name: "GoldenEye - Agente Corrupto"
   region: "PAL-S"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes offset post processing.
+    halfPixelOffset: 2 # Fixes offset post-processing.
 SLES-52978:
   name: "La Pucelle Tactics"
   region: "PAL-E"
@@ -19994,12 +20017,12 @@ SLES-52985:
   name: "Nickelodeon SpongeBob Schwammkopf - Der Film"
   region: "PAL-G"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLES-52986:
   name: "Nickelodeon Bob Esponja - La Película"
   region: "PAL-S"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLES-52988:
   name: "Mega Man X8"
   region: "PAL-M5"
@@ -20165,45 +20188,45 @@ SLES-53028:
   clampModes:
     vuClampMode: 0 # Fixes bump mapping issues.
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes alignment of shuffles and post processing.
+    halfPixelOffset: 2 # Fixes alignment of shuffles and post-processing.
     autoFlush: 1 # Fixes sun intensity.
-    textureInsideRT: 1 # Fixes post processing.
+    textureInsideRT: 1 # Fixes post-processing.
 SLES-53029:
   name: "Hitman - Blood Money"
   region: "PAL-F"
   clampModes:
     vuClampMode: 0 # Fixes bump mapping issues.
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes alignment of shuffles and post processing.
+    halfPixelOffset: 2 # Fixes alignment of shuffles and post-processing.
     autoFlush: 1 # Fixes sun intensity.
-    textureInsideRT: 1 # Fixes post processing.
+    textureInsideRT: 1 # Fixes post-processing.
 SLES-53030:
   name: "Hitman - Blood Money"
   region: "PAL-G"
   clampModes:
     vuClampMode: 0 # Fixes bump mapping issues.
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes alignment of shuffles and post processing.
+    halfPixelOffset: 2 # Fixes alignment of shuffles and post-processing.
     autoFlush: 1 # Fixes sun intensity.
-    textureInsideRT: 1 # Fixes post processing.
+    textureInsideRT: 1 # Fixes post-processing.
 SLES-53031:
   name: "Hitman - Blood Money"
   region: "PAL-I"
   clampModes:
     vuClampMode: 0 # Fixes bump mapping issues.
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes alignment of shuffles and post processing.
+    halfPixelOffset: 2 # Fixes alignment of shuffles and post-processing.
     autoFlush: 1 # Fixes sun intensity.
-    textureInsideRT: 1 # Fixes post processing.
+    textureInsideRT: 1 # Fixes post-processing.
 SLES-53032:
   name: "Hitman - Blood Money"
   region: "PAL-S"
   clampModes:
     vuClampMode: 0 # Fixes bump mapping issues.
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes alignment of shuffles and post processing.
+    halfPixelOffset: 2 # Fixes alignment of shuffles and post-processing.
     autoFlush: 1 # Fixes sun intensity.
-    textureInsideRT: 1 # Fixes post processing.
+    textureInsideRT: 1 # Fixes post-processing.
 SLES-53035:
   name: "Masters of the Universe - He-Man - Defender of Greyskull"
   region: "PAL-E"
@@ -20239,6 +20262,7 @@ SLES-53039:
     textureInsideRT: 1
     halfPixelOffset: 2
     roundSprite: 1
+    gpuPaletteConversion: 1
   memcardFilters: # Allows import of characters from first game.
     - "SLES-53039"
     - "SLES-52325"
@@ -20571,6 +20595,7 @@ SLES-53154:
     texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
+    gpuPaletteConversion: 1
 SLES-53155:
   name: "Star Wars - Episode III - Revenge of the Sith"
   region: "PAL-M3"
@@ -20866,32 +20891,37 @@ SLES-53332:
   region: "PAL-M4"
   compat: 5
   gsHWFixes:
-    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
     halfPixelOffset: 2 # Fixes misaligned blur.
+    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
+    mipmap: 0 # Fixes corrupted textures.
 SLES-53333:
   name: "Medal of Honor - Les Faucons de Guerre"
   region: "PAL-F"
   gsHWFixes:
-    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
     halfPixelOffset: 2 # Fixes misaligned blur.
+    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
+    mipmap: 0 # Fixes corrupted textures.
 SLES-53334:
   name: "Medal of Honor - European Assault"
   region: "PAL-G"
   gsHWFixes:
-    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
     halfPixelOffset: 2 # Fixes misaligned blur.
+    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
+    mipmap: 0 # Fixes corrupted textures.
 SLES-53335:
   name: "Medal of Honor - European Assault"
   region: "PAL-I"
   gsHWFixes:
-    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
     halfPixelOffset: 2 # Fixes misaligned blur.
+    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
+    mipmap: 0 # Fixes corrupted textures.
 SLES-53336:
   name: "Medal of Honor - European Assault"
   region: "PAL-S"
   gsHWFixes:
-    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
     halfPixelOffset: 2 # Fixes misaligned blur.
+    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
+    mipmap: 0 # Fixes corrupted textures.
 SLES-53338:
   name: "Victorious Boxers 2 - Fighting Spirit"
   region: "PAL-M3"
@@ -21072,16 +21102,16 @@ SLES-53393:
   gameFixes:
     - EETimingHack # Fixes garbage textures flashing on the character model.
   gsHWFixes:
-    autoFlush: 1 # Fixes missing post processing.
-    halfPixelOffset: 2 # Aligns post processing.
+    autoFlush: 1 # Fixes missing post-processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLES-53396:
   name: "Spartan - Total Warrior"
   region: "PAL-M3"
   gameFixes:
     - EETimingHack # Fixes garbage textures flashing on the character model.
   gsHWFixes:
-    autoFlush: 1 # Fixes missing post processing.
-    halfPixelOffset: 2 # Aligns post processing.
+    autoFlush: 1 # Fixes missing post-processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLES-53398:
   name: "Zombie Zone"
   region: "PAL-E"
@@ -21192,7 +21222,7 @@ SLES-53424:
   name: "Dead to Rights II"
   region: "PAL-M4"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes offset post processing.
+    halfPixelOffset: 2 # Fixes offset post-processing.
 SLES-53430:
   name: "The Incredible Hulk - Ultimate Destruction"
   region: "PAL-M4"
@@ -21341,43 +21371,43 @@ SLES-53492:
   name: "Total Overdose"
   region: "PAL-M5"
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLES-53494:
   name: "Nickelodeon SpongeBob SquarePants - Lights, Camera, Pants!"
   region: "PAL-E"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLES-53495:
   name: "Nickelodeon Bob L'éponge - Silence on Tourne!"
   region: "PAL-F"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLES-53496:
   name: "Nickelodeon SpongeBob - Ciak si Gira!"
   region: "PAL-I"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLES-53497:
   name: "Nickelodeon SpongeBob Schwammkopf - Film ab!"
   region: "PAL-G"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLES-53498:
   name: "Nickelodeon Bob Esponja - ¡Luces, Cámara, Esponja!"
   region: "PAL-S"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLES-53499:
   name: "Nickelodeon SpongeBob SquarePants - Licht uit, Camera aan!"
   region: "PAL-NL"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLES-53500:
   name: "Nickelodeon Svampbob Fyrkant - Tystnad, Tagning, TvÃ¤ttsvamp!"
   region: "PAL-SW"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLES-53501:
   name: "Star Wars - Battlefront II"
   region: "PAL-M3"
@@ -21555,7 +21585,7 @@ SLES-53534:
     vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     autoFlush: 1 # Improves post-processing rendering.
     preloadFrameData: 1 # Fixes missing loading screens.
 SLES-53535:
@@ -21565,7 +21595,7 @@ SLES-53535:
     vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     autoFlush: 1 # Improves post-processing rendering.
     preloadFrameData: 1 # Fixes missing loading screens.
 SLES-53536:
@@ -21724,7 +21754,7 @@ SLES-53560:
   region: "PAL-M5"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Fix post processing blur.
+    halfPixelOffset: 2 # Fix post-processing blur.
 SLES-53561:
   name: "Canis Canem Edit"
   region: "PAL-M5"
@@ -21900,7 +21930,7 @@ SLES-53626:
   region: "PAL-E-G"
   gsHWFixes:
     autoFlush: 1 # Fixes debris and blending on lower part of screen during monster transformation.
-    halfPixelOffset: 2 # Aligns post processing, might sometimes cause edge bleed which must be cropped.
+    halfPixelOffset: 2 # Aligns post-processing, might sometimes cause edge bleed which must be cropped.
   memcardFilters:
     - "SLES-53526"
     - "SLES-53527"
@@ -22005,7 +22035,7 @@ SLES-53657:
 SLES-53658:
   region: "PAL-R"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLES-53659:
   name: "Brothers in Arms - Earned in Blood"
   region: "PAL-M5"
@@ -22122,21 +22152,21 @@ SLES-53703:
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
-    textureInsideRT: 1 # Fixes post processing effects.
+    textureInsideRT: 1 # Fixes post-processing effects.
 SLES-53704:
   name: "Peter Jackson's King Kong - The Official Game of the Movie"
   region: "PAL-R"
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
-    textureInsideRT: 1 # Fixes post processing effects.
+    textureInsideRT: 1 # Fixes post-processing effects.
 SLES-53705:
   name: "Peter Jackson's King Kong - The Official Game of the Movie"
   region: "PAL-PL-E"
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
-    textureInsideRT: 1 # Fixes post processing effects.
+    textureInsideRT: 1 # Fixes post-processing effects.
 SLES-53706:
   name: "The Chronicles of Narnia - The Lion, the Witch and the Wardrobe"
   region: "PAL-E"
@@ -22294,7 +22324,7 @@ SLES-53747:
   roundModes:
     eeRoundMode: 2 # Fixes missing text.
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLES-53748:
   name: "Quest for Sleeping Beauty"
   region: "PAL-M7"
@@ -22459,9 +22489,10 @@ SLES-53803:
   name: "Friends - Das Trivia Game"
   region: "PAL-G"
 SLES-53804:
-  name: "SeaWorld Adventure Park - Shamu's Deep Sea Adventures"
+  name: "SeaWorld Adventure Parks - Shamu's Deep Sea Adventures"
   region: "PAL-E"
   gsHWFixes:
+    halfPixelOffset: 2 # Fixes depth alignment.
     textureInsideRT: 1 # Fixes depth blur.
 SLES-53805:
   name: "Cocoto Funfair"
@@ -22860,25 +22891,25 @@ SLES-53968:
   region: "PAL-F"
   gsHWFixes:
     textureInsideRT: 1 # Required for complex offset shuffles.
-    halfPixelOffset: 2 # Fixes center line in post processing.
+    halfPixelOffset: 2 # Fixes center line in post-processing.
 SLES-53969:
   name: "Pate, Der"
   region: "PAL-G"
   gsHWFixes:
     textureInsideRT: 1 # Required for complex offset shuffles.
-    halfPixelOffset: 2 # Fixes center line in post processing.
+    halfPixelOffset: 2 # Fixes center line in post-processing.
 SLES-53970:
   name: "Padrino, Il"
   region: "PAL-I"
   gsHWFixes:
     textureInsideRT: 1 # Required for complex offset shuffles.
-    halfPixelOffset: 2 # Fixes center line in post processing.
+    halfPixelOffset: 2 # Fixes center line in post-processing.
 SLES-53971:
   name: "Padrino, El"
   region: "PAL-S"
   gsHWFixes:
     textureInsideRT: 1 # Required for complex offset shuffles.
-    halfPixelOffset: 2 # Fixes center line in post processing.
+    halfPixelOffset: 2 # Fixes center line in post-processing.
 SLES-53972:
   name: "Stock Car Crash"
   region: "PAL-E"
@@ -24108,7 +24139,7 @@ SLES-54389:
     vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     autoFlush: 1 # Fixes bloom positioning.
 SLES-54390:
   name: "Tony Hawk's Project 8"
@@ -24118,7 +24149,7 @@ SLES-54390:
     vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     autoFlush: 1 # Fixes bloom positioning.
 SLES-54393:
   name: "Pippa Funnell - Take the Reins"
@@ -24180,6 +24211,7 @@ SLES-54423:
     texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performamce issues.
     textureInsideRT: 1
+    gpuPaletteConversion: 1
 SLES-54424:
   name: "Dr. Dolittle"
   region: "PAL-M7"
@@ -24844,7 +24876,6 @@ SLES-54644:
     halfPixelOffset: 1 # Reduces bloom misalignment.
     roundSprite: 1 # Fixes area transition vertical lines and lessens red forest vertical lines.
     textureInsideRT: 1
-    cpuSpriteRenderBW: 1
 SLES-54645:
   name: "Valkyrie Profile 2 - Silmeria"
   region: "PAL-F"
@@ -24854,7 +24885,6 @@ SLES-54645:
     halfPixelOffset: 1 # Reduces bloom misalignment.
     roundSprite: 1 # Fixes area transition vertical lines and lessens red forest vertical lines.
     textureInsideRT: 1
-    cpuSpriteRenderBW: 1
 SLES-54646:
   name: "Valkyrie Profile 2 - Silmeria"
   region: "PAL-G"
@@ -24865,7 +24895,6 @@ SLES-54646:
     halfPixelOffset: 1 # Reduces bloom misalignment.
     roundSprite: 1 # Fixes area transition vertical lines and lessens red forest vertical lines.
     textureInsideRT: 1
-    cpuSpriteRenderBW: 1
 SLES-54647:
   name: "Valkyrie Profile 2 - Silmeria"
   region: "PAL-I"
@@ -24876,7 +24905,6 @@ SLES-54647:
     halfPixelOffset: 1 # Reduces bloom misalignment.
     roundSprite: 1 # Fixes area transition vertical lines and lessens red forest vertical lines.
     textureInsideRT: 1
-    cpuSpriteRenderBW: 1
 SLES-54648:
   name: "Valkyrie Profile 2 - Silmeria"
   region: "PAL-S"
@@ -24886,7 +24914,6 @@ SLES-54648:
     halfPixelOffset: 1 # Reduces bloom misalignment.
     roundSprite: 1 # Fixes area transition vertical lines and lessens red forest vertical lines.
     textureInsideRT: 1
-    cpuSpriteRenderBW: 1
 SLES-54653:
   name: "Freak Out - Extreme Freeride"
   region: "PAL-M5"
@@ -24999,6 +25026,8 @@ SLES-54683:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes lighting misalignment.
     mergeSprite: 1 # Removes occasional vertical lines.
+    autoFlush: 1
+    mipmap: 0
 SLES-54684:
   name: "Peter Pan"
   region: "PAL-M3"
@@ -25214,17 +25243,17 @@ SLES-54755:
   region: "PAL-E"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes alignment of post processing.
+    halfPixelOffset: 2 # Fixes alignment of post-processing.
 SLES-54756:
   name: "Transformers - The Game"
   region: "PAL-F-S"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes alignment of post processing.
+    halfPixelOffset: 2 # Fixes alignment of post-processing.
 SLES-54757:
   name: "Transformers - The Game"
   region: "PAL-G-I"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes alignment of post processing.
+    halfPixelOffset: 2 # Fixes alignment of post-processing.
 SLES-54767:
   name: "Sniper Assault"
   region: "PAL-E"
@@ -25451,7 +25480,7 @@ SLES-54835:
   name: "Power Rangers - Super Legends"
   region: "PAL-M5"
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLES-54836:
   name: "Disney High School Musical - Sing It!"
   region: "PAL-M5"
@@ -25486,14 +25515,14 @@ SLES-54859:
   roundModes:
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLES-54860:
   name: "Guitar Hero - Rocks The 80s"
   region: "PAL-M4"
   roundModes:
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLES-54861:
   name: "Thomas & Friends - A Day at the Races"
   region: "PAL-SC"
@@ -25842,7 +25871,7 @@ SLES-54963:
     vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     autoFlush: 1 # Fixes bloom positioning.
 SLES-54964:
   name: "Tony Hawk's Proving Ground"
@@ -25851,7 +25880,7 @@ SLES-54964:
     vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     autoFlush: 1 # Fixes bloom positioning.
 SLES-54971:
   name: "Hot Wheels - Beat That!"
@@ -25947,6 +25976,9 @@ SLES-54995:
 SLES-54996:
   name: "The Golden Compass"
   region: "PAL-M5"
+  gsHWFixes:
+    halfPixelOffset: 2 # Aligns post processing.
+    autoFlush: 1 # Fixes light penetrating objects and intensity.
 SLES-54997:
   name: "Mercenaries 2 - World in Flames"
   region: "PAL-E"
@@ -26129,7 +26161,10 @@ SLES-55011:
     deinterlace: 8 # Game requires adaptive (or blend) tff de-interlacing instead of auto for the whole game.
 SLES-55012:
   name: "The Golden Compass"
-  region: "PAL-M5"
+  region: "PAL-SC"
+  gsHWFixes:
+    halfPixelOffset: 2 # Aligns post processing.
+    autoFlush: 1 # Fixes light penetrating objects and intensity.
 SLES-55013:
   name: "Iridium Runners"
   region: "PAL-M5"
@@ -26358,6 +26393,7 @@ SLES-55102:
   name: "The History Channel - Battle for the Pacific"
   region: "PAL-E"
   gsHWFixes:
+    halfPixelOffset: 2 # Fixes depth alignment.
     textureInsideRT: 1 # Fixes depth blur.
 SLES-55103:
   name: "Cabela's Big Game Hunter [2007]"
@@ -26581,7 +26617,7 @@ SLES-55191:
   gsHWFixes:
     textureInsideRT: 1 # Crowd textures.
     autoFlush: 1 # Fixes bloom intensity.
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLES-55192:
   name: "Steam Express"
   region: "PAL-M5"
@@ -26641,7 +26677,7 @@ SLES-55200:
   gsHWFixes:
     textureInsideRT: 1 # Crowd textures.
     autoFlush: 1 # Fixes bloom intensity.
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLES-55201:
   name: "Riding Star"
   region: "PAL-M4"
@@ -27116,7 +27152,7 @@ SLES-55355:
   speedHacks:
     InstantVU1SpeedHack: 0 # Corrects note board position.
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLES-55356:
   name: "Bratz - Girlz Really Rock"
   region: "PAL-M3"
@@ -27288,9 +27324,9 @@ SLES-55442:
   region: "PAL-M8"
   compat: 5
   gsHWFixes:
-    textureInsideRT: 1 # Needed for post processing effects.
+    textureInsideRT: 1 # Needed for post-processing effects.
     autoFlush: 1 # Fixes missing blur layer.
-    halfPixelOffset: 2 # Fixes offset post processing.
+    halfPixelOffset: 2 # Fixes offset post-processing.
 SLES-55443:
   name: "Mana Khemia - Alchemists of Al-Revis"
   region: "PAL-E"
@@ -27373,7 +27409,7 @@ SLES-55474:
   clampModes:
     vuClampMode: 2 # Fix flickering floor during cutscenes in school.
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLES-55476:
   name: "Scooby-Doo! First Frights"
   region: "PAL-M5"
@@ -27479,7 +27515,7 @@ SLES-55518:
   gsHWFixes:
     preloadFrameData: 1 # Fixes icons.
     autoFlush: 1 # Fixes bloom intensity.
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLES-55520:
   name: "Transformers - Revenge of the Fallen"
   region: "PAL-M5"
@@ -27532,12 +27568,12 @@ SLES-55533:
     vuRoundMode: 0 # Fixes SPS and VU size spam.
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLES-55536:
   name: "Disney/Pixar Cars - Race-O-Rama"
   region: "PAL-M5"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
     autoFlush: 1 # Fixes sun penetrating walls and buildings.
 SLES-55537:
   name: "G.I. Joe - The Rise of Cobra"
@@ -27682,7 +27718,7 @@ SLES-55610:
   name: "Springdale"
   region: "PAL-SC"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLES-55622:
   name: "Disney/Pixar Toy Story 3"
   region: "PAL-M6"
@@ -28480,7 +28516,7 @@ SLKA-25061:
   name: "Tom Clancy's Splinter Cell"
   region: "NTSC-K"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLKA-25062:
   name: "Dragon Ball Z 2"
   region: "NTSC-K"
@@ -28594,6 +28630,8 @@ SLKA-25088:
 SLKA-25090:
   name: "Starsky & Hutch"
   region: "NTSC-K"
+  gsHWFixes:
+    halfPixelOffset: 2 # Aligns shadows better.
 SLKA-25091:
   name: "Bansug Yeongung vs. 3D"
   region: "NTSC-K"
@@ -29186,8 +29224,9 @@ SLKA-25243:
   name: "Medal of Honor - European Assault"
   region: "NTSC-K"
   gsHWFixes:
-    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
     halfPixelOffset: 2 # Fixes misaligned blur.
+    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
+    mipmap: 0 # Fixes corrupted textures.
 SLKA-25244:
   name: "WWE SmackDown! vs. Raw"
   region: "NTSC-K"
@@ -29201,6 +29240,7 @@ SLKA-25246:
     texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
+    gpuPaletteConversion: 1
 SLKA-25247:
   name: "Prince of Persia - Warrior Within"
   region: "NTSC-K"
@@ -29216,7 +29256,7 @@ SLKA-25250:
   name: "GoldenEye - Rogue Agent"
   region: "NTSC-K"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes offset post processing.
+    halfPixelOffset: 2 # Fixes offset post-processing.
 SLKA-25251:
   name: "Metal Gear Solid 3 - Snake Eater"
   region: "NTSC-K"
@@ -29448,7 +29488,7 @@ SLKA-25309:
   name: "Indigo Prophecy"
   region: "NTSC-K"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLKA-25310:
   name: "Musou Orochi"
   region: "NTSC-K"
@@ -29493,7 +29533,7 @@ SLKA-25319:
   name: "Nickelodeon SpongeBob SquarePants - Lights, Camera, Pants!"
   region: "NTSC-K"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLKA-25320:
   name: "Ikusa Gami"
   region: "NTSC-K"
@@ -29580,13 +29620,13 @@ SLKA-25337:
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
-    textureInsideRT: 1 # Fixes post processing effects.
+    textureInsideRT: 1 # Fixes post-processing effects.
 SLKA-25338:
   name: "The Godfather"
   region: "NTSC-K"
   gsHWFixes:
     textureInsideRT: 1 # Required for complex offset shuffles.
-    halfPixelOffset: 2 # Fixes center line in post processing.
+    halfPixelOffset: 2 # Fixes center line in post-processing.
 SLKA-25339:
   name: "Jin Samguk Mussang 4"
   region: "NTSC-K"
@@ -29676,7 +29716,7 @@ SLKA-25358:
   name: "Sonic Riders"
   region: "NTSC-K"
   gsHWFixes:
-    halfPixelOffset: 2 # Fix post processing blur.
+    halfPixelOffset: 2 # Fix post-processing blur.
 SLKA-25359:
   name: "World Soccer - Winning Eleven 9 - Liveware Evolution"
   region: "NTSC-K"
@@ -29703,7 +29743,7 @@ SLKA-25363:
   gsHWFixes:
     textureInsideRT: 1 # Crowd textures.
     autoFlush: 1 # Fixes bloom intensity.
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLKA-25364:
   name: "Mobile Suit Gundam - Climax U.C."
   region: "NTSC-K"
@@ -29741,7 +29781,7 @@ SLKA-25372:
   gsHWFixes:
     autoFlush: 1 # Properly diffuses light instead of strips of light.
     roundSprite: 1 # Fixes lighting misalignment such as the street poles and the sun.
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLKA-25373:
   name: "Fight Night Round 3"
   region: "NTSC-K"
@@ -29756,7 +29796,7 @@ SLKA-25375:
   name: "Transformers - The Game"
   region: "NTSC-K"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes alignment of post processing.
+    halfPixelOffset: 2 # Fixes alignment of post-processing.
 SLKA-25377:
   name: "OutRun 2006 - Coast 2 Coast"
   region: "NTSC-K"
@@ -29908,7 +29948,7 @@ SLKA-25414:
   gsHWFixes:
     textureInsideRT: 1 # Crowd textures.
     autoFlush: 1 # Fixes bloom intensity.
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLKA-25417:
   name: "Jin Samguk Mussang 4 - Empires"
   region: "NTSC-K"
@@ -29959,7 +29999,7 @@ SLKA-25434:
   gsHWFixes:
     textureInsideRT: 1 # Crowd textures.
     autoFlush: 1 # Fixes bloom intensity.
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLKA-25435:
   name: "Sengoku Basara X"
   region: "NTSC-J-K"
@@ -30036,12 +30076,12 @@ SLKA-25453:
   name: "Shin Onimusha - Dawn of Dreams [Disc 1 of 2]"
   region: "NTSC-K"
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLKA-25454:
   name: "Shin Onimusha - Dawn of Dreams [Disc 2 of 2]"
   region: "NTSC-K"
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLKA-25455:
   name: "World Soccer Winning Eleven 2009"
   region: "NTSC-K"
@@ -30153,6 +30193,8 @@ SLKA-35004:
   name: "Sakura Wars 5 So Long My Love"
   region: "NTSC-K"
   compat: 5
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes recrusive drawing to the top left.
 SLKA-35005:
   name: "Jin Samguk Mussang 5 - Special"
   region: "NTSC-K"
@@ -30325,8 +30367,9 @@ SLPM-55037:
   name: "Medal of Honor - European Assault [EA:SY! 1980]"
   region: "NTSC-J"
   gsHWFixes:
-    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
     halfPixelOffset: 2 # Fixes misaligned blur.
+    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
+    mipmap: 0 # Fixes corrupted textures.
 SLPM-55038:
   name: "Grand Theft Auto - Liberty City Stories [Best Price]"
   region: "NTSC-J"
@@ -30450,8 +30493,9 @@ SLPM-55076:
   name: "Medal of Honor - Vanguard [EA:SY! 1980]"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes lighting misalignment.
-    mergeSprite: 1 # Removes occasional vertical lines.
+    halfPixelOffset: 2 # Fixes misaligned blur.
+    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
+    mipmap: 0 # Fixes corrupted textures.
 SLPM-55077:
   name: "SSX3 [EA:SY! 1980]"
   region: "NTSC-J"
@@ -31516,8 +31560,8 @@ SLPM-60217:
   region: "NTSC-J"
   gsHWFixes:
     texturePreloading: 0 # Performs much better with no preload.
-    textureInsideRT: 1 # Fixes post processing.
-    halfPixelOffset: 2 # Fixes alignment of shuffles and post processing.
+    textureInsideRT: 1 # Fixes post-processing.
+    halfPixelOffset: 2 # Fixes alignment of shuffles and post-processing.
 SLPM-60218:
   name: "Gungrave O.D. [Trial]"
   region: "NTSC-J"
@@ -31610,7 +31654,7 @@ SLPM-60253:
   name: "Zettai Zetsumei Toshi 2 - Itetsuita Kioutachi [Trial Type-B]"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLPM-60254:
   name: "Zettai Zetsumei Toshi 2 - Itetsuita Kioutachi [Trial Type-A]"
   region: "NTSC-J"
@@ -31656,6 +31700,9 @@ SLPM-60264:
 SLPM-60265:
   name: "Steamboy [Trial]"
   region: "NTSC-J"
+  gsHWFixes:
+    halfPixelOffset: 2 # Reduces post misalignment.
+    autoFlush: 1 # Fixes post alignment.
 SLPM-60266:
   name: "Ponkotsu Roeman Daikatsugeki Bumpy Trot [Trial]"
   region: "NTSC-J"
@@ -32208,7 +32255,7 @@ SLPM-61142:
   name: "Shin Onimusha - Dawn of Dreams / Ookami [Trial]"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLPM-61144:
   name: "Ninkyouden Toseinin Ichidaiki [Trial]"
   region: "NTSC-J"
@@ -32223,6 +32270,7 @@ SLPM-61147:
     halfPixelOffset: 1 # Fixes lighting misalignment and reduces ground shadows (probably texture cache issue).
     roundSprite: 2 # Fixes font artifacts.
     texturePreloading: 0 # Performs much better with it off.
+    textureInsideRT: 1
 SLPM-61148:
   name: "Growlanser V - Generations [Trial]"
   region: "NTSC-J"
@@ -32251,9 +32299,9 @@ SLPM-61155:
   gameFixes:
     - SoftwareRendererFMVHack # Fixes broken FMVs on repeat plays.
   gsHWFixes:
-    textureInsideRT: 1 # Needed for post processing effects.
+    textureInsideRT: 1 # Needed for post-processing effects.
     autoFlush: 1 # Fixes bloom intensity.
-    halfPixelOffset: 2 # Fixes offset post processing.
+    halfPixelOffset: 2 # Fixes offset post-processing.
 SLPM-61156:
   name: "Dengeki PS2 / DengekiPlayStation D93"
   region: "NTSC-J"
@@ -33020,7 +33068,7 @@ SLPM-62240:
   region: "NTSC-C"
 SLPM-62241:
   name: "Harry Potter and the Chamber of Secrets"
-  region: "NTSC-J"
+  region: "NTSC-C"
   gameFixes:
     - EETimingHack # Fixes flickering textures.
   gsHWFixes:
@@ -34205,6 +34253,8 @@ SLPM-62597:
 SLPM-62598:
   name: "Sakura Taisen V - Saraba Itoshiki Hito yo [Trial]"
   region: "NTSC-J"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes recrusive drawing to the top left.
 SLPM-62599:
   name: "Bomberman Kart DX"
   region: "NTSC-J"
@@ -35366,13 +35416,13 @@ SLPM-65100:
   name: "Onimusha 2 [Limited Edition]"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     roundSprite: 2 # Fixes text.
 SLPM-65101:
   name: "Onimusha 2"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     roundSprite: 2 # Fixes text.
   memcardFilters:
     - "SLPM-65100"
@@ -36622,7 +36672,7 @@ SLPM-65422:
   name: "Tom Clancy's Splinter Cell"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLPM-65423:
   name: "Sangokushi IX"
   region: "NTSC-J"
@@ -36814,7 +36864,7 @@ SLPM-65470:
   name: "FIRE FIGHTER F.D.18"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     roundSprite: 1 # Fixes sprite misaligment.
 SLPM-65471:
   name: "Need for Speed - Underground"
@@ -37255,9 +37305,13 @@ SLPM-65598:
 SLPM-65599:
   name: "Gensou Suikoden 4 [Limited Edition]"
   region: "NTSC-J"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes grid-like patterns in water.
 SLPM-65600:
   name: "Gensou Suikoden 4"
   region: "NTSC-J"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes grid-like patterns in water.
 SLPM-65601:
   name: "Omoide ni Kawaru-Kimi - Memories Off [SuperLite 2000 Series]"
   region: "NTSC-J"
@@ -37443,6 +37497,8 @@ SLPM-65647:
 SLPM-65648:
   name: "Medal of Honor - Frontline [EA Best Hits]"
   region: "NTSC-J"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes misaligned blur.
 SLPM-65649:
   name: "NBA Street Vol. 2 [EA Best Hits]"
   region: "NTSC-J"
@@ -37575,7 +37631,7 @@ SLPM-65687:
   name: "Star Wars - Battlefront"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Corrects post processing positioning.
+    halfPixelOffset: 2 # Corrects post-processing positioning.
 SLPM-65688:
   name: "Berserk - Millennium Falcon-hen - Seima Senki no Shou [Standard Edition]"
   region: "NTSC-J"
@@ -37819,7 +37875,7 @@ SLPM-65744:
   name: "FIRE FIGHTER F.D.18 [KONAMI The BEST]"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     roundSprite: 1 # Fixes sprite misaligment.
 SLPM-65745:
   name: "Tokimeki Memorial - Girl's Side [KONAMI Dendou Selection]"
@@ -37902,7 +37958,7 @@ SLPM-65763:
   name: "007 - Goldeneye - Rogue Agent"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes offset post processing.
+    halfPixelOffset: 2 # Fixes offset post-processing.
 SLPM-65764:
   name: "Men at Work! 3 [First Print Limited Edition]"
   region: "NTSC-J"
@@ -38210,11 +38266,12 @@ SLPM-65845:
     texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
+    gpuPaletteConversion: 1
 SLPM-65846:
   name: "Lord of the Rings, The - The Third Age"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLPM-65847:
   name: "Soriaro no Organ Remix [First Print Limited Edition]"
   region: "NTSC-J"
@@ -38468,6 +38525,7 @@ SLPM-65915:
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     roundSprite: 1
+    gpuPaletteConversion: 1
 SLPM-65916:
   name: "Harukanaru Toki no Naka de - Hachiyou-shou"
   region: "NTSC-J"
@@ -38562,6 +38620,8 @@ SLPM-65942:
 SLPM-65943:
   name: "Angel's Feather"
   region: "NTSC-J"
+  gsHWFixes:
+    cpuCLUTRender: 1 # Fixes rendering.
 SLPM-65944:
   name: "Tantei Jinguuji Saburou - Kind of Blue [Workjam Best Collection - Vol.2]"
   region: "NTSC-J"
@@ -38861,7 +38921,7 @@ SLPM-66017:
   name: "Firefighter F.D.18 [KONAMI Dendou Selection]"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     roundSprite: 1 # Fixes sprite misaligment.
 SLPM-66018:
   name: "Silent Hill 3 [KONAMI Dendou Selection]"
@@ -39124,8 +39184,9 @@ SLPM-66079:
   name: "Medal of Honor - European Assault"
   region: "NTSC-J"
   gsHWFixes:
-    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
     halfPixelOffset: 2 # Fixes misaligned blur.
+    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
+    mipmap: 0 # Fixes corrupted textures.
 SLPM-66080:
   name: "Generation of Chaos 3 [Idea Factory Collection]"
   region: "NTSC-J"
@@ -39435,7 +39496,7 @@ SLPM-66145:
   name: "GoldenEye - Rogue Agent [EA Best Hits]"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes offset post processing.
+    halfPixelOffset: 2 # Fixes offset post-processing.
 SLPM-66146:
   name: "Memories Off #5 - Togireta Film [First Print Limited Edition]"
   region: "NTSC-J"
@@ -39445,7 +39506,7 @@ SLPM-66148:
   name: "Star Wars - Battlefront [EA Best Hits]"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Corrects post processing positioning.
+    halfPixelOffset: 2 # Corrects post-processing positioning.
 SLPM-66149:
   name: "Silver Birdcage [Limited Edition]"
   region: "NTSC-J"
@@ -39711,7 +39772,7 @@ SLPM-66211:
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
-    textureInsideRT: 1 # Fixes post processing effects.
+    textureInsideRT: 1 # Fixes post-processing effects.
 SLPM-66212:
   name: "SEGA RALLY 2006"
   region: "NTSC-J"
@@ -40043,7 +40104,7 @@ SLPM-66281:
   name: "Sonic Riders"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Fix post processing blur.
+    halfPixelOffset: 2 # Fix post-processing blur.
 SLPM-66282:
   name: "Memories Off After Rain Vol.2 - Souen [SuperLite 2000 Series]"
   region: "NTSC-J"
@@ -40609,7 +40670,6 @@ SLPM-66419:
     halfPixelOffset: 1 # Reduces bloom misalignment.
     roundSprite: 1 # Fixes area transition vertical lines and lessens red forest vertical lines.
     textureInsideRT: 1
-    cpuSpriteRenderBW: 1
 SLPM-66420:
   name: "Front Mission 4 [Ultimate Hits]"
   region: "NTSC-J"
@@ -40710,8 +40770,8 @@ SLPM-66444:
   gameFixes:
     - EETimingHack # Fixes garbage textures flashing on the character model.
   gsHWFixes:
-    autoFlush: 1 # Fixes missing post processing.
-    halfPixelOffset: 2 # Aligns post processing.
+    autoFlush: 1 # Fixes missing post-processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLPM-66445:
   name: "Persona 3"
   region: "NTSC-J"
@@ -41020,7 +41080,7 @@ SLPM-66504:
   name: "Onimusha 2 [MEGA HITS!]"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     roundSprite: 2 # Fixes text.
 SLPM-66505:
   name: "Shin Sangoku Musou 2 [MEGA HITS!]"
@@ -41056,8 +41116,9 @@ SLPM-66514:
   name: "Medal of Honor - European Assault [EA Best Hits]"
   region: "NTSC-J"
   gsHWFixes:
-    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
     halfPixelOffset: 2 # Fixes misaligned blur.
+    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
+    mipmap: 0 # Fixes corrupted textures.
 SLPM-66515:
   name: "Star Wars - Episode III - Sith no Fukushuu [EA Best Hits]"
   region: "NTSC-J"
@@ -42065,6 +42126,8 @@ SLPM-66752:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes lighting misalignment.
     mergeSprite: 1 # Removes occasional vertical lines.
+    autoFlush: 1
+    mipmap: 0
 SLPM-66753:
   name: "Getsumento Heiki Mina - Futatsu no Project M [Limited Edition]"
   region: "NTSC-J"
@@ -42183,7 +42246,6 @@ SLPM-66782:
     halfPixelOffset: 1 # Reduces bloom misalignment.
     roundSprite: 1 # Fixes area transition vertical lines and lessens red forest vertical lines.
     textureInsideRT: 1
-    cpuSpriteRenderBW: 1
 SLPM-66783:
   name: "Idol Janshi Suchie-Pai IV [Limited Edition]"
   region: "NTSC-J"
@@ -42844,6 +42906,8 @@ SLPM-66962:
 SLPM-66963:
   name: "Medal of Honor - Frontline [EA:SY! 1980]"
   region: "NTSC-J"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes misaligned blur.
 SLPM-66964:
   name: "Guilty Gear XX - Accent Core Plus [Append Edition]"
   region: "NTSC-J"
@@ -43009,6 +43073,8 @@ SLPM-67008:
 SLPM-67009:
   name: "Sakura Taisen V - Saraba Itoshiki Hito Yo"
   region: "NTSC-J"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes recrusive drawing to the top left.
 SLPM-67010:
   name: "God of War"
   region: "NTSC-J"
@@ -43141,7 +43207,7 @@ SLPM-67518:
   name: "Onimusha 2 - Samurai's Destiny"
   region: "NTSC-K"
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     roundSprite: 2 # Fixes text.
 SLPM-67519:
   name: "Rayman 2 Revolution"
@@ -43174,6 +43240,8 @@ SLPM-67524:
 SLPM-67525:
   name: "Medal of Honor - Frontline"
   region: "NTSC-K"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes misaligned blur.
 SLPM-67526:
   name: "Ghost Vibration"
   region: "NTSC-K"
@@ -43296,7 +43364,7 @@ SLPM-68017:
   name: "Shin Onimusha - Dawn of Dreams [Saikyou Save Data]"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
   memcardFilters:
     - "SLPM-66275"
 SLPM-68018:
@@ -43500,6 +43568,8 @@ SLPM-74212:
 SLPM-74213:
   name: "Gensou Suikoden IV [PlayStation 2 the Best]"
   region: "NTSC-J"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes grid-like patterns in water.
 SLPM-74214:
   name: "Densha de Go! Final [PlayStation 2 the Best]"
   region: "NTSC-J"
@@ -43892,6 +43962,9 @@ SLPM-74406:
     eeRoundMode: 0 # Fixes crash when using the Subaru.
   gameFixes:
     - XGKickHack # Fixes SPS while ingame.
+  gsHWFixes:
+    halfPixelOffset: 2 # Aligns distant blur layer.
+    autoFlush: 1 # Better aligns car shadows.
 SLPM-74407:
   name: "Jet de Go! 2 [PlayStation 2 the Best]"
   region: "NTSC-J"
@@ -46034,7 +46107,8 @@ SLPS-25099:
   gameFixes:
     - XGKickHack # Fixes SPS while ingame.
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns Depth of Field.
+    halfPixelOffset: 2 # Aligns distant blur layer.
+    autoFlush: 1 # Better aligns car shadows.
 SLPS-25100:
   name: "Tekken 4"
   region: "NTSC-J"
@@ -46187,12 +46261,14 @@ SLPS-25139:
     disablePartialInvalidation: 1
     textureInsideRT: 1
     roundSprite: 1
+    gpuPaletteConversion: 1
 SLPS-25140:
   name: "Baldur's Gate - Dark Alliance [Standard Edition]"
   region: "NTSC-J"
   gsHWFixes:
-    textureInsideRT: 1 # Fixes half right.
     roundSprite: 1 # Fixes lines in menus.
+    textureInsideRT: 1 # Fixes half right.
+    gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
 SLPS-25141:
   name: "Pac-Man World 2"
   region: "NTSC-J"
@@ -46247,6 +46323,8 @@ SLPS-25150:
 SLPS-25151:
   name: "Medal of Honor - Shijou Saidai no Sakusen"
   region: "NTSC-J"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes misaligned blur.
 SLPS-25153:
   name: "Disney's Lilo and Stitch - Stitch no Daibouken"
   region: "NTSC-J"
@@ -46335,8 +46413,6 @@ SLPS-25171:
 SLPS-25172:
   name: "Tales of Destiny 2"
   region: "NTSC-J"
-  speedHacks:
-    mvuFlagSpeedHack: 0 # Fixes graphical corruptions.
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
@@ -46788,6 +46864,8 @@ SLPS-25291:
     texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes perforamnce issues.
     textureInsideRT: 1
+    roundSprite: 1
+    gpuPaletteConversion: 1
 SLPS-25292:
   name: "D-A - Black [Standard Edition]"
   region: "NTSC-J"
@@ -47673,6 +47751,9 @@ SLPS-25502:
   name: "Steamboy"
   region: "NTSC-J"
   compat: 5
+  gsHWFixes:
+    halfPixelOffset: 2 # Reduces post misalignment.
+    autoFlush: 1 # Fixes post alignment.
 SLPS-25503:
   name: "Bakumatsu Roman - Last Blade 2-in-1 [NeoGeo Online Collection the Best]"
   region: "NTSC-J"
@@ -47898,8 +47979,8 @@ SLPS-25563:
   gsHWFixes:
     texturePreloading: 1 # Performs much better with partial preload.
     autoFlush: 1 # Fixes bloom rendering.
-    textureInsideRT: 1 # Fixes post processing.
-    halfPixelOffset: 2 # Fixes alignment of shuffles and post processing.
+    textureInsideRT: 1 # Fixes post-processing.
+    halfPixelOffset: 2 # Fixes alignment of shuffles and post-processing.
 SLPS-25564:
   name: "Gallop Racer 8 - Live Horse Racing -"
   region: "NTSC-J"
@@ -48228,6 +48309,7 @@ SLPS-25640:
     halfPixelOffset: 1 # Fixes lighting misalignment and reduces ground shadows (probably texture cache issue).
     roundSprite: 2 # Fixes font artifacts.
     texturePreloading: 0 # Performs much better with it off.
+    textureInsideRT: 1
   memcardFilters: # Allows import of Xenosaga II save data.
     - "SLPS-25640"
     - "SLPS-25368"
@@ -48240,6 +48322,7 @@ SLPS-25641:
     halfPixelOffset: 1 # Fixes lighting misalignment and reduces ground shadows (probably texture cache issue).
     roundSprite: 2 # Fixes font artifacts.
     texturePreloading: 0 # Performs much better with it off.
+    textureInsideRT: 1
   memcardFilters:
     - "SLPS-25640"
     - "SLPS-25368"
@@ -49033,7 +49116,7 @@ SLPS-25834:
   name: "Transformers - The Game"
   region: "NTSC-J"
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes alignment of post processing.
+    halfPixelOffset: 2 # Fixes alignment of post-processing.
 SLPS-25835:
   name: "Super Robot Taisen OG - Original Generations Gaiden [Limited Edition]"
   region: "NTSC-J"
@@ -49249,7 +49332,7 @@ SLPS-25885:
   gsHWFixes:
     textureInsideRT: 1 # Crowd textures.
     autoFlush: 1 # Fixes bloom intensity.
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLPS-25886:
   name: "Guitar Hero - Aerosmith on Tour [with Guitar]"
   region: "NTSC-J"
@@ -49258,7 +49341,7 @@ SLPS-25886:
   gsHWFixes:
     textureInsideRT: 1 # Crowd textures.
     autoFlush: 1 # Fixes bloom intensity.
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLPS-25887:
   name: "Super Robot Taisen Z"
   region: "NTSC-J"
@@ -49287,7 +49370,7 @@ SLPS-25889:
   gsHWFixes:
     textureInsideRT: 1 # Crowd textures.
     autoFlush: 1 # Fixes bloom intensity.
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLPS-25890:
   name: "Guitar Hero III - Legends of Rock [Only Soft]"
   region: "NTSC-J"
@@ -49431,9 +49514,9 @@ SLPS-25927:
   name: "Tomb Raider - Underworld"
   region: "NTSC-J"
   gsHWFixes:
-    textureInsideRT: 1 # Needed for post processing effects.
+    textureInsideRT: 1 # Needed for post-processing effects.
     autoFlush: 1 # Fixes missing blur layer.
-    halfPixelOffset: 2 # Fixes offset post processing.
+    halfPixelOffset: 2 # Fixes offset post-processing.
 SLPS-25928:
   name: "Little Anchor [Limited Edition]"
   region: "NTSC-J"
@@ -49503,15 +49586,15 @@ SLPS-25945:
   gameFixes:
     - SoftwareRendererFMVHack # Fixes broken FMVs on repeat plays.
   gsHWFixes:
-    textureInsideRT: 1 # Needed for post processing effects.
+    textureInsideRT: 1 # Needed for post-processing effects.
     autoFlush: 1 # Fixes bloom intensity.
-    halfPixelOffset: 2 # Fixes offset post processing.
+    halfPixelOffset: 2 # Fixes offset post-processing.
 SLPS-25946:
   name: "Tomb Raider - Anniversary [Spike the Best]"
   region: "NTSC-J"
   gsHWFixes:
-    textureInsideRT: 1 # Needed for post processing effects.
-    halfPixelOffset: 2 # Fixes offset post processing.
+    textureInsideRT: 1 # Needed for post-processing effects.
+    halfPixelOffset: 2 # Fixes offset post-processing.
     autoFlush: 1 # Fixes bloom intensity.
 SLPS-25947:
   name: "Summon Night Gran-These - Horobi no Ken to Yakusoku no Kishi"
@@ -49608,9 +49691,9 @@ SLPS-25986:
   name: "Tomb Raider - Underworld [Spike The Best]"
   region: "NTSC-J"
   gsHWFixes:
-    textureInsideRT: 1 # Needed for post processing effects.
+    textureInsideRT: 1 # Needed for post-processing effects.
     autoFlush: 1 # Fixes missing blur layer.
-    halfPixelOffset: 2 # Fixes offset post processing.
+    halfPixelOffset: 2 # Fixes offset post-processing.
 SLPS-25987:
   name: "Amagami [ebKore+]"
   region: "NTSC-J"
@@ -49707,7 +49790,7 @@ SLPS-71502:
   region: "NTSC-J"
   gsHWFixes:
     textureInsideRT: 1 # Fixes post effects
-    halfPixelOffset: 2 # Fixes title screen and some intro post processing alignment.
+    halfPixelOffset: 2 # Fixes title screen and some intro post-processing alignment.
     roundSprite: 1 # Fixes ui and hud alignment.
     gpuPaletteConversion: 2 # Lots of CLUTs in large textures.
     cpuSpriteRenderBW: 1 # Fixes car textures.
@@ -49726,10 +49809,8 @@ SLPS-72501:
     textureInsideRT: 1 # Fixes wrong visuals for the summon Anima and The (Triple) Magus Sisters.
     autoFlush: 1
 SLPS-72502:
-  name: "Tales of Destiny 2 [MEGA HITS!]"
+  name: "Tales of Destiny 2 [Mega Hits]"
   region: "NTSC-J"
-  speedHacks:
-    mvuFlagSpeedHack: 0 # Fixes graphical corruptions.
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
@@ -49923,8 +50004,6 @@ SLPS-73218:
 SLPS-73219:
   name: "Tales of Destiny 2 [PlayStation 2 the Best]"
   region: "NTSC-J"
-  speedHacks:
-    mvuFlagSpeedHack: 0 # Fixes graphical corruptions.
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
@@ -50551,6 +50630,7 @@ SLUS-20035:
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     roundSprite: 1
+    gpuPaletteConversion: 1
 SLUS-20037:
   name: "Run Like Hell - Hunt or Be Hunted"
   region: "NTSC-U"
@@ -51994,6 +52074,8 @@ SLUS-20368:
   name: "Medal of Honor - Frontline"
   region: "NTSC-U"
   compat: 5
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes misaligned blur.
 SLUS-20369:
   name: "Knockout Kings 2002"
   region: "NTSC-U"
@@ -52129,7 +52211,7 @@ SLUS-20393:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLUS-20394:
   name: "Ecco the Dolphin - Defender of the Future"
   region: "NTSC-U"
@@ -52208,7 +52290,7 @@ SLUS-20409:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    textureInsideRT: 1 # Needed for post processing effects.
+    textureInsideRT: 1 # Needed for post-processing effects.
     roundSprite: 1 # Fixes upscaling lines.
 SLUS-20412:
   name: "Hot Wheels - Velocity X"
@@ -52268,6 +52350,9 @@ SLUS-20419:
     eeRoundMode: 0 # Fixes crash when using the Subaru.
   gameFixes:
     - XGKickHack # Fixes SPS while ingame.
+  gsHWFixes:
+    halfPixelOffset: 2 # Aligns distant blur layer.
+    autoFlush: 1 # Better aligns car shadows.
 SLUS-20420:
   name: "Star Wars - Bounty Hunter"
   region: "NTSC-U"
@@ -52874,6 +52959,7 @@ SLUS-20539:
     texturePreloading: 1 # Performs much better with partial preload.
     textureInsideRT: 1
     roundSprite: 1
+    gpuPaletteConversion: 1
 SLUS-20540:
   name: "Evolution Skateboarding"
   region: "NTSC-U"
@@ -53041,6 +53127,7 @@ SLUS-20565:
     texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
+    gpuPaletteConversion: 1
 SLUS-20566:
   name: "Buffy the Vampire Slayer - Chaos Bleeds"
   region: "NTSC-U"
@@ -53310,6 +53397,8 @@ SLUS-20619:
   name: "Starsky & Hutch"
   region: "NTSC-U"
   compat: 5
+  gsHWFixes:
+    halfPixelOffset: 2 # Aligns shadows better.
 SLUS-20620:
   name: "Smash Cars"
   region: "NTSC-U"
@@ -53401,7 +53490,7 @@ SLUS-20636:
   compat: 5
   gsHWFixes:
     autoFlush: 1 # Fixes debris and blending on lower part of screen during monster transformation.
-    halfPixelOffset: 2 # Aligns post processing, might sometimes cause edge bleed which must be cropped.
+    halfPixelOffset: 2 # Aligns post-processing, might sometimes cause edge bleed which must be cropped.
 SLUS-20637:
   name: "Chessmaster"
   region: "NTSC-U"
@@ -53501,7 +53590,7 @@ SLUS-20652:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLUS-20653:
   name: "Dynasty Warriors 4"
   region: "NTSC-U"
@@ -53622,6 +53711,7 @@ SLUS-20675:
     texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
+    gpuPaletteConversion: 1
 SLUS-20676:
   name: "Lowrider"
   region: "NTSC-U"
@@ -53820,12 +53910,13 @@ SLUS-20715:
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     halfPixelOffset: 2
+    gpuPaletteConversion: 1
 SLUS-20716:
   name: "Teenage Mutant Ninja Turtles"
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     autoFlush: 1 # Fixes sun intensity.
 SLUS-20718:
   name: "Sonic Heroes"
@@ -53864,7 +53955,7 @@ SLUS-20724:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     roundSprite: 1 # Fixes sprite misaligment.
 SLUS-20725:
   name: "Call of Duty - Finest Hour"
@@ -53917,7 +54008,7 @@ SLUS-20731:
     vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     autoFlush: 1 # Fixes bloom positioning.
 SLUS-20732:
   name: "Drakengard"
@@ -54303,6 +54394,7 @@ SLUS-20803:
   gsHWFixes:
     texturePreloading: 1 # Performs much better with partial preload.
     textureInsideRT: 1
+    gpuPaletteConversion: 1
 SLUS-20804:
   name: "Forgotten Realms - Demon Stone"
   region: "NTSC-U"
@@ -54475,7 +54567,7 @@ SLUS-20843:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes offset post processing.
+    halfPixelOffset: 2 # Fixes offset post-processing.
 SLUS-20845:
   name: "Cold Winter"
   region: "NTSC-U"
@@ -54808,7 +54900,7 @@ SLUS-20898:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Corrects post processing positioning.
+    halfPixelOffset: 2 # Corrects post-processing positioning.
 SLUS-20899:
   name: "Samurai Jack - The Shadow of Aku"
   region: "NTSC-U"
@@ -54836,7 +54928,7 @@ SLUS-20904:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLUS-20905:
   name: "Disney/Pixar The Incredibles"
   region: "NTSC-U"
@@ -55212,7 +55304,7 @@ SLUS-20965:
     vu1RoundMode: 0
   gsHWFixes:
     preloadFrameData: 1 # Fixes missing loading screens.
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     autoFlush: 1 # Fixes bloom positioning.
 SLUS-20966:
   name: "State of Emergency 2"
@@ -55263,6 +55355,7 @@ SLUS-20973:
     textureInsideRT: 1
     halfPixelOffset: 2
     roundSprite: 1
+    gpuPaletteConversion: 1
   memcardFilters:
     - "SLUS-20973"
     - "SLUS-20565"
@@ -55820,7 +55913,7 @@ SLUS-21064:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes offset post processing.
+    halfPixelOffset: 2 # Fixes offset post-processing.
 SLUS-21065:
   name: "Need for Speed - Underground 2"
   region: "NTSC-U"
@@ -56044,9 +56137,9 @@ SLUS-21108:
   clampModes:
     vuClampMode: 0 # Fixes bump mapping issues
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes alignment of shuffles and post processing.
+    halfPixelOffset: 2 # Fixes alignment of shuffles and post-processing.
     autoFlush: 1 # Fixes sun intensity.
-    textureInsideRT: 1 # Fixes post processing.
+    textureInsideRT: 1 # Fixes post-processing.
 SLUS-21109:
   name: "Drive to Survive"
   region: "NTSC-U"
@@ -56349,7 +56442,7 @@ SLUS-21165:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing alignment.
+    halfPixelOffset: 2 # Fixes post-processing alignment.
     textureInsideRT: 1 # Fixes on screen garbage.
 SLUS-21166:
   name: "Full Metal Alchemist 2 - Curse of the Crimson Elixir"
@@ -56518,7 +56611,7 @@ SLUS-21196:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLUS-21197:
   name: "DreamWorks Shrek - SuperSlam"
   region: "NTSC-U"
@@ -56537,8 +56630,9 @@ SLUS-21199:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
     halfPixelOffset: 2 # Fixes misaligned blur.
+    autoFlush: 1 # Fixes sun shinging through surfaces and graphical corruptions.
+    mipmap: 0 # Fixes corrupted textures.
 SLUS-21200:
   name: "Armored Core - Nine Breaker"
   region: "NTSC-U"
@@ -56611,7 +56705,7 @@ SLUS-21208:
     vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     autoFlush: 1 # Improves post-processing rendering.
     preloadFrameData: 1 # Fixes missing loading screens.
 SLUS-21209:
@@ -56631,8 +56725,8 @@ SLUS-21212:
   gameFixes:
     - EETimingHack # Fixes garbage textures flashing on the character model.
   gsHWFixes:
-    autoFlush: 1 # Fixes missing post processing.
-    halfPixelOffset: 2 # Aligns post processing.
+    autoFlush: 1 # Fixes missing post-processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLUS-21213:
   name: "Madden NFL '06"
   region: "NTSC-U"
@@ -56912,7 +57006,7 @@ SLUS-21252:
   region: "NTSC-U"
   compat: 4
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
   memcardFilters:
     - "SLUS-21218"
     - "SLUS-21252"
@@ -56975,7 +57069,7 @@ SLUS-21260:
   roundModes:
     eeRoundMode: 2 # Fixes missing text.
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLUS-21261:
   name: "Shadow the Hedgehog"
   region: "NTSC-U"
@@ -57160,7 +57254,7 @@ SLUS-21283:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLUS-21284:
   name: "Nicktoons Unite!"
   region: "NTSC-U"
@@ -57205,6 +57299,7 @@ SLUS-21289:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
+    halfPixelOffset: 2 # Fixes depth alignment.
     textureInsideRT: 1 # Fixes depth blur.
 SLUS-21290:
   name: "Ford Street Racing"
@@ -57242,7 +57337,7 @@ SLUS-21295:
     vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     autoFlush: 1 # Improves post-processing rendering.
     preloadFrameData: 1 # Fixes missing loading screens.
   memcardFilters: # Game saves use the normal edition serial.
@@ -57294,6 +57389,7 @@ SLUS-21304:
     texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
+    gpuPaletteConversion: 1
 SLUS-21305:
   name: "Arthur and the Invisibles - The Game"
   region: "NTSC-U"
@@ -57337,7 +57433,7 @@ SLUS-21311:
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
-    textureInsideRT: 1 # Fixes post processing effects.
+    textureInsideRT: 1 # Fixes post-processing effects.
 SLUS-21312:
   name: "Wallace & Gromit - The Curse of the Were-Rabbit"
   region: "NTSC-U"
@@ -57483,7 +57579,7 @@ SLUS-21331:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Fix post processing blur.
+    halfPixelOffset: 2 # Fix post-processing blur.
 SLUS-21332:
   name: "Real World Golf"
   region: "NTSC-U"
@@ -57518,6 +57614,11 @@ SLUS-21338:
     preloadFrameData: 1 # Fixes black screen while in a mech.
     roundSprite: 2 # Fixes HUD artifacts.
     halfPixelOffset: 2
+  memcardFilters: # Convert savegames from AC: Nexus and AC: Nine Breaker.
+    - "SLUS-21338"
+    - "SLUS-21200"
+    - "SLUS-20986"
+    - "SLUS-21079"
 SLUS-21339:
   name: "Puzzle Challenge - Crosswords and More!"
   region: "NTSC-U"
@@ -57530,6 +57631,8 @@ SLUS-21341:
   name: "Stuart Little 3 - Big Photo Adventure"
   region: "NTSC-U"
   compat: 5
+  gameFixes:
+    - InstantDMAHack # Fixes loading screen corruption.
   gsHWFixes:
     autoFlush: 1 # Fixes missing effects.
 SLUS-21342:
@@ -57881,6 +57984,7 @@ SLUS-21389:
     halfPixelOffset: 1 # Fixes lighting misalignment and reduces ground shadows.
     roundSprite: 2 # Fixes font artifacts.
     texturePreloading: 0 # Performs much better with it off.
+    textureInsideRT: 1
   memcardFilters: # Allows import of Xenosaga II save data.
     - "SLUS-21389"
     - "SLUS-20892"
@@ -57971,7 +58075,7 @@ SLUS-21406:
   region: "NTSC-U"
   gsHWFixes:
     textureInsideRT: 1 # Required for complex offset shuffles.
-    halfPixelOffset: 2 # Fixes center line in post processing.
+    halfPixelOffset: 2 # Fixes center line in post-processing.
 SLUS-21407:
   name: "NFL Head Coach"
   region: "NTSC-U"
@@ -58040,6 +58144,7 @@ SLUS-21417:
     halfPixelOffset: 1 # Fixes lighting misalignment and reduces ground shadows.
     roundSprite: 2 # Fixes font artifacts.
     texturePreloading: 0 # Performs much better with it off.
+    textureInsideRT: 1
   memcardFilters:
     - "SLUS-21389"
     - "SLUS-20892"
@@ -58219,7 +58324,7 @@ SLUS-21444:
     vuRoundMode: 0
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     autoFlush: 1 # Fixes bloom positioning.
 SLUS-21445:
   name: "Ar tonelico - Melody of Elemia"
@@ -58268,7 +58373,6 @@ SLUS-21452:
     halfPixelOffset: 1 # Reduces bloom misalignment.
     roundSprite: 1 # Fixes area transition vertical lines.
     textureInsideRT: 1
-    cpuSpriteRenderBW: 1
 SLUS-21453:
   name: "Meet the Robinsons"
   region: "NTSC-U"
@@ -58848,7 +58952,7 @@ SLUS-21586:
   roundModes:
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLUS-21587:
   name: "Made Man - Confessions of the Family Blood"
   region: "NTSC-U"
@@ -58912,6 +59016,8 @@ SLUS-21597:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes lighting misalignment.
     mergeSprite: 1 # Removes occasional vertical lines.
+    autoFlush: 1
+    mipmap: 0
 SLUS-21598:
   name: "Digimon World - Data Squad"
   region: "NTSC-U"
@@ -58951,7 +59057,7 @@ SLUS-21602:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes alignment of post processing.
+    halfPixelOffset: 2 # Fixes alignment of post-processing.
 SLUS-21603:
   name: "Soul Nomad & the World Eaters"
   region: "NTSC-U"
@@ -59046,7 +59152,7 @@ SLUS-21616:
     vuRoundMode: 0
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
     autoFlush: 1 # Fixes bloom positioning.
 SLUS-21617:
   name: "Spider-Man 3"
@@ -59382,6 +59488,9 @@ SLUS-21677:
   name: "The Golden Compass"
   region: "NTSC-U"
   compat: 5
+  gsHWFixes:
+    halfPixelOffset: 2 # Aligns post processing.
+    autoFlush: 1 # Fixes light penetrating objects and intensity.
 SLUS-21678:
   name: "Dragon Ball Z - Budokai Tenkaichi 3"
   region: "NTSC-U"
@@ -59393,7 +59502,7 @@ SLUS-21679:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLUS-21680:
   name: "Harvey Birdman - Attorney at Law"
   region: "NTSC-U"
@@ -59549,6 +59658,7 @@ SLUS-21712:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
+    halfPixelOffset: 2 # Fixes depth alignment.
     textureInsideRT: 1 # Fixes depth blur.
 SLUS-21713:
   name: "Winter Sports 2008 - The Ultimate Challenge"
@@ -59720,7 +59830,7 @@ SLUS-21740:
   gsHWFixes:
     textureInsideRT: 1 # Crowd textures.
     autoFlush: 1 # Fixes bloom intensity.
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLUS-21741:
   name: "Sea Monsters - A Prehistoric Adventure"
   region: "NTSC-U"
@@ -59948,7 +60058,7 @@ SLUS-21781:
   speedHacks:
     InstantVU1SpeedHack: 0 # Corrects note board position.
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLUS-21782:
   name: "Shin Megami Tensei - Persona 4"
   region: "NTSC-U"
@@ -60001,7 +60111,7 @@ SLUS-21793:
   region: "NTSC-U"
   compat: 3
   gsHWFixes:
-    halfPixelOffset: 2 # Fixes post processing position.
+    halfPixelOffset: 2 # Fixes post-processing position.
     gpuPaletteConversion: 2 # Improves performance and reduces hash cache size.
     autoFlush: 1 # Corrects shadows (Currently still broken even with this).
 SLUS-21794:
@@ -60285,9 +60395,9 @@ SLUS-21858:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    textureInsideRT: 1 # Needed for post processing effects.
+    textureInsideRT: 1 # Needed for post-processing effects.
     autoFlush: 1 # Fixes missing blur layer.
-    halfPixelOffset: 2 # Fixes offset post processing.
+    halfPixelOffset: 2 # Fixes offset post-processing.
 SLUS-21860:
   name: "The Bigs 2"
   region: "NTSC-U"
@@ -60320,7 +60430,7 @@ SLUS-21865:
     vuRoundMode: 0 # Fixes SPS and VU size spam.
     vu1RoundMode: 0
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLUS-21866:
   name: "Guitar Hero - Smash Hits"
   region: "NTSC-U"
@@ -60328,7 +60438,7 @@ SLUS-21866:
   roundModes:
     vu1RoundMode: 0 # Fixes VU size spam and potential graphical issues with GH3 engine.
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLUS-21867:
   name: "Guitar Hero - Van Halen"
   region: "NTSC-U"
@@ -60338,7 +60448,7 @@ SLUS-21867:
   gsHWFixes:
     preloadFrameData: 1 # Fixes icons.
     autoFlush: 1 # Fixes bloom intensity.
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLUS-21868:
   name: "Nobunaga's Ambition - Iron Triangle"
   region: "NTSC-U"
@@ -60426,7 +60536,7 @@ SLUS-21883:
   name: "Disney/Pixar Cars - Race-O-Rama"
   region: "NTSC-U"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
     autoFlush: 1 # Fixes sun penetrating walls and buildings.
   patches:
     E4278493:
@@ -60617,7 +60727,7 @@ SLUS-21924:
   gsHWFixes:
     preloadFrameData: 1 # Fixes icons.
     autoFlush: 1 # Fixes bloom intensity.
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLUS-21926:
   name: "Ni Hao, Kai-Lan - Super Game Day"
   region: "NTSC-U"
@@ -60625,6 +60735,8 @@ SLUS-21927:
   name: "Sakura Wars - So Long, My Love [English - Disc 1]"
   region: "NTSC-U"
   compat: 5
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes recrusive drawing to the top left.
 SLUS-21928:
   name: "Scooby-Doo! and the Spooky Swamp"
   region: "NTSC-U"
@@ -60641,6 +60753,8 @@ SLUS-21930:
   name: "Sakura Wars - So Long, My Love [Japanese - Disc 2]"
   region: "NTSC-U"
   compat: 5
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes recrusive drawing to the top left.
 SLUS-21931:
   name: "Disney/Pixar Toy Story 3"
   region: "NTSC-U"
@@ -60928,6 +61042,7 @@ SLUS-28054:
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     halfPixelOffset: 2
+    gpuPaletteConversion: 1
 SLUS-28056:
   name: "State of Emergency 2 [Trade Demo]"
   region: "NTSC-U"
@@ -61127,7 +61242,7 @@ SLUS-29048:
   name: "Tom Clancy's Splinter Cell [Demo]"
   region: "NTSC-U"
   gsHWFixes:
-    halfPixelOffset: 2 # Aligns post processing.
+    halfPixelOffset: 2 # Aligns post-processing.
 SLUS-29049:
   name: "Warhammer 40,000 - Fire Warrior [Demo]"
   region: "NTSC-U"
@@ -61250,10 +61365,11 @@ SLUS-29084:
   name: ".hack Quarantine Part 4 [Demo]"
   region: "NTSC-U"
 SLUS-29085:
-  name: "Champions of Norrath - Realms of EverQuest"
+  name: "Champions of Norrath - Realms of EverQuest [Public Beta Volume 1.0]"
   region: "NTSC-U"
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
 SLUS-29086:
   name: "FIFA Soccer 2004 [Demo]"
   region: "NTSC-U"
@@ -61277,6 +61393,7 @@ SLUS-29088:
     texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
+    gpuPaletteConversion: 1
 SLUS-29089:
   name: "Resident Evil Outbreak [Public Beta 1.0]"
   region: "NTSC-U"
@@ -61391,6 +61508,7 @@ SLUS-29126:
     textureInsideRT: 1
     halfPixelOffset: 2
     roundSprite: 1
+    gpuPaletteConversion: 1
 SLUS-29127:
   name: "FIFA Soccer 2005 [Demo]"
   region: "NTSC-U"
@@ -61581,7 +61699,7 @@ SLUS-29170:
   name: "Total Overdose - A Gunslinger's Tale in Mexico [Demo]"
   region: "NTSC-U"
   gsHWFixes:
-    halfPixelOffset: 2 # Mostly aligns post processing.
+    halfPixelOffset: 2 # Mostly aligns post-processing.
 SLUS-29171:
   name: "Final Fantasy XII [Demo]"
   region: "NTSC-U"
@@ -61623,7 +61741,7 @@ SLUS-29179:
   name: "Sonic Riders [Demo]"
   region: "NTSC-U"
   gsHWFixes:
-    halfPixelOffset: 2 # Fix post processing blur.
+    halfPixelOffset: 2 # Fix post-processing blur.
 SLUS-29180:
   name: "Black [Demo]"
   region: "NTSC-U"
@@ -61663,8 +61781,9 @@ SLUS-29191:
   clampModes:
     vuClampMode: 0 # Fixes bump mapping issues
   gsHWFixes:
-    textureInsideRT: 1 # Fixes post processing.
-    halfPixelOffset: 2 # Fixes alignment of shuffles and post processing in Hitman.
+    textureInsideRT: 1 # Fixes post-processing.
+    autoFlush: 1 # Fixes sun intensity in Hitman.
+    halfPixelOffset: 2 # Fixes alignment of shuffles and post-processing in Hitman.
 SLUS-29192:
   name: "Test Drive Unlimited [Public Beta Vol.1.0]"
   region: "NTSC-U"
