@@ -19191,6 +19191,8 @@ SLES-52676:
 SLES-52678:
   name: "Viewtiful Joe"
   region: "PAL-M5"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes post processing alignment.
 SLES-52680:
   name: "Intellivision Lives - The History of Video Gaming"
   region: "PAL-E"
@@ -21285,6 +21287,8 @@ SLES-53452:
 SLES-53457:
   name: "Evil Dead - Regeneration"
   region: "PAL-E"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes post processing alignment.
 SLES-53458:
   name: "Shin Megami Tensei - Digital Devil Saga"
   region: "PAL-E"
@@ -24300,20 +24304,30 @@ SLES-54448:
   name: "World Series of Poker - Tournament of Champions"
   region: "PAL-E"
 SLES-54449:
-  name: "Chicken Little - Ace in Action"
+  name: "Disney's Chicken Little - Ace in Action"
   region: "PAL-E"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes post processing alignment.
 SLES-54450:
-  name: "Chicken Little - Aventures Intergalactiques"
+  name: "Disney Chicken Little - Aventures Intergalactiques"
   region: "PAL-F"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes post processing alignment.
 SLES-54451:
-  name: "Himmel und Huhn - Ace in Action"
+  name: "Disneys Himmel und Huhn - Ace in Action"
   region: "PAL-G"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes post processing alignment.
 SLES-54452:
   name: "Disney Chicken Little - As en Acción"
   region: "PAL-S"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes post processing alignment.
 SLES-54453:
-  name: "Chicken Little - Asso Spaziale!"
+  name: "Disney Chicken Little - Asso Spaziale!"
   region: "PAL-I"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes post processing alignment.
 SLES-54454:
   name: "Disgaea 2 - Cursed Memories"
   region: "PAL-E"
@@ -25066,6 +25080,7 @@ SLES-54711:
   compat: 5
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts and reduces text box artifacts.
+    halfPixelOffset: 2
 SLES-54712:
   name: "Action Man A.T.O.M. - Alpha Teens on Machines"
   region: "PAL-PL"
@@ -29144,6 +29159,8 @@ SLKA-25219:
 SLKA-25220:
   name: "Viewtiful Joe - A New Hope"
   region: "NTSC-K"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes post processing alignment.
 SLKA-25221:
   name: "Busin 0 - Wizardry Alternative Neo"
   region: "NTSC-K"
@@ -29477,6 +29494,8 @@ SLKA-25305:
 SLKA-25306:
   name: "Evil Dead - Regeneration"
   region: "NTSC-K"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes post processing alignment.
 SLKA-25307:
   name: "Dragon Ball Z - Sparking!"
   region: "NTSC-K"
@@ -30073,8 +30092,10 @@ SLKA-25451:
   name: "WWE SmackDown! vs. Raw 2008"
   region: "NTSC-K"
 SLKA-25452:
-  name: "Viewtiful Joe - A New Hope"
+  name: "Viewtiful Joe - A New Hope [BigHit Series]"
   region: "NTSC-K"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes post processing alignment.
 SLKA-25453:
   name: "Shin Onimusha - Dawn of Dreams [Disc 1 of 2]"
   region: "NTSC-K"
@@ -31700,6 +31721,8 @@ SLPM-60263:
 SLPM-60264:
   name: "Shadow Hearts - From the New World [Trial]"
   region: "NTSC-J"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes shadow positioning.
 SLPM-60265:
   name: "Steamboy [Trial]"
   region: "NTSC-J"
@@ -37704,6 +37727,8 @@ SLPM-65699:
   name: "Viewtiful Joe - Aratanaru Kibo"
   region: "NTSC-J"
   compat: 5
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes post processing alignment.
 SLPM-65700:
   name: "Kengo 3"
   region: "NTSC-J"
@@ -39136,12 +39161,14 @@ SLPM-66070:
   region: "NTSC-J"
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts and reduces text box artifacts.
+    halfPixelOffset: 2
 SLPM-66071:
   name: "Shadow Hearts - From the New World"
   region: "NTSC-J"
   compat: 5
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts and reduces text box artifacts.
+    halfPixelOffset: 2
 SLPM-66072:
   name: "Fight Night Round 2"
   region: "NTSC-J"
@@ -55215,6 +55242,8 @@ SLUS-20951:
   name: "Viewtiful Joe"
   region: "NTSC-U"
   compat: 5
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes post processing alignment.
 SLUS-20952:
   name: "Tak 2 - The Staff of Dreams"
   region: "NTSC-U"
@@ -55840,6 +55869,8 @@ SLUS-21048:
   name: "Evil Dead - Regeneration"
   region: "NTSC-U"
   compat: 5
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes post processing alignment.
 SLUS-21049:
   name: "Outlaw Volleyball Remixed"
   region: "NTSC-U"
@@ -57541,6 +57572,7 @@ SLUS-21326:
   compat: 5
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts and reduces text box artifacts.
+    halfPixelOffset: 2
 SLUS-21327:
   name: "Atelier Iris 2 - The Azoth of Destiny"
   region: "NTSC-U"
@@ -58185,6 +58217,8 @@ SLUS-21419:
 SLUS-21420:
   name: "Disney's Chicken Little - Ace in Action"
   region: "NTSC-U"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes post processing alignment.
 SLUS-21421:
   name: "Spy Hunter - Nowhere to Run"
   region: "NTSC-U"
