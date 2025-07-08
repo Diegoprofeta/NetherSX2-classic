@@ -2356,10 +2356,10 @@ SCED-50642:
   name: "Final Fantasy X [Demo] [Final Fantasy VI PS1 - Bonus Disc]"
   region: "PAL-E"
   clampModes:
-    eeClampMode: 3 # Fixes animations.
-    vu0ClampMode: 2 # Fixes SPS.
+    eeClampMode: 3 # Fixes reverse controls as well as bosses and characters facing the wrong way during certain battles.
+    vu0ClampMode: 2 # Fixes Yojimbo's flickering cloak issue caused by EE Full Clamping.
   roundModes:
-    eeRoundMode: 2 # Fixes reverse control and boss in some places.
+    eeRoundMode: 2 # Fixes cutscene animations while slightly dislocating a few select meshes. Setting round mode to Chop/Zero or Nearest fixes the issues with meshes at the cost of breaking important cutscenes.
   gameFixes:
     - SoftwareRendererFMVHack # Fixes interlacing.
   gsHWFixes:
@@ -2480,16 +2480,6 @@ SCED-50844:
 SCED-50907:
   name: "Final Fantasy X [Bonus Disc - Beyond Final Fantasy]"
   region: "PAL-Unk"
-  clampModes:
-    eeClampMode: 3 # Fixes animations.
-    vu0ClampMode: 2 # Fixes SPS.
-  roundModes:
-    eeRoundMode: 2 # Fixes reverse control and boss in some places.
-  gameFixes:
-    - SoftwareRendererFMVHack # Fixes interlacing.
-  gsHWFixes:
-    roundSprite: 2 # Fixes font artifacts.
-    autoFlush: 1 # Fixes blur effect on attacks.
 SCED-50916:
   name: "Ratchet & Clank [Demo]"
   region: "PAL-M5"
@@ -4169,10 +4159,10 @@ SCES-50490:
   region: "PAL-E"
   compat: 5
   clampModes:
-    eeClampMode: 3 # Fixes animations.
-    vu0ClampMode: 2 # Fixes SPS.
+    eeClampMode: 3 # Fixes reverse controls as well as bosses and characters facing the wrong way during certain battles.
+    vu0ClampMode: 2 # Fixes Yojimbo's flickering cloak issue caused by EE Full Clamping.
   roundModes:
-    eeRoundMode: 2 # Fixes reverse control and boss in some places.
+    eeRoundMode: 2 # Fixes cutscene animations while slightly dislocating a few select meshes. Setting round mode to Chop/Zero or Nearest fixes the issues with meshes at the cost of breaking important cutscenes.
   gameFixes:
     - SoftwareRendererFMVHack # Fixes interlacing.
   gsHWFixes:
@@ -4182,10 +4172,10 @@ SCES-50491:
   name: "Final Fantasy X"
   region: "PAL-F"
   clampModes:
-    eeClampMode: 3 # Fixes animations.
-    vu0ClampMode: 2 # Fixes SPS.
+    eeClampMode: 3 # Fixes reverse controls as well as bosses and characters facing the wrong way during certain battles.
+    vu0ClampMode: 2 # Fixes Yojimbo's flickering cloak issue caused by EE Full Clamping.
   roundModes:
-    eeRoundMode: 2 # Fixes reverse control and boss in some places.
+    eeRoundMode: 2 # Fixes cutscene animations while slightly dislocating a few select meshes. Setting round mode to Chop/Zero or Nearest fixes the issues with meshes at the cost of breaking important cutscenes.
   gameFixes:
     - SoftwareRendererFMVHack # Fixes interlacing.
   gsHWFixes:
@@ -4196,10 +4186,10 @@ SCES-50492:
   region: "PAL-G"
   compat: 5
   clampModes:
-    eeClampMode: 3 # Fixes animations.
-    vu0ClampMode: 2 # Fixes SPS.
+    eeClampMode: 3 # Fixes reverse controls as well as bosses and characters facing the wrong way during certain battles.
+    vu0ClampMode: 2 # Fixes Yojimbo's flickering cloak issue caused by EE Full Clamping.
   roundModes:
-    eeRoundMode: 2 # Fixes reverse control and boss in some places.
+    eeRoundMode: 2 # Fixes cutscene animations while slightly dislocating a few select meshes. Setting round mode to Chop/Zero or Nearest fixes the issues with meshes at the cost of breaking important cutscenes.
   gameFixes:
     - SoftwareRendererFMVHack # Fixes interlacing.
   gsHWFixes:
@@ -4209,10 +4199,10 @@ SCES-50493:
   name: "Final Fantasy X"
   region: "PAL-I"
   clampModes:
-    eeClampMode: 3 # Fixes animations.
-    vu0ClampMode: 2 # Fixes SPS.
+    eeClampMode: 3 # Fixes reverse controls as well as bosses and characters facing the wrong way during certain battles.
+    vu0ClampMode: 2 # Fixes Yojimbo's flickering cloak issue caused by EE Full Clamping.
   roundModes:
-    eeRoundMode: 2 # Fixes reverse control and boss in some places.
+    eeRoundMode: 2 # Fixes cutscene animations while slightly dislocating a few select meshes. Setting round mode to Chop/Zero or Nearest fixes the issues with meshes at the cost of breaking important cutscenes.
   gameFixes:
     - SoftwareRendererFMVHack # Fixes interlacing.
   gsHWFixes:
@@ -4222,10 +4212,10 @@ SCES-50494:
   name: "Final Fantasy X"
   region: "PAL-S"
   clampModes:
-    eeClampMode: 3 # Fixes animations.
-    vu0ClampMode: 2 # Fixes SPS.
+    eeClampMode: 3 # Fixes reverse controls as well as bosses and characters facing the wrong way during certain battles.
+    vu0ClampMode: 2 # Fixes Yojimbo's flickering cloak issue caused by EE Full Clamping.
   roundModes:
-    eeRoundMode: 2 # Fixes reverse control and boss in some places.
+    eeRoundMode: 2 # Fixes cutscene animations while slightly dislocating a few select meshes. Setting round mode to Chop/Zero or Nearest fixes the issues with meshes at the cost of breaking important cutscenes.
   gameFixes:
     - SoftwareRendererFMVHack # Fixes interlacing.
   gsHWFixes:
@@ -13210,6 +13200,7 @@ SLES-50479:
   region: "PAL-M4"
   compat: 5
   gsHWFixes:
+    halfPixelOffset: 2 # Fixes depth/fog lines.
     textureInsideRT: 1 # Fixes underwater levels.
 SLES-50480:
   name: "Aggressive Inline"
@@ -14656,6 +14647,7 @@ SLES-51124:
   region: "PAL-G"
   compat: 5
   gsHWFixes:
+    halfPixelOffset: 2 # Fixes depth/fog lines.
     textureInsideRT: 1 # Fixes underwater levels.
 SLES-51125:
   name: "Sega Soccer Slam"
@@ -18219,7 +18211,7 @@ SLES-52636:
   region: "PAL-M5"
   compat: 5
   gameFixes:
-    - VUSyncHack # Fixes in-game timer.
+    - FullVU0SyncHack # Fixes in-game timer.
   gsHWFixes:
     halfPixelOffset: 1 # Fixes 4 split lines in stage intros.
     autoFlush: 1 # Fixes incorrect colors.
@@ -28079,9 +28071,10 @@ SLKA-25214:
   name: "Final Fantasy X - International [PlayStation 2 - Big Hit Series]"
   region: "NTSC-K"
   clampModes:
-    eeClampMode: 3 # Fixes animations.
+    eeClampMode: 3 # Fixes reverse controls as well as bosses and characters facing the wrong way during certain battles.
+    vu0ClampMode: 2 # Fixes Yojimbo's flickering cloak issue caused by EE Full Clamping.
   roundModes:
-    eeRoundMode: 2 # Fixes reverse control and boss in some places.
+    eeRoundMode: 2 # Fixes cutscene animations while slightly dislocating a few select meshes. Setting round mode to Chop/Zero or Nearest fixes the issues with meshes at the cost of breaking important cutscenes.
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
@@ -34327,9 +34320,10 @@ SLPM-65115:
   name: "Final Fantasy X International"
   region: "NTSC-J"
   clampModes:
-    eeClampMode: 3 # Fixes animations.
+    eeClampMode: 3 # Fixes reverse controls as well as bosses and characters facing the wrong way during certain battles.
+    vu0ClampMode: 2 # Fixes Yojimbo's flickering cloak issue caused by EE Full Clamping.
   roundModes:
-    eeRoundMode: 2 # Fixes reverse control and boss in some places.
+    eeRoundMode: 2 # Fixes cutscene animations while slightly dislocating a few select meshes. Setting round mode to Chop/Zero or Nearest fixes the issues with meshes at the cost of breaking important cutscenes.
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
@@ -38196,10 +38190,10 @@ SLPM-66124:
   name: "Final Fantasy X [Ultimate Hits]"
   region: "NTSC-J"
   clampModes:
-    eeClampMode: 3 # Fixes animations.
-    vu0ClampMode: 2 # Fixes SPS.
+    eeClampMode: 3 # Fixes reverse controls as well as bosses and characters facing the wrong way during certain battles.
+    vu0ClampMode: 2 # Fixes Yojimbo's flickering cloak issue caused by EE Full Clamping.
   roundModes:
-    eeRoundMode: 2 # Fixes reverse control and boss in some places.
+    eeRoundMode: 2 # Fixes cutscene animations while slightly dislocating a few select meshes. Setting round mode to Chop/Zero or Nearest fixes the issues with meshes at the cost of breaking important cutscenes.
   gameFixes:
     - SoftwareRendererFMVHack # Fixes interlacing.
   gsHWFixes:
@@ -40547,9 +40541,10 @@ SLPM-66677:
   name: "Final Fantasy X - International [Ultimate Hits]"
   region: "NTSC-J"
   clampModes:
-    eeClampMode: 3 # Fixes animations.
+    eeClampMode: 3 # Fixes reverse controls as well as bosses and characters facing the wrong way during certain battles.
+    vu0ClampMode: 2 # Fixes Yojimbo's flickering cloak issue caused by EE Full Clamping.
   roundModes:
-    eeRoundMode: 2 # Fixes reverse control and boss in some places.
+    eeRoundMode: 2 # Fixes cutscene animations while slightly dislocating a few select meshes. Setting round mode to Chop/Zero or Nearest fixes the issues with meshes at the cost of breaking important cutscenes.
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
@@ -41889,9 +41884,10 @@ SLPM-67513:
   name: "Final Fantasy X International"
   region: "NTSC-K"
   clampModes:
-    eeClampMode: 3 # Fixes animations.
+    eeClampMode: 3 # Fixes reverse controls as well as bosses and characters facing the wrong way during certain battles.
+    vu0ClampMode: 2 # Fixes Yojimbo's flickering cloak issue caused by EE Full Clamping.
   roundModes:
-    eeRoundMode: 2 # Fixes reverse control and boss in some places.
+    eeRoundMode: 2 # Fixes cutscene animations while slightly dislocating a few select meshes. Setting round mode to Chop/Zero or Nearest fixes the issues with meshes at the cost of breaking important cutscenes.
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
@@ -43322,7 +43318,7 @@ SLPS-20195:
   name: "WORLD FANTASISTA"
   region: "NTSC-J"
   gameFixes:
-    - VUSyncHack # Fixes SPS.
+    - FullVU0SyncHack # Fixes SPS.
 SLPS-20196:
   name: "Akagawa Jirou - Tsuki no Hikari - Shizumeru Kane no Satsujin"
   region: "NTSC-J"
@@ -44559,10 +44555,10 @@ SLPS-25050:
   region: "NTSC-J"
   compat: 5
   clampModes:
-    eeClampMode: 3 # Fixes animations.
-    vu0ClampMode: 2 # Fixes SPS.
+    eeClampMode: 3 # Fixes reverse controls as well as bosses and characters facing the wrong way during certain battles.
+    vu0ClampMode: 2 # Fixes Yojimbo's flickering cloak issue caused by EE Full Clamping.
   roundModes:
-    eeRoundMode: 2 # Fixes reverse control and boss in some places.
+    eeRoundMode: 2 # Fixes cutscene animations while slightly dislocating a few select meshes. Setting round mode to Chop/Zero or Nearest fixes the issues with meshes at the cost of breaking important cutscenes.
   gameFixes:
     - SoftwareRendererFMVHack # Fixes interlacing.
   gsHWFixes:
@@ -44716,9 +44712,10 @@ SLPS-25088:
   region: "NTSC-J"
   compat: 5
   clampModes:
-    eeClampMode: 3 # Fixes animations.
+    eeClampMode: 3 # Fixes reverse controls as well as bosses and characters facing the wrong way during certain battles.
+    vu0ClampMode: 2 # Fixes Yojimbo's flickering cloak issue caused by EE Full Clamping.
   roundModes:
-    eeRoundMode: 2 # Fixes reverse control and boss in some places.
+    eeRoundMode: 2 # Fixes cutscene animations while slightly dislocating a few select meshes. Setting round mode to Chop/Zero or Nearest fixes the issues with meshes at the cost of breaking important cutscenes.
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
@@ -44766,7 +44763,7 @@ SLPS-25101:
   name: "Nichibeikan Pro Yakyuu - Final League"
   region: "NTSC-J"
   gameFixes:
-    - VUSyncHack # Fixes SPS.
+    - FullVU0SyncHack # Fixes SPS.
 SLPS-25102:
   name: "PROJECT ARMS"
   region: "NTSC-J"
@@ -48335,10 +48332,10 @@ SLPS-72501:
   name: "Final Fantasy X [MEGA HITS!]"
   region: "NTSC-J"
   clampModes:
-    eeClampMode: 3 # Fixes animations.
-    vu0ClampMode: 2 # Fixes SPS.
+    eeClampMode: 3 # Fixes reverse controls as well as bosses and characters facing the wrong way during certain battles.
+    vu0ClampMode: 2 # Fixes Yojimbo's flickering cloak issue caused by EE Full Clamping.
   roundModes:
-    eeRoundMode: 2 # Fixes reverse control and boss in some places.
+    eeRoundMode: 2 # Fixes cutscene animations while slightly dislocating a few select meshes. Setting round mode to Chop/Zero or Nearest fixes the issues with meshes at the cost of breaking important cutscenes.
   gameFixes:
     - SoftwareRendererFMVHack # Fixes interlacing.
   gsHWFixes:
@@ -50260,10 +50257,10 @@ SLUS-20312:
   region: "NTSC-U"
   compat: 5
   clampModes:
-    eeClampMode: 3 # Fixes animations.
-    vu0ClampMode: 2 # Fixes SPS.
+    eeClampMode: 3 # Fixes reverse controls as well as bosses and characters facing the wrong way during certain battles.
+    vu0ClampMode: 2 # Fixes Yojimbo's flickering cloak issue caused by EE Full Clamping.
   roundModes:
-    eeRoundMode: 2 # Fixes reverse control and boss in some places.
+    eeRoundMode: 2 # Fixes cutscene animations while slightly dislocating a few select meshes. Setting round mode to Chop/Zero or Nearest fixes the issues with meshes at the cost of breaking important cutscenes.
   gameFixes:
     - SoftwareRendererFMVHack # Fixes interlacing.
   gsHWFixes:
@@ -50370,6 +50367,7 @@ SLUS-20333:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
+    halfPixelOffset: 2 # Fixes depth/fog lines.
     textureInsideRT: 1 # Fixes underwater levels.
 SLUS-20334:
   name: "Kelly Slater's Pro Surfer"
