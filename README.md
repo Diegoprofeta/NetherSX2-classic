@@ -1,6 +1,5 @@
 <p align="center">
-  <img width="312" height="312" src="/.github/assets/logo_light.png#gh-dark-mode-only">
-  <img width="312" height="312" src="/.github/assets/logo_dark.png#gh-light-mode-only">
+  <img width="312" height="312" src="/.github/assets/logo_light.png">
 </p>
 
 # NetherSX2-classic
@@ -28,12 +27,21 @@ The rest comes prepackaged for your convenience
 
 And there you go, you should now have an updated and bug fixed copy of NetherSX2-classic on your phone!
 
+## Installing NetherSX2
+One you've used one of the above methods to create your NetherSX2 apk, it's time to install it on your phone
+
+1. Backup your files. The easiest method is to use the AetherSX2's built in Transfer Data function by using it's Export feature to move your files to an external folder. This will backup your bios files, memcards, save states, game settings, covers and texture packs
+2. After backing up your files, you need to remove any previous copies of AetherSX2 or NetherSX2. Do this by Uninstalling the app normally. Be sure NOT to keep any files if prompted
+3. With the Backup and Uninstalls done, all that remains is to navigate to where you put your NetherSX2 apk with your File Manager (named Files or File Manager depending on your phone) and tapping it to install it to your phone
+4. Once installed, run the app and configure it normally. Once at the Game List screen, you can access the Transfer Data/Backup Data feature and Import the files you exported earlier by navigating to the folder you put all your backed up files. This should import your bios files, memcards, save states, game settings, covers and texture packs
+5. Now spend some time redoing the Global App Settings and you should be ready to go
+
 ## Downloads
-### Stable Build: 
-* [NetherSX2-classic.zip](https://github.com/Trixarian/NetherSX2-classic/releases/download/1.0/NetherSX2-classic.zip) - Copy of these scripts. See above on how to use them
-* [nethersx2-classic.xdelta](https://github.com/Trixarian/NetherSX2-classic/releases/download/1.0/nethersx2-classic.xdelta) - The xdelta patch that can be applied to an AetherSX2 3668 apk with any patching program that supports the format and comes with all the changes pre-applied. This allows the creation of NetherSX2-classic on systems other than Windows, including Android when using the UniPatcher application
-### Dev Build:
-* [NetherSX2-Classic v2.0a](https://github.com/Trixarian/NetherSX2-classic/releases/download/2.0a/15210-v2.0-3668-signed.apk) - Developmental version released as an apk to see if anybody will try to enforce the license a year after AetherSX2 was delisted
+### Stable
+* [NetherSX2-v2.0-3668.apk](https://github.com/Trixarian/NetherSX2-classic/releases/download/2.0/NetherSX2-v2.0-3668.apk)
+
+### Development Builds
+* [NetherSX2-v2.0.3-3668.apk](https://github.com/Trixarian/test-builds/releases/download/v2.0.3/NetherSX2-v2.0.3-3668.apk)
 
 ## Credits
 * PCSX2: <https://github.com/PCSX2/pcsx2> 
