@@ -121,6 +121,7 @@ PAPX-90020:
     - SoftwareRendererFMVHack # Fixes hash cache disabling itself.
   gsHWFixes:
     autoFlush: 1 # Fixes light bloom intensity.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns post effects.
 PAPX-90201:
   name: "Fantavision [Trial]"
@@ -1224,6 +1225,7 @@ SCAJ-20072:
     - SoftwareRendererFMVHack # Fixes hash cache disabling itself.
   gsHWFixes:
     autoFlush: 1 # Fixes light bloom intensity.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns post effects.
     textureInsideRT: 1 # Fixes post shuffles.
 SCAJ-20073:
@@ -6391,6 +6393,7 @@ SCKA-20027:
     - SoftwareRendererFMVHack # Fixes hash cache disabling itself.
   gsHWFixes:
     autoFlush: 1 # Fixes light bloom intensity.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns post effects.
     textureInsideRT: 1 # Fixes post shuffles.
 SCKA-20028:
@@ -7673,6 +7676,7 @@ SCPS-15064:
     - SoftwareRendererFMVHack # Fixes hash cache disabling itself.
   gsHWFixes:
     autoFlush: 1 # Fixes light bloom intensity.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns post effects.
   patches:
     A5768F53:
@@ -11907,6 +11911,7 @@ SLED-53723:
   region: "PAL-E"
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
     textureInsideRT: 1 # Fixes post-processing effects.
 SLED-53731:
@@ -12832,6 +12837,8 @@ SLES-50282:
   name: "Age of Empires II - The Age of Kings"
   region: "PAL-M5"
   compat: 5
+  gsHWFixes:
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size when moving.
 SLES-50283:
   name: "WTA Tour Tennis"
   region: "PAL-M3"
@@ -13551,6 +13558,7 @@ SLES-50672:
   gsHWFixes:
     roundSprite: 1 # Fixes lines in menus.
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
 SLES-50677:
   name: "Shadow Hearts"
@@ -15623,6 +15631,7 @@ SLES-51525:
   region: "PAL-M3"
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
     roundSprite: 1 # Fixes HUD garbage.
 SLES-51526:
@@ -15630,6 +15639,7 @@ SLES-51526:
   region: "PAL-M3"
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
     roundSprite: 1 # Fixes HUD garbage.
 SLES-51547:
@@ -17105,6 +17115,7 @@ SLES-52187:
   compat: 5
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
     roundSprite: 1 # Fixes lines in sprites but still some lines left.
 SLES-52188:
@@ -17113,6 +17124,7 @@ SLES-52188:
   compat: 5
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
     roundSprite: 1 # Fixes lines in sprites but still some lines left.
 SLES-52190:
@@ -17416,6 +17428,7 @@ SLES-52325:
     - BlitInternalFPSHack # Fixes internal fps detection in some areas.
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
     roundSprite: 1 # Fixes lines in menus HUD and in game.
     halfPixelOffset: 2 # Fixes edge garbage.
@@ -17516,6 +17529,7 @@ SLES-52373:
     - BlitInternalFPSHack # Fixes internal fps detection in some areas.
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
     roundSprite: 1 # Fixes lines in menus HUD and in game.
     halfPixelOffset: 2 # Fixes edge garbage.
@@ -17581,6 +17595,8 @@ SLES-52388:
 SLES-52392:
   name: "Combat Elite - WWII Paratroopers [Preview]"
   region: "PAL-E"
+  gsHWFixes:
+    disablePartialInvalidation: 1 # Improves performance.
 SLES-52393:
   name: "Pinball Fun"
   region: "PAL-E"
@@ -18937,6 +18953,7 @@ SLES-52894:
   region: "PAL-E"
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
 SLES-52895:
   name: "Nickelodeon The SpongeBob SquarePants Movie"
@@ -19319,6 +19336,7 @@ SLES-53020:
     - SoftwareRendererFMVHack # Fixes hash cache disabling itself.
   gsHWFixes:
     autoFlush: 1 # Fixes light bloom intensity.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns post effects.
     textureInsideRT: 1 # Fixes post shuffles.
   patches:
@@ -19456,6 +19474,7 @@ SLES-53039:
   compat: 5
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
     roundSprite: 1 # Fixes lines in menus HUD and in game.
     halfPixelOffset: 2 # Fixes erroneous line in menus.
@@ -19784,6 +19803,7 @@ SLES-53154:
   region: "PAL-M8"
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
 SLES-53155:
   name: "Star Wars - Episode III - Revenge of the Sith"
@@ -21309,6 +21329,7 @@ SLES-53703:
   compat: 5
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
     textureInsideRT: 1 # Fixes post-processing effects.
 SLES-53704:
@@ -21316,6 +21337,7 @@ SLES-53704:
   region: "PAL-R"
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
     textureInsideRT: 1 # Fixes post-processing effects.
 SLES-53705:
@@ -21323,6 +21345,7 @@ SLES-53705:
   region: "PAL-PL-E"
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
     textureInsideRT: 1 # Fixes post-processing effects.
 SLES-53706:
@@ -21638,6 +21661,7 @@ SLES-53804:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth alignment.
     textureInsideRT: 1 # Fixes depth blur.
+    disablePartialInvalidation: 1 # Massively improves performance in certain situations.
 SLES-53805:
   name: "Cocoto Funfair"
   region: "PAL-M5"
@@ -21889,6 +21913,7 @@ SLES-53904:
     vuClampMode: 0 # Fixes black artifacts on tracks
   gsHWFixes:
     halfPixelOffset: 2 # Fixes post-processing position.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 2 # Improves performance and reduces hash cache size.
     autoFlush: 1 # Corrects shadows (Currently still broken even with this).
 SLES-53906:
@@ -23311,6 +23336,7 @@ SLES-54423:
     vuClampMode: 2 # Fixes ingame SPS for the capes.
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
 SLES-54424:
   name: "Dr. Dolittle"
@@ -28210,6 +28236,7 @@ SLKA-25246:
   region: "NTSC-K"
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
 SLKA-25247:
   name: "Prince of Persia - Warrior Within"
@@ -28586,6 +28613,7 @@ SLKA-25337:
   region: "NTSC-K"
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
     textureInsideRT: 1 # Fixes post-processing effects.
 SLKA-25338:
@@ -31484,6 +31512,8 @@ SLPM-62075:
 SLPM-62076:
   name: "Age of Empires II - The Age of Kings"
   region: "NTSC-J"
+  gsHWFixes:
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size when moving.
 SLPM-62077:
   name: "Maestro Music 2, The"
   region: "NTSC-J"
@@ -37094,6 +37124,7 @@ SLPM-65845:
   compat: 5
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
     roundSprite: 1 # Fixes lines in sprites but still some lines left.
 SLPM-65846:
@@ -37346,6 +37377,7 @@ SLPM-65915:
   region: "NTSC-J"
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
     roundSprite: 1 # Fixes HUD garbage.
 SLPM-65916:
@@ -38558,6 +38590,7 @@ SLPM-66211:
   region: "NTSC-J"
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
     textureInsideRT: 1 # Fixes post-processing effects.
 SLPM-66212:
@@ -44770,9 +44803,13 @@ SLPS-25102:
 SLPS-25103:
   name: "Super Robot Taisen Impact [Limited Edition]"
   region: "NTSC-J"
+  gsHWFixes:
+    disablePartialInvalidation: 1 # Reduces hash cache size.
 SLPS-25104:
   name: "Super Robot Taisen Impact"
   region: "NTSC-J"
+  gsHWFixes:
+    disablePartialInvalidation: 1 # Reduces hash cache size.
 SLPS-25105:
   name: "Kingdom Hearts"
   region: "NTSC-J"
@@ -44900,6 +44937,7 @@ SLPS-25139:
   gsHWFixes:
     roundSprite: 1 # Fixes lines in menus.
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
 SLPS-25140:
   name: "Baldur's Gate - Dark Alliance [Standard Edition]"
@@ -44907,6 +44945,7 @@ SLPS-25140:
   gsHWFixes:
     roundSprite: 1 # Fixes lines in menus.
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
 SLPS-25141:
   name: "Pac-Man World 2"
@@ -45486,6 +45525,7 @@ SLPS-25291:
   gsHWFixes:
     roundSprite: 1 # Fixes lines in menus.
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
 SLPS-25292:
   name: "D-A - Black [Standard Edition]"
@@ -48923,6 +48963,8 @@ SLPS-73415:
 SLPS-73416:
   name: "Super Robot Wars - Impact [PlayStation2 the Best]"
   region: "NTSC-J"
+  gsHWFixes:
+    disablePartialInvalidation: 1 # Reduces hash cache size.
 SLPS-73417:
   name: "Armored Core 3 [PlayStation2 the Best]"
   region: "NTSC-J"
@@ -49120,6 +49162,7 @@ SLUS-20035:
   gsHWFixes:
     roundSprite: 1 # Fixes lines in menus.
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
 SLUS-20037:
   name: "Run Like Hell - Hunt or Be Hunted"
@@ -51403,6 +51446,7 @@ SLUS-20539:
   compat: 5
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
     roundSprite: 1 # Fixes HUD garbage.
 SLUS-20540:
@@ -51550,6 +51594,7 @@ SLUS-20565:
     - BlitInternalFPSHack # Fixes internal fps detection in some areas.
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
 SLUS-20566:
   name: "Buffy the Vampire Slayer - Chaos Bleeds"
@@ -52114,6 +52159,7 @@ SLUS-20675:
     - SoftwareRendererFMVHack # Fixes FMVs.
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
     roundSprite: 1 # Fixes lines in sprites but still some lines left.
 SLUS-20676:
@@ -52303,6 +52349,7 @@ SLUS-20715:
   region: "NTSC-U"
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
     halfPixelOffset: 2 # Fixes effect alignment.
 SLUS-20716:
@@ -52781,6 +52828,7 @@ SLUS-20803:
   compat: 5
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
 SLUS-20804:
   name: "Forgotten Realms - Demon Stone"
@@ -53711,6 +53759,7 @@ SLUS-20973:
   compat: 5
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
     roundSprite: 1 # Fixes lines in menus HUD and in game.
     halfPixelOffset: 2 # Fixes erroneous line in menus.
@@ -53902,6 +53951,7 @@ SLUS-21006:
     - SoftwareRendererFMVHack # Fixes hash cache disabling itself.
   gsHWFixes:
     autoFlush: 1 # Fixes light bloom intensity.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns post effects.
     textureInsideRT: 1 # Fixes post shuffles.
   patches:
@@ -54399,6 +54449,7 @@ SLUS-21095:
   compat: 5
   gsHWFixes:
     halfPixelOffset: 2 # Fixes post-processing position.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 2 # Improves performance and reduces hash cache size.
     autoFlush: 1 # Corrects shadows (Currently still broken even with this).
 SLUS-21096:
@@ -55614,6 +55665,7 @@ SLUS-21289:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth alignment.
     textureInsideRT: 1 # Fixes depth blur.
+    disablePartialInvalidation: 1 # Massively improves performance in certain situations.
 SLUS-21290:
   name: "Ford Street Racing"
   region: "NTSC-U"
@@ -55697,6 +55749,7 @@ SLUS-21304:
     vuClampMode: 2 # Ingame capes become SPS mess with lower than extra VU clamp.
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
 SLUS-21305:
   name: "Arthur and the Invisibles - The Game"
@@ -55739,6 +55792,7 @@ SLUS-21311:
   compat: 5
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
     textureInsideRT: 1 # Fixes post-processing effects.
 SLUS-21312:
@@ -58341,6 +58395,7 @@ SLUS-21793:
   compat: 3
   gsHWFixes:
     halfPixelOffset: 2 # Fixes post-processing position.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 2 # Improves performance and reduces hash cache size.
     autoFlush: 1 # Corrects shadows (Currently still broken even with this).
 SLUS-21794:
@@ -59252,6 +59307,7 @@ SLUS-28054:
   region: "NTSC-U"
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
     halfPixelOffset: 2 # Fixes effect alignment.
 SLUS-28056:
@@ -59567,6 +59623,7 @@ SLUS-29085:
   region: "NTSC-U"
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
 SLUS-29086:
   name: "FIFA Soccer 2004 [Demo]"
@@ -59589,6 +59646,7 @@ SLUS-29088:
     - BlitInternalFPSHack # Fixes internal fps detection in some areas.
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
 SLUS-29089:
   name: "Resident Evil Outbreak [Public Beta 1.0]"
@@ -59684,6 +59742,7 @@ SLUS-29123:
     - SoftwareRendererFMVHack # Fixes hash cache disabling itself.
   gsHWFixes:
     autoFlush: 1 # Fixes light bloom intensity.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns post effects.
     textureInsideRT: 1 # Fixes post shuffles.
 SLUS-29124:
@@ -59698,6 +59757,7 @@ SLUS-29126:
   compat: 4
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
     roundSprite: 1 # Fixes lines in menus HUD and in game.
     halfPixelOffset: 2 # Fixes erroneous line in menus.

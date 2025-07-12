@@ -122,6 +122,7 @@ PAPX-90020:
     - SoftwareRendererFMVHack # Fixes hash cache disabling itself.
   gsHWFixes:
     autoFlush: 1 # Fixes light bloom intensity.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns post effects.
 PAPX-90201:
   name: "Fantavision [Trial]"
@@ -1266,6 +1267,7 @@ SCAJ-20072:
   gsHWFixes:
     halfPixelOffset: 1 # Fixes texture and lighting misalignment.
     mergeSprite: 1 # Fixes most vertical lines and lighting misalignment.
+    disablePartialInvalidation: 1
     textureInsideRT: 1
 SCAJ-20073:
   name: "Jak and Daxter II"
@@ -4931,7 +4933,6 @@ SCES-51904:
   gameFixes:
     - EETimingHack # Get rids of DMA8/9 non-fatal errors.
     - VIF1StallHack # Fixes broken HUD.
-    - InstantDMAHack
 SCES-51910:
   name: "Arc - Twilight of the Spirits"
   region: "PAL-M5"
@@ -5034,7 +5035,6 @@ SCES-52306:
   gameFixes:
     - EETimingHack # Get rids of DMA8/9 non-fatal errors.
     - VIF1StallHack # Fixes broken HUD.
-    - InstantDMAHack
 SCES-52327:
   name: "Forbidden Siren"
   region: "PAL-F"
@@ -6571,7 +6571,6 @@ SCKA-20020:
   gameFixes:
     - EETimingHack # Get rids of DMA8/9 non-fatal errors.
     - VIF1StallHack # Fixes broken HUD.
-    - InstantDMAHack
 SCKA-20022:
   name: "Gran Turismo 4 Prologue"
   region: "NTSC-K"
@@ -6613,6 +6612,7 @@ SCKA-20027:
   gsHWFixes:
     halfPixelOffset: 1 # Fixes texture and lighting misalignment.
     mergeSprite: 1 # Fixes most vertical lines and lighting misalignment.
+    disablePartialInvalidation: 1
     textureInsideRT: 1
 SCKA-20028:
   name: "Ico [PlayStation 2 Big Hit Series]"
@@ -6815,7 +6815,6 @@ SCKA-20053:
   gameFixes:
     - EETimingHack # Get rids of DMA8/9 non-fatal errors.
     - VIF1StallHack # Fixes broken HUD.
-    - InstantDMAHack
 SCKA-20054:
   name: "Tales of Destiny 2 [PlayStation 2 Big Hit Series]"
   region: "NTSC-K"
@@ -7078,7 +7077,6 @@ SCKA-20092:
   region: "NTSC-K"
   gameFixes:
     - XGKickHack # Fixes grey fighters problem.
-    - InstantDMAHack
   speedHacks:
     InstantVU1SpeedHack: 0 # Fixes random black frames from happening when in a fight session.
     MTVUSpeedHack: 0
@@ -7960,6 +7958,7 @@ SCPS-15064:
     - SoftwareRendererFMVHack # Fixes hash cache disabling itself.
   gsHWFixes:
     autoFlush: 1 # Fixes light bloom intensity.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns post effects.
   patches:
     A5768F53:
@@ -8006,7 +8005,6 @@ SCPS-15065:
   gameFixes:
     - EETimingHack # Get rids of DMA8/9 non-fatal errors.
     - VIF1StallHack # Fixes broken HUD.
-    - InstantDMAHack
 SCPS-15066:
   name: "Prince of Persia - The Sands of Time"
   region: "NTSC-J"
@@ -10116,7 +10114,6 @@ SCUS-97275:
   gameFixes:
     - EETimingHack # Get rids of DMA8/9 non-fatal errors.
     - VIF1StallHack # Fixes broken HUD.
-    - InstantDMAHack
 SCUS-97276:
   name: "NFL GameDay 2004"
   region: "NTSC-U"
@@ -10337,7 +10334,6 @@ SCUS-97366:
   gameFixes:
     - EETimingHack # Get rids of DMA8/9 non-fatal errors.
     - VIF1StallHack # Fixes broken HUD.
-    - InstantDMAHack
 SCUS-97367:
   name: "Neopets - The Darkest Faerie"
   region: "NTSC-U"
@@ -10353,7 +10349,6 @@ SCUS-97368:
   gameFixes:
     - EETimingHack # Get rids of DMA8/9 non-fatal errors.
     - VIF1StallHack # Fixes broken HUD.
-    - InstantDMAHack
 SCUS-97369:
   name: "ATV Offroad Fury 2"
   region: "NTSC-U"
@@ -10998,7 +10993,6 @@ SCUS-97511:
   gameFixes:
     - EETimingHack # Get rids of DMA8/9 non-fatal errors.
     - VIF1StallHack # Fixes broken HUD.
-    - InstantDMAHack
 SCUS-97512:
   name: "Gran Turismo 3 - A-Spec [Greatest Hits]"
   region: "NTSC-U"
@@ -11800,8 +11794,8 @@ SLED-50117:
   name: "Metal Gear Solid 2 - Sons of Liberty [Demo] [Zone of the Enders Bonus Disc]"
   region: "PAL-E"
   gameFixes:
+    - DMABusyHack # Fixes broken half-bottom artifacts.
     - BlitInternalFPSHack
-    - InstantDMAHack
   gsHWFixes:
     gpuPaletteConversion: 2 # Fixes micro-stuttering.
     halfPixelOffset: 2
@@ -12345,6 +12339,7 @@ SLED-53723:
   region: "PAL-E"
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
     textureInsideRT: 1 # Fixes post-processing effects.
 SLED-53731:
@@ -13285,6 +13280,8 @@ SLES-50282:
   name: "Age of Empires II - The Age of Kings"
   region: "PAL-M5"
   compat: 5
+  gsHWFixes:
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size when moving.
 SLES-50283:
   name: "WTA Tour Tennis"
   region: "PAL-M3"
@@ -13443,8 +13440,8 @@ SLES-50383:
   region: "PAL-M3"
   compat: 5
   gameFixes:
+    - DMABusyHack # Fixes broken half-bottom artifacts.
     - BlitInternalFPSHack
-    - InstantDMAHack
   gsHWFixes:
     gpuPaletteConversion: 2 # Fixes micro-stuttering.
     halfPixelOffset: 2
@@ -13452,8 +13449,8 @@ SLES-50384:
   name: "Metal Gear Solid 2 - Sons of Liberty"
   region: "PAL-I"
   gameFixes:
+    - DMABusyHack # Fixes broken half-bottom artifacts.
     - BlitInternalFPSHack
-    - InstantDMAHack
   gsHWFixes:
     gpuPaletteConversion: 2 # Fixes micro-stuttering.
     halfPixelOffset: 2
@@ -13461,8 +13458,8 @@ SLES-50385:
   name: "Metal Gear Solid 2 - Sons of Liberty"
   region: "PAL-S"
   gameFixes:
+    - DMABusyHack # Fixes broken half-bottom artifacts.
     - BlitInternalFPSHack
-    - InstantDMAHack
   gsHWFixes:
     gpuPaletteConversion: 2 # Fixes micro-stuttering.
     halfPixelOffset: 2
@@ -14009,7 +14006,6 @@ SLES-50672:
   region: "PAL-M5"
   compat: 5
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     roundSprite: 1
@@ -15107,7 +15103,7 @@ SLES-51113:
   region: "PAL-M5"
   compat: 5
   gameFixes:
-    - InstantDMAHack
+    - DMABusyHack # Fixes the corrupted fade effect in cutscenes.
   gsHWFixes:
     halfPixelOffset: 2 # Aligns post effects.
 SLES-51114:
@@ -16152,7 +16148,6 @@ SLES-51525:
   name: "Fallout - Brotherhood of Steel"
   region: "PAL-M3"
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes perfomrance issues.
     textureInsideRT: 1
     roundSprite: 1
@@ -16161,7 +16156,6 @@ SLES-51526:
   name: "Fallout - Brotherhood of Steel"
   region: "PAL-M3"
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performace issues.
     textureInsideRT: 1
     roundSprite: 1
@@ -17659,7 +17653,6 @@ SLES-52187:
   compat: 5
   gsHWFixes:
     roundSprite: 1 # Fixes lines in sprites but still some lines left.
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -17669,7 +17662,6 @@ SLES-52188:
   compat: 5
   gsHWFixes:
     roundSprite: 1 # Fixes lines in sprites but still some lines left.
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -17978,7 +17970,6 @@ SLES-52325:
   gameFixes:
     - BlitInternalFPSHack # Fixes internal fps detection in some areas.
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     halfPixelOffset: 2
@@ -18080,7 +18071,6 @@ SLES-52373:
   gameFixes:
     - BlitInternalFPSHack # Fixes internal fps detection in some areas.
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
     halfPixelOffset: 2
@@ -18154,7 +18144,7 @@ SLES-52392:
   name: "Combat Elite - WWII Paratroopers [Preview]"
   region: "PAL-E"
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
+    disablePartialInvalidation: 1
 SLES-52393:
   name: "Pinball Fun"
   region: "PAL-E"
@@ -19543,7 +19533,6 @@ SLES-52894:
   name: "The Bard's Tale"
   region: "PAL-E"
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -19928,6 +19917,7 @@ SLES-53020:
   gsHWFixes:
     halfPixelOffset: 1 # Fixes texture and lighting misalignment.
     mergeSprite: 1 # Fixes most vertical lines and lighting misalignment.
+    disablePartialInvalidation: 1
     textureInsideRT: 1
   patches:
     BF6F101F:
@@ -20064,7 +20054,6 @@ SLES-53039:
   region: "PAL-M4"
   compat: 5
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     halfPixelOffset: 2
@@ -20264,7 +20253,7 @@ SLES-53099:
     vuRoundMode: 0
     vu1RoundMode: 0
   gameFixes:
-    - InstantDMAHack
+    - DMABusyHack # Game has weird DMA handling, this allows required DMA's to finish.
   speedHacks:
     InstantVU1SpeedHack: 0 # Improves speed by a moderate amount.
 SLES-53100:
@@ -20397,7 +20386,6 @@ SLES-53154:
   name: "The Bard's Tale"
   region: "PAL-M8"
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -21940,6 +21928,7 @@ SLES-53703:
   compat: 5
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
     textureInsideRT: 1 # Fixes post-processing effects.
 SLES-53704:
@@ -21947,6 +21936,7 @@ SLES-53704:
   region: "PAL-R"
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
     textureInsideRT: 1 # Fixes post-processing effects.
 SLES-53705:
@@ -21954,6 +21944,7 @@ SLES-53705:
   region: "PAL-PL-E"
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
     textureInsideRT: 1 # Fixes post-processing effects.
 SLES-53706:
@@ -22281,6 +22272,7 @@ SLES-53804:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth alignment.
     textureInsideRT: 1 # Fixes depth blur.
+    disablePartialInvalidation: 1 # Massively improves performance in certain situations.
 SLES-53805:
   name: "Cocoto Funfair"
   region: "PAL-M5"
@@ -22293,7 +22285,6 @@ SLES-53809:
   region: "PAL-E"
   gameFixes:
     - XGKickHack # Fixes black and white fighters.
-    - InstantDMAHack
   speedHacks:
     MTVUSpeedHack: 0 # Fixes game from crashing.
     InstantVU1SpeedHack: 0 # Fixes graphical issues.
@@ -22541,6 +22532,7 @@ SLES-53904:
   gsHWFixes:
     mipmap: 1
     autoFlush: 1
+    disablePartialInvalidation: 1
     halfPixelOffset: 2
     gpuPaletteConversion: 2
 SLES-53906:
@@ -23987,7 +23979,6 @@ SLES-54423:
   clampModes:
     vuClampMode: 2 # Fixes ingame SPS for the capes.
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performamce issues.
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -27645,8 +27636,8 @@ SLES-82009:
   region: "PAL-M5"
   compat: 5
   gameFixes:
+    - DMABusyHack # Fixes broken half-bottom artifacts.
     - BlitInternalFPSHack
-    - InstantDMAHack
   gsHWFixes:
     gpuPaletteConversion: 2 # Fixes micro-stuttering.
     roundSprite: 2 # Fixes font artifacts.
@@ -27673,7 +27664,6 @@ SLES-82013:
   compat: 5
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurry characters.
 SLES-82018:
@@ -27697,7 +27687,6 @@ SLES-82024:
   region: "PAL-I"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurry characters.
 SLES-82026:
@@ -27705,7 +27694,6 @@ SLES-82026:
   region: "PAL-S"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurry characters.
 SLES-82028:
@@ -27753,7 +27741,6 @@ SLES-82032:
   region: "PAL-G"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurry characters.
 SLES-82036:
@@ -27795,7 +27782,6 @@ SLES-82042:
   region: "PAL-E-F"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
 SLES-82043:
@@ -27803,7 +27789,6 @@ SLES-82043:
   region: "PAL-E-F"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
   memcardFilters:
@@ -27813,7 +27798,6 @@ SLES-82044:
   region: "PAL-I"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
 SLES-82045:
@@ -27821,7 +27805,6 @@ SLES-82045:
   region: "PAL-I"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
   memcardFilters:
@@ -27831,7 +27814,6 @@ SLES-82046:
   region: "PAL-G"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
 SLES-82047:
@@ -27839,7 +27821,6 @@ SLES-82047:
   region: "PAL-G"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
   memcardFilters:
@@ -27849,7 +27830,6 @@ SLES-82048:
   region: "PAL-S"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
 SLES-82049:
@@ -27857,7 +27837,6 @@ SLES-82049:
   region: "PAL-S"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
   memcardFilters:
@@ -27867,7 +27846,6 @@ SLES-82050:
   region: "PAL-E-F"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
   memcardFilters:
@@ -27877,7 +27855,6 @@ SLES-82051:
   region: "PAL-I"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
   memcardFilters:
@@ -27887,7 +27864,6 @@ SLES-82052:
   region: "PAL-G"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
   memcardFilters:
@@ -27897,7 +27873,6 @@ SLES-82053:
   region: "PAL-S"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
   memcardFilters:
@@ -28983,7 +28958,6 @@ SLKA-25246:
   name: "The Bard's Tale"
   region: "NTSC-K"
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -29008,7 +28982,6 @@ SLKA-25251:
   region: "NTSC-K"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
 SLKA-25252:
@@ -29364,6 +29337,7 @@ SLKA-25337:
   region: "NTSC-K"
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
     textureInsideRT: 1 # Fixes post-processing effects.
 SLKA-25338:
@@ -29429,7 +29403,6 @@ SLKA-25353:
   compat: 5
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
 SLKA-25354:
@@ -29438,7 +29411,6 @@ SLKA-25354:
   compat: 5
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
   memcardFilters:
@@ -29917,8 +29889,8 @@ SLKA-35001:
   region: "NTSC-K"
   compat: 5
   gameFixes:
+    - DMABusyHack # Fixes broken half-bottom artifacts.
     - BlitInternalFPSHack
-    - InstantDMAHack
   gsHWFixes:
     gpuPaletteConversion: 2 # Fixes micro-stuttering.
     roundSprite: 2 # Fixes font artifacts.
@@ -32308,6 +32280,8 @@ SLPM-62075:
 SLPM-62076:
   name: "Age of Empires II - The Age of Kings"
   region: "NTSC-J"
+  gsHWFixes:
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size when moving.
 SLPM-62077:
   name: "Maestro Music 2, The"
   region: "NTSC-J"
@@ -33931,7 +33905,6 @@ SLPM-62581:
   region: "NTSC-J"
   gameFixes:
     - XGKickHack # Fixes black and white fighters.
-    - InstantDMAHack
   speedHacks:
     MTVUSpeedHack: 0 # Fixes game from crashing.
     InstantVU1SpeedHack: 0 # Fixes graphical issues.
@@ -35038,8 +35011,8 @@ SLPM-65077:
   name: "METAL GEAR SOLID 2 SONS OF LIBERTY [PREMIUM PACKAGE]"
   region: "NTSC-J"
   gameFixes:
+    - DMABusyHack # Fixes broken half-bottom artifacts.
     - BlitInternalFPSHack
-    - InstantDMAHack
   gsHWFixes:
     gpuPaletteConversion: 2 # Fixes micro-stuttering.
     halfPixelOffset: 2
@@ -35050,8 +35023,8 @@ SLPM-65078:
   name: "METAL GEAR SOLID 2 SONS OF LIBERTY"
   region: "NTSC-J"
   gameFixes:
+    - DMABusyHack # Fixes broken half-bottom artifacts.
     - BlitInternalFPSHack
-    - InstantDMAHack
   gsHWFixes:
     gpuPaletteConversion: 2 # Fixes micro-stuttering.
     halfPixelOffset: 2
@@ -37753,7 +37726,6 @@ SLPM-65789:
   region: "NTSC-J"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
 SLPM-65790:
@@ -37761,7 +37733,6 @@ SLPM-65790:
   region: "NTSC-J"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
 SLPM-65791:
@@ -37979,7 +37950,6 @@ SLPM-65845:
   compat: 5
   gsHWFixes:
     roundSprite: 1 # Fixes lines in sprites but still some lines left.
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -38237,7 +38207,6 @@ SLPM-65915:
   name: "Fallout BROTHERHOOD OF STEEL"
   region: "NTSC-J"
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     roundSprite: 1
@@ -39068,7 +39037,6 @@ SLPM-66117:
   region: "NTSC-J"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
 SLPM-66118:
@@ -39478,6 +39446,7 @@ SLPM-66211:
   region: "NTSC-J"
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
     textureInsideRT: 1 # Fixes post-processing effects.
 SLPM-66212:
@@ -39515,7 +39484,6 @@ SLPM-66220:
   region: "NTSC-J"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
   memcardFilters:
@@ -39525,7 +39493,6 @@ SLPM-66221:
   region: "NTSC-J"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
   memcardFilters:
@@ -39535,7 +39502,6 @@ SLPM-66222:
   region: "NTSC-J"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
   memcardFilters:
@@ -39545,7 +39511,6 @@ SLPM-66223:
   region: "NTSC-J"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
   memcardFilters:
@@ -39555,7 +39520,6 @@ SLPM-66224:
   region: "NTSC-J"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
   memcardFilters:
@@ -40767,8 +40731,8 @@ SLPM-66503:
   name: "METAL GEAR SOLID 2 SONS OF LIBERTY [MEGA HITS!]"
   region: "NTSC-J"
   gameFixes:
+    - DMABusyHack # Fixes broken half-bottom artifacts.
     - BlitInternalFPSHack
-    - InstantDMAHack
   gsHWFixes:
     gpuPaletteConversion: 2 # Fixes micro-stuttering.
     halfPixelOffset: 2
@@ -41970,8 +41934,8 @@ SLPM-66792:
   name: "Metal Gear Solid 2 - Sons of Liberty [20th Anniversary Edition] [Disc 1 of 2]"
   region: "NTSC-J"
   gameFixes:
+    - DMABusyHack # Fixes broken half-bottom artifacts.
     - BlitInternalFPSHack
-    - InstantDMAHack
   gsHWFixes:
     gpuPaletteConversion: 2 # Fixes micro-stuttering.
     halfPixelOffset: 2
@@ -41989,7 +41953,6 @@ SLPM-66794:
   region: "NTSC-J"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
 SLPM-66795:
@@ -42711,8 +42674,8 @@ SLPM-67002:
   name: "METAL GEAR SOLID 2 SUBSTANCE"
   region: "NTSC-J"
   gameFixes:
+    - DMABusyHack # Fixes broken half-bottom artifacts.
     - BlitInternalFPSHack
-    - InstantDMAHack
   gsHWFixes:
     gpuPaletteConversion: 2 # Fixes micro-stuttering.
     roundSprite: 2 # Fixes font artifacts.
@@ -42867,8 +42830,8 @@ SLPM-67515:
   name: "Metal Gear Solid 2 - Sons of Liberty"
   region: "NTSC-K"
   gameFixes:
+    - DMABusyHack # Fixes broken half-bottom artifacts
     - BlitInternalFPSHack
-    - InstantDMAHack
   gsHWFixes:
     gpuPaletteConversion: 2 # Fixes micro-stuttering.
     halfPixelOffset: 2
@@ -43098,7 +43061,6 @@ SLPM-68516:
   region: "NTSC-J"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
 SLPM-68519:
@@ -43744,7 +43706,6 @@ SLPS-20007:
   gameFixes:
     - EETimingHack # Garbage in FMVs.
     - VUSyncHack # Fixes missing geometry.
-    - InstantDMAHack
   gsHWFixes:
     textureInsideRT: 1
     roundSprite: 1 # Fixes font misalignment when upscaling.
@@ -45118,7 +45079,6 @@ SLPS-20453:
   compat: 5
   gameFixes:
     - XGKickHack # Fixes black and white fighters.
-    - InstantDMAHack
   speedHacks:
     MTVUSpeedHack: 0 # Fixes game from crashing.
     InstantVU1SpeedHack: 0 # Fixes graphical issues.
@@ -45794,9 +45754,13 @@ SLPS-25102:
 SLPS-25103:
   name: "Super Robot Taisen Impact [Limited Edition]"
   region: "NTSC-J"
+  gsHWFixes:
+    disablePartialInvalidation: 1 # Reduces hash cache size.
 SLPS-25104:
   name: "Super Robot Taisen Impact"
   region: "NTSC-J"
+  gsHWFixes:
+    disablePartialInvalidation: 1 # Reduces hash cache size.
 SLPS-25105:
   name: "Kingdom Hearts"
   region: "NTSC-J"
@@ -45924,7 +45888,6 @@ SLPS-25139:
   region: "NTSC-J"
   compat: 5
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
     roundSprite: 1
@@ -45935,6 +45898,7 @@ SLPS-25140:
   gsHWFixes:
     roundSprite: 1 # Fixes lines in menus.
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
 SLPS-25141:
   name: "Pac-Man World 2"
@@ -46527,7 +46491,6 @@ SLPS-25291:
   region: "NTSC-J"
   compat: 5
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes perforamnce issues.
     textureInsideRT: 1
     roundSprite: 1
@@ -47714,7 +47677,6 @@ SLPS-25578:
   region: "NTSC-J"
   gameFixes:
     - XGKickHack # Fixes black and white fighters.
-    - InstantDMAHack
   speedHacks:
     MTVUSpeedHack: 0 # Fixes game from crashing.
     InstantVU1SpeedHack: 0 # Fixes graphical issues.
@@ -48292,7 +48254,6 @@ SLPS-25710:
   compat: 4
   gameFixes:
     - XGKickHack # Fixes grey fighters problem.
-    - InstantDMAHack
   speedHacks:
     InstantVU1SpeedHack: 0 # Fixes random black frames from happening when in a fight session.
     MTVUSpeedHack: 0
@@ -50076,6 +50037,8 @@ SLPS-73415:
 SLPS-73416:
   name: "Super Robot Wars - Impact [PlayStation 2 the Best]"
   region: "NTSC-J"
+  gsHWFixes:
+    disablePartialInvalidation: 1 # Reduces hash cache size.
 SLPS-73417:
   name: "Armored Core 3 [PlayStation 2 the Best]"
   region: "NTSC-J"
@@ -50282,7 +50245,6 @@ SLUS-20035:
   gameFixes:
     - SoftwareRendererFMVHack # Fixes FMVs.
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     roundSprite: 1
@@ -50663,8 +50625,8 @@ SLUS-20144:
   region: "NTSC-U"
   compat: 5
   gameFixes:
+    - DMABusyHack # Fixes broken half-bottom artifacts.
     - BlitInternalFPSHack
-    - InstantDMAHack
   gsHWFixes:
     gpuPaletteConversion: 2 # Fixes micro-stuttering.
     halfPixelOffset: 2
@@ -52602,7 +52564,7 @@ SLUS-20539:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
+    disablePartialInvalidation: 1
     textureInsideRT: 1
     roundSprite: 1
     gpuPaletteConversion: 1
@@ -52680,8 +52642,8 @@ SLUS-20554:
   region: "NTSC-U"
   compat: 5
   gameFixes:
+    - DMABusyHack # Fixes broken half-bottom artifacts.
     - BlitInternalFPSHack
-    - InstantDMAHack
   gsHWFixes:
     gpuPaletteConversion: 2 # Fixes micro-stuttering.
     roundSprite: 2 # Fixes font artifacts.
@@ -52768,7 +52730,6 @@ SLUS-20565:
   gameFixes:
     - BlitInternalFPSHack # Fixes internal fps detection in some areas.
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -53347,7 +53308,6 @@ SLUS-20675:
     - SoftwareRendererFMVHack # Fixes FMVs.
   gsHWFixes:
     roundSprite: 1 # Fixes lines in sprites but still some lines left.
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -53545,7 +53505,6 @@ SLUS-20715:
   name: "Combat Elite - WWII Paratroopers"
   region: "NTSC-U"
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     halfPixelOffset: 2
@@ -54031,7 +53990,7 @@ SLUS-20803:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
+    disablePartialInvalidation: 1
     textureInsideRT: 1
     gpuPaletteConversion: 1
 SLUS-20804:
@@ -54627,7 +54586,6 @@ SLUS-20915:
   compat: 5
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
 SLUS-20916:
@@ -54986,7 +54944,6 @@ SLUS-20973:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     halfPixelOffset: 2
@@ -55181,6 +55138,7 @@ SLUS-21006:
   gsHWFixes:
     halfPixelOffset: 1 # Fixes texture and lighting misalignment.
     mergeSprite: 1 # Fixes most vertical lines and lighting misalignment.
+    disablePartialInvalidation: 1
     textureInsideRT: 1
   patches:
     default:
@@ -55687,6 +55645,7 @@ SLUS-21095:
   gsHWFixes:
     mipmap: 1
     autoFlush: 1
+    disablePartialInvalidation: 1
     halfPixelOffset: 2
     gpuPaletteConversion: 2
 SLUS-21096:
@@ -56574,7 +56533,6 @@ SLUS-21243:
   compat: 5
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
   memcardFilters:
@@ -56924,6 +56882,7 @@ SLUS-21289:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth alignment.
     textureInsideRT: 1 # Fixes depth blur.
+    disablePartialInvalidation: 1 # Massively improves performance in certain situations.
 SLUS-21290:
   name: "Ford Street Racing"
   region: "NTSC-U"
@@ -57009,7 +56968,6 @@ SLUS-21304:
   clampModes:
     vuClampMode: 2 # Ingame capes become SPS mess with lower than extra VU clamp.
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -57055,6 +57013,7 @@ SLUS-21311:
   compat: 5
   gsHWFixes:
     autoFlush: 1 # Corrects vignette to match software.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     halfPixelOffset: 2 # Aligns blur more correctly to match software.
     textureInsideRT: 1 # Fixes post-processing effects.
 SLUS-21312:
@@ -57390,7 +57349,6 @@ SLUS-21359:
   compat: 5
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
 SLUS-21360:
@@ -57398,7 +57356,6 @@ SLUS-21360:
   region: "NTSC-U"
   gameFixes:
     - BlitInternalFPSHack # Fixes internal FPS detection.
-    - InstantDMAHack
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
   memcardFilters:
@@ -59722,6 +59679,7 @@ SLUS-21793:
   compat: 3
   gsHWFixes:
     halfPixelOffset: 2 # Fixes post-processing position.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 2 # Improves performance and reduces hash cache size.
     autoFlush: 1 # Corrects shadows (Currently still broken even with this).
 SLUS-21794:
@@ -60645,7 +60603,6 @@ SLUS-28054:
   name: "Combat Elite - WWII Paratroopers [Trade Demo]"
   region: "NTSC-U"
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     halfPixelOffset: 2
@@ -60699,8 +60656,8 @@ SLUS-29003:
   region: "NTSC-U"
   compat: 5
   gameFixes:
+    - DMABusyHack # Fixes broken half-bottom artifacts.
     - BlitInternalFPSHack
-    - InstantDMAHack
   gsHWFixes:
     gpuPaletteConversion: 2 # Fixes micro-stuttering.
     halfPixelOffset: 2
@@ -60972,6 +60929,7 @@ SLUS-29085:
   region: "NTSC-U"
   gsHWFixes:
     textureInsideRT: 1 # Fixes half right.
+    disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 1 # Reduces hashcache size and improves performance.
 SLUS-29086:
   name: "FIFA Soccer 2004 [Demo]"
@@ -60993,7 +60951,6 @@ SLUS-29088:
   gameFixes:
     - BlitInternalFPSHack # Fixes internal fps detection in some areas.
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -61092,6 +61049,7 @@ SLUS-29123:
   gsHWFixes:
     halfPixelOffset: 1 # Fixes texture and lighting misalignment.
     mergeSprite: 1 # Fixes most vertical lines and lighting misalignment.
+    disablePartialInvalidation: 1
     textureInsideRT: 1
 SLUS-29124:
   name: "Fight Club [Demo]"
@@ -61104,7 +61062,6 @@ SLUS-29126:
   region: "NTSC-U"
   compat: 4
   gsHWFixes:
-    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes perfromance issues.
     textureInsideRT: 1
     halfPixelOffset: 2
@@ -61467,7 +61424,6 @@ TCES-51904:
   gameFixes:
     - EETimingHack # Get rids of DMA8/9 non-fatal errors.
     - VIF1StallHack # Fixes broken HUD.
-    - InstantDMAHack
 TCES-52004:
   name: "Killzone Beta Trial Code"
   region: "PAL-E"

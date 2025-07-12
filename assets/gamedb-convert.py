@@ -21,11 +21,11 @@ key_list = ['clampModes', 'dynaPatches', 'gameFixes', 'gsHWFixes', 'memcardFilte
 key_order = ['name', 'name-sort', 'name-en', 'region', 'compat', 'clampModes', 'roundModes', 'gameFixes', 'speedHacks', 'gsHWFixes', 'patches', 'dynaPatches', 'memcardFilters']
 clamp_list = ['eeClampMode', 'vuClampMode', 'vu0ClampMode', 'vu1ClampMode']
 round_list = ['eeRoundMode', 'vuRoundMode', 'vu0RoundMode', 'vu1RoundMode']
-gmfix_list = ['BlitInternalFPSHack', 'DMABusyHack', 'EETimingHack', 'FpuMulHack', 'GIFFIFOHack', 'GoemonTlbHack', 'IbitHack', 'InstantDMAHack', 'OPHFlagHack', 'SkipMPEGHack', 'SoftwareRendererFMVHack', 'VIF1StallHack', 'VIFFIFOHack', 'VuAddSubHack', 'VUOverflowHack', 'FullVU0SyncHack', 'VUSyncHack', 'XGKickHack']
+gmfix_list = ['BlitInternalFPSHack', 'DMABusyHack', 'EETimingHack', 'FpuMulHack', 'GIFFIFOHack', 'GoemonTlbHack', 'IbitHack', 'OPHFlagHack', 'SkipMPEGHack', 'SoftwareRendererFMVHack', 'VIF1StallHack', 'VIFFIFOHack', 'VuAddSubHack', 'VUOverflowHack', 'FullVU0SyncHack', 'VUSyncHack', 'XGKickHack']
 speed_list = ['mvuFlagSpeedHack', 'InstantVU1SpeedHack', 'MTVUSpeedHack']
 hwfix_list = ['cpuFramebufferConversion', 'disableDepthSupport', 'preloadFrameData', 'disablePartialInvalidation', 'textureInsideRT', 'alignSprite', 'mergeSprite', 'wildArmsHack', 'mipmap', 'trilinearFiltering', 'skipDrawStart', 'skipDrawEnd', 'halfBottomOverride', 'halfPixelOffset', 'roundSprite', 'texturePreloading', 'deinterlace', 'cpuCLUTRender', 'gpuPaletteConversion']
-ignore_list = ['beforeDraw', 'bilinearUpscale', 'cpuSpriteRenderLevel', 'eeCycleRate', 'estimateTextureRegion', 'getSkipCount', 'gpuTargetCLUT', 'maximumBlendingLevel', 'minimumBlendingLevel', 'name-sort', 'nativePaletteDraw', 'nativeScaling', 'partialTargetInvalidation', 'PCRTCOffsets', 'PCRTCOverscan', 'readTCOnClose', 'recommendedBlendingLevel']
-replace_dict = {'autoFlush: 2': 'autoFlush: 1', 'forceEvenSpritePosition:': 'wildArmsHack:', 'halfPixelOffset: 4': 'halfPixelOffset: 2', 'halfPixelOffset: 5': 'halfPixelOffset: 2', 'instantVU1:': 'InstantVU1SpeedHack:', 'mtvu:': 'MTVUSpeedHack:', 'mvuFlag:': 'mvuFlagSpeedHack:', 'name-en:': 'name:', 'PlayStation2': 'PlayStation 2', 'textureInsideRT: 2': 'textureInsideRT: 1', '～': ''}
+ignore_list = ['beforeDraw', 'bilinearUpscale', 'cpuSpriteRenderLevel', 'eeCycleRate', 'getSkipCount', 'gpuTargetCLUT', 'maximumBlendingLevel', 'minimumBlendingLevel', 'name-sort', 'nativePaletteDraw', 'nativeScaling', 'partialTargetInvalidation', 'PCRTCOffsets', 'PCRTCOverscan', 'readTCOnClose', 'recommendedBlendingLevel']
+replace_dict = {'autoFlush: 2': 'autoFlush: 1', 'estimateTextureRegion:': 'disablePartialInvalidation:', 'forceEvenSpritePosition:': 'wildArmsHack:', 'halfPixelOffset: 4': 'halfPixelOffset: 2', 'halfPixelOffset: 5': 'halfPixelOffset: 2', 'instantVU1:': 'InstantVU1SpeedHack:', 'mtvu:': 'MTVUSpeedHack:', 'mvuFlag:': 'mvuFlagSpeedHack:', 'name-en:': 'name:', 'PlayStation2': 'PlayStation 2', 'textureInsideRT: 2': 'textureInsideRT: 1', '～': ''}
 
 def sort_keys(my_dict):
     sorted_data = {}
@@ -127,9 +127,9 @@ def process_dict(my_dict, new_dict):
             for nested_value in gmfix_list:
                 if nested_value in value['gameFixes']:
                     if nested_value in my_dict[key]['gameFixes']: continue
-                    elif 'InstantDMAHack' in nested_value and 'DMABusyHack' in my_dict[key]['gameFixes']:
-                        my_dict[key]['gameFixes'].remove('DMABusyHack')
-                        my_dict[key]['gameFixes'].append('InstantDMAHack')
+                    elif 'DMABusyHack' in nested_value and 'InstantDMAHack' in my_dict[key]['gameFixes']:
+                        my_dict[key]['gameFixes'].remove('InstantDMAHack')
+                        my_dict[key]['gameFixes'].append('DMABusyHack')
                     else: my_dict[key]['gameFixes'].append(nested_value)
         if 'speedHacks' in value and key in my_dict:
             for nested_key in speed_list:
@@ -141,6 +141,9 @@ def process_dict(my_dict, new_dict):
         if 'gsHWFixes' in value and key in my_dict:
             for nested_key in hwfix_list:
                 if nested_key in value['gsHWFixes']:
+                    if 'disablePartialInvalidation' in nested_key and 'texturePreloading' in my_dict[key]['gsHWFixes']:
+                        del my_dict[key]['gsHWFixes']['texturePreloading']
+                        my_dict[key]['gsHWFixes'][nested_key] = new_dict[key]['gsHWFixes'][nested_key]
                     try:
                         if my_dict[key]['gsHWFixes'][nested_key]: continue
                     except KeyError:
