@@ -192,12 +192,16 @@ PAPX-90222:
   gsHWFixes:
     mipmap: 1
     textureInsideRT: 1
+    skipDrawStart: 1
+    skipDrawEnd: 1
 PAPX-90223:
   name: "Jak x Daxter - Kyuu Sekai no Isan [Demo]"
   region: "NTSC-J"
   gsHWFixes:
     mipmap: 1
     textureInsideRT: 1
+    skipDrawStart: 1
+    skipDrawEnd: 1
 PAPX-90224:
   name: "Sidewinder F [Trial]"
   region: "NTSC-J"
@@ -2473,6 +2477,8 @@ SCED-50614:
   gsHWFixes:
     mipmap: 1
     textureInsideRT: 1
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCED-50615:
   name: "Official Demo Disc 1 - Retail Edition November 01"
   region: "PAL-E"
@@ -4281,6 +4287,8 @@ SCES-50361:
   gsHWFixes:
     mipmap: 1
     textureInsideRT: 1
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCES-50408:
   name: "PaRappa the Rapper 2"
   region: "PAL-M5"
@@ -4461,6 +4469,8 @@ SCES-50614:
   gsHWFixes:
     mipmap: 1
     textureInsideRT: 1
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCES-50759:
   name: "Virtua Fighter 4"
   region: "PAL-M5"
@@ -7715,6 +7725,8 @@ SCPS-15021:
   gsHWFixes:
     mipmap: 1
     textureInsideRT: 1
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCPS-15022:
   name: "Dual Hearts"
   region: "NTSC-J"
@@ -8544,6 +8556,8 @@ SCPS-19210:
   gsHWFixes:
     mipmap: 1
     textureInsideRT: 1
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCPS-19211:
   name: "Ratchet & Clank [PlayStation 2 the Best]"
   region: "NTSC-J"
@@ -8988,6 +9002,8 @@ SCPS-55004:
   gsHWFixes:
     mipmap: 1
     textureInsideRT: 1
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCPS-55005:
   name: "GRAN TURISMO Concept 2001 Tokyo"
   region: "NTSC-J"
@@ -9273,6 +9289,8 @@ SCPS-56003:
   gsHWFixes:
     mipmap: 1
     textureInsideRT: 1
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCPS-56004:
   name: "Otostaz"
   region: "NTSC-K"
@@ -9487,6 +9505,8 @@ SCUS-97124:
   gsHWFixes:
     mipmap: 1
     textureInsideRT: 1
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCUS-97125:
   name: "Frequency"
   region: "NTSC-U"
@@ -9680,12 +9700,16 @@ SCUS-97170:
   gsHWFixes:
     mipmap: 1
     textureInsideRT: 1
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCUS-97171:
   name: "Jak and Daxter - The Precursor Legacy [PS Underground Demo]"
   region: "NTSC-U"
   gsHWFixes:
     mipmap: 1
     textureInsideRT: 1
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCUS-97172:
   name: "World Tour Soccer 2002"
   region: "NTSC-U"
@@ -10644,6 +10668,8 @@ SCUS-97440:
     mipmap: 1
     textureInsideRT: 1
     autoFlush: 1
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCUS-97441:
   name: "The Getaway - Black Monday [Demo]"
   region: "NTSC-U"
@@ -15513,9 +15539,10 @@ SLES-51252:
   compat: 5
   clampModes:
     vuClampMode: 3 # Fix white shiny weapons.
+  gameFixes:
+    - SoftwareRendererFMVHack # Fixes FMVs
   gsHWFixes:
     halfPixelOffset: 2 # Fixes misaligned lighting and other effects.
-    cpuSpriteRenderBW: 1 # Fixes flickering textures caused by mipmapping.
 SLES-51253:
   name: "Le Seigneur des Anneaux - Les Deux Tours"
   region: "PAL-F"
@@ -18519,6 +18546,8 @@ SLES-52541:
   gsHWFixes:
     autoFlush: 1
     halfPixelOffset: 2
+    skipDrawStart: 7
+    skipDrawEnd: 3
 SLES-52542:
   name: "All Music Dance!"
   region: "PAL-I"
@@ -19649,6 +19678,8 @@ SLES-52927:
   gsHWFixes:
     autoFlush: 1
     halfPixelOffset: 2
+    skipDrawStart: 7
+    skipDrawEnd: 3
 SLES-52931:
   name: "Legend of Kay"
   region: "PAL-M5"
@@ -19991,6 +20022,12 @@ SLES-53028:
     halfPixelOffset: 2 # Fixes alignment of shuffles and post-processing.
     autoFlush: 1 # Fixes sun intensity.
     textureInsideRT: 1 # Fixes post-processing.
+  patches:
+    default:
+      content: |-
+        comment=Fixes Hitman Blood Money's Graphics
+        patch=1,EE,002ABE58,word,00000000
+        patch=1,EE,00497DD0,word,00000000
 SLES-53029:
   name: "Hitman - Blood Money"
   region: "PAL-F"
@@ -20000,6 +20037,12 @@ SLES-53029:
     halfPixelOffset: 2 # Fixes alignment of shuffles and post-processing.
     autoFlush: 1 # Fixes sun intensity.
     textureInsideRT: 1 # Fixes post-processing.
+  patches:
+    default:
+      content: |-
+        comment=Fixes Hitman Blood Money's Graphics
+        patch=1,EE,002ABE58,word,00000000
+        patch=1,EE,00497DD0,word,00000000
 SLES-53030:
   name: "Hitman - Blood Money"
   region: "PAL-G"
@@ -20009,6 +20052,12 @@ SLES-53030:
     halfPixelOffset: 2 # Fixes alignment of shuffles and post-processing.
     autoFlush: 1 # Fixes sun intensity.
     textureInsideRT: 1 # Fixes post-processing.
+  patches:
+    default:
+      content: |-
+        comment=Fixes Hitman Blood Money's Graphics
+        patch=1,EE,002ABE58,word,00000000
+        patch=1,EE,00497DD0,word,00000000
 SLES-53031:
   name: "Hitman - Blood Money"
   region: "PAL-I"
@@ -20018,6 +20067,12 @@ SLES-53031:
     halfPixelOffset: 2 # Fixes alignment of shuffles and post-processing.
     autoFlush: 1 # Fixes sun intensity.
     textureInsideRT: 1 # Fixes post-processing.
+  patches:
+    default:
+      content: |-
+        comment=Fixes Hitman Blood Money's Graphics
+        patch=1,EE,002ABE58,word,00000000
+        patch=1,EE,00497DD0,word,00000000
 SLES-53032:
   name: "Hitman - Blood Money"
   region: "PAL-S"
@@ -20027,6 +20082,12 @@ SLES-53032:
     halfPixelOffset: 2 # Fixes alignment of shuffles and post-processing.
     autoFlush: 1 # Fixes sun intensity.
     textureInsideRT: 1 # Fixes post-processing.
+  patches:
+    default:
+      content: |-
+        comment=Fixes Hitman Blood Money's Graphics
+        patch=1,EE,002ABE58,word,00000000
+        patch=1,EE,00497DD0,word,00000000
 SLES-53035:
   name: "Masters of the Universe - He-Man - Defender of Greyskull"
   region: "PAL-E"
@@ -22195,6 +22256,10 @@ SLES-53763:
 SLES-53764:
   name: "Atelier Iris - Eternal Mana"
   region: "PAL-E"
+  gameFixes:
+    - SoftwareRendererFMVHack # Fixes FMVs
+  gsHWFixes:
+    roundSprite: 2 # Fixes character portraits when upscaling and reduces lines in FMVs when using HW renderer.
 SLES-53765:
   name: "Stella Deus - The Gate of Eternity"
   region: "PAL-E"
@@ -25244,6 +25309,8 @@ SLES-54820:
 SLES-54822:
   name: "Atelier Iris 3 - Grand Phantasm"
   region: "PAL-E"
+  gameFixes:
+    - SoftwareRendererFMVHack # Fixes FMVs
   gsHWFixes:
     roundSprite: 1 # Fixes vertical lines in FMVs, character portraits and other sprites.
 SLES-54825:
@@ -30284,6 +30351,8 @@ SLPM-55092:
   gsHWFixes:
     autoFlush: 1
     halfPixelOffset: 2
+    skipDrawStart: 7
+    skipDrawEnd: 3
 SLPM-55093:
   name: "Galaxy Angel II - Mugen Kairou no Kagi [Disc 1 of 2]"
   region: "NTSC-J"
@@ -30911,6 +30980,8 @@ SLPM-55292:
   gsHWFixes:
     autoFlush: 1
     halfPixelOffset: 2
+    skipDrawStart: 7
+    skipDrawEnd: 3
 SLPM-55293:
   name: "Grand Theft Auto III [Rockstar Classics]"
   region: "NTSC-J"
@@ -35553,13 +35624,14 @@ SLPM-65211:
   name: "Chou Battle Houshin [Premium Pack] [Houshin Engi 2 Disc]"
   region: "NTSC-J"
 SLPM-65212:
-  name: "Lord of the Rings, The - The Two Towers"
+  name: "The Lord of the Rings - The Two Towers"
   region: "NTSC-J"
   clampModes:
     vuClampMode: 3 # Fixes white shiny weapons.
+  gameFixes:
+    - SoftwareRendererFMVHack # Fixes FMVs
   gsHWFixes:
     halfPixelOffset: 2 # Fixes misaligned lighting and other effects.
-    cpuSpriteRenderBW: 1 # Fixes flickering textures caused by mipmapping.
 SLPM-65213:
   name: "Evolution Skateboarding"
   region: "NTSC-J"
@@ -38493,6 +38565,8 @@ SLPM-65984:
   gsHWFixes:
     autoFlush: 1
     halfPixelOffset: 2
+    skipDrawStart: 7
+    skipDrawEnd: 3
 SLPM-65985:
   name: "Iris no Atelier - Eternal Mana 2"
   region: "NTSC-J"
@@ -41938,6 +42012,8 @@ SLPM-66788:
   gsHWFixes:
     autoFlush: 1
     halfPixelOffset: 2
+    skipDrawStart: 7
+    skipDrawEnd: 3
 SLPM-66789:
   name: "Grand Theft Auto III [Best Price]"
   region: "NTSC-J"
@@ -42708,13 +42784,14 @@ SLPM-67004:
   name: "Medal of Honor - Rising Sun"
   region: "NTSC-J"
 SLPM-67005:
-  name: "Lord of the Rings, The - The Two Towers [EA Best Hits]"
+  name: "The Lord of the Rings - The Two Towers [EA Best Hits]"
   region: "NTSC-J"
   clampModes:
     vuClampMode: 3 # Fix white shiny weapons.
+  gameFixes:
+    - SoftwareRendererFMVHack # Fixes FMVs
   gsHWFixes:
     halfPixelOffset: 2 # Fixes misaligned lighting and other effects.
-    cpuSpriteRenderBW: 1 # Fixes flickering textures caused by mipmapping.
 SLPM-67006:
   name: "Train Simulator - Kyushu Shinkansen"
   region: "NTSC-J"
@@ -42971,13 +43048,14 @@ SLPM-67545:
   name: "Project Minerva"
   region: "NTSC-K"
 SLPM-67546:
-  name: "Lord of the Rings - The Two Towers"
+  name: "The Lord of the Rings - The Two Towers"
   region: "NTSC-K"
   clampModes:
     vuClampMode: 3 # Fix white shiny weapons.
+  gameFixes:
+    - SoftwareRendererFMVHack # Fixes FMVs
   gsHWFixes:
     halfPixelOffset: 2 # Fixes misaligned lighting and other effects.
-    cpuSpriteRenderBW: 1 # Fixes flickering textures caused by mipmapping.
 SLPM-67550:
   name: "Jin Samguk Mussang 2 - Maengjangjeon"
   region: "NTSC-K"
@@ -49397,22 +49475,24 @@ SLPS-29002:
         patch=1,EE,00285f60,word,2673ffff
         patch=1,EE,00285f64,word,00000000
 SLPS-29003:
-  name: "Lord of the Rings, The - The Two Towers [Collector's Box]"
+  name: "The Lord of the Rings - The Two Towers [Collector's Box]"
   region: "NTSC-J"
   clampModes:
     vuClampMode: 3 # Fix white shiny weapons.
+  gameFixes:
+    - SoftwareRendererFMVHack # Fixes FMVs
   gsHWFixes:
     halfPixelOffset: 2 # Fixes misaligned lighting and other effects.
-    cpuSpriteRenderBW: 1 # Fixes flickering textures caused by mipmapping.
 SLPS-29004:
-  name: "Lord of the Rings, The - The Two Towers"
+  name: "The Lord of the Rings - The Two Towers"
   region: "NTSC-J"
   compat: 5
   clampModes:
     vuClampMode: 3 # Fix white shiny weapons.
+  gameFixes:
+    - SoftwareRendererFMVHack # Fixes FMVs
   gsHWFixes:
     halfPixelOffset: 2 # Fixes misaligned lighting and other effects.
-    cpuSpriteRenderBW: 1 # Fixes flickering textures caused by mipmapping.
 SLPS-29005:
   name: "Xenosaga Episode 1 - Der Wille zur Macht [Reloaded]"
   region: "NTSC-J"
@@ -52820,9 +52900,10 @@ SLUS-20578:
   compat: 5
   clampModes:
     vuClampMode: 3 # Fix white shiny weapons.
+  gameFixes:
+    - SoftwareRendererFMVHack # Fixes FMVs
   gsHWFixes:
     halfPixelOffset: 2 # Fixes misaligned lighting and other effects.
-    cpuSpriteRenderBW: 1 # Fixes flickering textures caused by mipmapping.
 SLUS-20579:
   name: "007 - Nightfire"
   region: "NTSC-U"
@@ -54800,6 +54881,8 @@ SLUS-20946:
   gsHWFixes:
     autoFlush: 1
     halfPixelOffset: 2
+    skipDrawStart: 7
+    skipDrawEnd: 3
 SLUS-20947:
   name: "WinBack 2 - Project Poseidon"
   region: "NTSC-U"
@@ -55754,6 +55837,12 @@ SLUS-21108:
     halfPixelOffset: 2 # Fixes alignment of shuffles and post-processing.
     autoFlush: 1 # Fixes sun intensity.
     textureInsideRT: 1 # Fixes post-processing.
+  patches:
+    default:
+      content: |-
+        comment=Fixes Hitman Blood Money's Graphics
+        patch=1,EE,002ABE58,word,00000000
+        patch=1,EE,00497DD0,word,00000000
 SLUS-21109:
   name: "Drive to Survive"
   region: "NTSC-U"
@@ -57147,7 +57236,7 @@ SLUS-21327:
   region: "NTSC-U"
   compat: 5
   gameFixes:
-    - SoftwareRendererFMVHack # Flickering in FMV.
+    - SoftwareRendererFMVHack # Fixes FMVs
   gsHWFixes:
     roundSprite: 1 # Fixes font artifacts for health and other sprites.
     texturePreloading: 0 # Improves performance and prevents it disabling itself regardless.
@@ -58429,6 +58518,8 @@ SLUS-21564:
   name: "Atelier Iris 3 - Grand Phantasm"
   region: "NTSC-U"
   compat: 5
+  gameFixes:
+    - SoftwareRendererFMVHack # Fixes FMVs
   gsHWFixes:
     roundSprite: 1 # Fixes vertical lines in FMVs, character portraits and other sprites.
 SLUS-21565:
@@ -61762,6 +61853,9 @@ SLES-51541:
     eeClampMode: 2 # Fixes Game freezes during "Reuniting The Families" mission.
   gsHWFixes:
     autoFlush: 1
+    halfPixelOffset: 2
+    skipDrawStart: 7
+    skipDrawEnd: 3
 SLES-51752:
   name: "Tony Hawks Underground"
   region: "PAL-Unk"
