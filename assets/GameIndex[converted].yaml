@@ -11166,6 +11166,7 @@ SLAJ-25053:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLAJ-25055:
   name: "Def Jam - Fight for NY"
   region: "NTSC-Unk"
@@ -11202,6 +11203,7 @@ SLAJ-25066:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
   memcardFilters:
     - "SLAJ-25066"
     - "SLPM-66108"
@@ -11322,6 +11324,7 @@ SLAJ-25094:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLAJ-25095:
   name: "Medal of Honor - Vanguard"
   region: "NTSC-HK"
@@ -11478,6 +11481,7 @@ SLED-51211:
   roundModes:
     vu1RoundMode: 1 # Bright lights in cars.
   gsHWFixes:
+    cpuCLUTRender: 1 # Fixes bloom and sun rendering in front of everything.
     autoFlush: 1 # Fixes bloom and sun rendering in front of everything.
     halfPixelOffset: 2 # Aligns bloom effect.
 SLED-51212:
@@ -11502,6 +11506,7 @@ SLED-51281:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes ghosting.
     alignSprite: 1 # Fixes vertical lines.
+    cpuCLUTRender: 1 # Fixes broken water rendering.
 SLED-51338:
   name: "Tom Clancy's Ghost Recon"
   region: "PAL-Unk"
@@ -11557,6 +11562,7 @@ SLED-51902:
   gsHWFixes:
     preloadFrameData: 1 # Fixes licences.
     halfPixelOffset: 2 # Fixes double image.
+    cpuCLUTRender: 1 # Fixes sun penetrating buildings.
     autoFlush: 1 # Fixes sun occlusion.
 SLED-51921:
   name: "Final Fantasy X-2 [Demo]"
@@ -11695,6 +11701,7 @@ SLED-52597:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLED-52736:
   name: "Need for Speed - Underground 2 [Demo]"
   region: "PAL-E"
@@ -11841,6 +11848,7 @@ SLED-53512:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLED-53537:
   name: "187 - Ride or Die [Demo]"
   region: "PAL-E"
@@ -11877,6 +11885,7 @@ SLED-53637:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLED-53650:
   name: "Need for Speed - Most Wanted"
   region: "PAL-E"
@@ -13905,17 +13914,20 @@ SLES-50812:
   region: "PAL-E"
   gsHWFixes:
     autoFlush: 1 # Fixes lens flares.
+    cpuCLUTRender: 1 # Fixes lens flares going through objects.
 SLES-50813:
   name: "Spider-Man"
   region: "PAL-F"
   gsHWFixes:
     autoFlush: 1 # Fixes lens flares.
+    cpuCLUTRender: 1 # Fixes lens flares going through objects.
 SLES-50814:
   name: "Spider-Man"
   region: "PAL-G"
   compat: 5
   gsHWFixes:
     autoFlush: 1 # Fixes lens flares.
+    cpuCLUTRender: 1 # Fixes lens flares going through objects.
 SLES-50815:
   name: "Blood Omen 2 - The Legacy of Kain Series"
   region: "PAL-G"
@@ -14328,6 +14340,7 @@ SLES-50965:
   region: "PAL-S"
   gsHWFixes:
     autoFlush: 1 # Fixes lens flares.
+    cpuCLUTRender: 1 # Fixes lens flares going through objects.
 SLES-50972:
   name: "Barbarian"
   region: "PAL-M5"
@@ -14462,6 +14475,7 @@ SLES-51044:
   roundModes:
     vu1RoundMode: 1 # Bright lights in cars.
   gsHWFixes:
+    cpuCLUTRender: 1 # Fixes bloom and sun rendering in front of everything.
     autoFlush: 1 # Fixes bloom and sun rendering in front of everything.
     halfPixelOffset: 2 # Aligns bloom effect.
 SLES-51045:
@@ -14867,6 +14881,7 @@ SLES-51209:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes ghosting.
     alignSprite: 1 # Fixes vertical lines.
+    cpuCLUTRender: 1 # Fixes broken water rendering.
 SLES-51214:
   name: "Harry Potter og Hemmelighedernes Kammer"
   region: "PAL-D"
@@ -14953,6 +14968,7 @@ SLES-51230:
   name: "Minority Report - Everybody Runs"
   region: "PAL-E"
   gsHWFixes:
+    cpuCLUTRender: 2 # Fixes light bleed through objects.
     halfPixelOffset: 1 # Fixes light bleed through objects.
     autoFlush: 1 # Fixes light bloom intensity.
 SLES-51232:
@@ -15204,12 +15220,14 @@ SLES-51317:
   name: "Minority Report - Le Futur vous Rattrape"
   region: "PAL-F"
   gsHWFixes:
+    cpuCLUTRender: 2 # Fixes light bleed through objects.
     halfPixelOffset: 1 # Fixes light bleed through objects.
     autoFlush: 1 # Fixes light bloom intensity.
 SLES-51318:
   name: "Minority Report - Everybody Runs"
   region: "PAL-G"
   gsHWFixes:
+    cpuCLUTRender: 2 # Fixes light bleed through objects.
     halfPixelOffset: 1 # Fixes light bleed through objects.
     autoFlush: 1 # Fixes light bloom intensity.
 SLES-51322:
@@ -16043,6 +16061,7 @@ SLES-51753:
   gsHWFixes:
     preloadFrameData: 1 # Fixes licences.
     halfPixelOffset: 2 # Fixes double image.
+    cpuCLUTRender: 1 # Fixes sun penetrating buildings.
     autoFlush: 1 # Fixes sun occlusion.
 SLES-51754:
   name: "True Crime - Streets of LA"
@@ -16051,6 +16070,7 @@ SLES-51754:
   gsHWFixes:
     preloadFrameData: 1 # Fixes licences.
     halfPixelOffset: 2 # Fixes double image.
+    cpuCLUTRender: 1 # Fixes sun penetrating buildings.
     autoFlush: 1 # Fixes sun occlusion.
 SLES-51755:
   name: "Disney/Pixar Finding Nemo"
@@ -17112,6 +17132,7 @@ SLES-52179:
   compat: 5
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth line and edge garbage.
+    cpuCLUTRender: 2 # Fixes broken effects.
 SLES-52187:
   name: "Baldur's Gate - Dark Alliance II"
   region: "PAL-M3"
@@ -18102,6 +18123,7 @@ SLES-52584:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLES-52585:
   name: "Burnout 3 - Takedown"
   region: "PAL-F-G-I"
@@ -18110,6 +18132,7 @@ SLES-52585:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLES-52587:
   name: "Army Men - Sarge's War"
   region: "PAL-M5"
@@ -19192,6 +19215,7 @@ SLES-52968:
   roundModes:
     vu1RoundMode: 1 # Bright lights in cars.
   gsHWFixes:
+    cpuCLUTRender: 1 # Fixes bloom and sun rendering in front of everything.
     autoFlush: 1 # Fixes bloom and sun rendering in front of everything.
     halfPixelOffset: 2 # Aligns bloom effect.
 SLES-52973:
@@ -20639,6 +20663,7 @@ SLES-53506:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
   memcardFilters:
     - "SLES-53506"
     - "SLES-53507"
@@ -20654,6 +20679,7 @@ SLES-53507:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
   memcardFilters:
     - "SLES-53506"
     - "SLES-53507"
@@ -21066,6 +21092,7 @@ SLES-53616:
   gsHWFixes:
     cpuSpriteRenderBW: 1 # Fixes textures.
     preloadFrameData: 1 # Fixes numberplates and ensures above targets are valid.
+    cpuCLUTRender: 1 # Fixes light occlusion.
     halfPixelOffset: 2 # Reduces post misalignment.
     autoFlush: 1 # Fixes shadow alignment.
 SLES-53617:
@@ -21078,6 +21105,7 @@ SLES-53617:
   gsHWFixes:
     cpuSpriteRenderBW: 1 # Fixes textures.
     preloadFrameData: 1 # Fixes numberplates and ensures above targets are valid.
+    cpuCLUTRender: 1 # Fixes light occlusion.
     halfPixelOffset: 2 # Reduces post misalignment.
     autoFlush: 1 # Fixes shadow alignment.
 SLES-53618:
@@ -21090,6 +21118,7 @@ SLES-53618:
   gsHWFixes:
     cpuSpriteRenderBW: 1 # Fixes textures.
     preloadFrameData: 1 # Fixes numberplates and ensures above targets are valid.
+    cpuCLUTRender: 1 # Fixes light occlusion.
     halfPixelOffset: 2 # Reduces post misalignment.
     autoFlush: 1 # Fixes shadow alignment.
 SLES-53621:
@@ -21931,6 +21960,7 @@ SLES-53904:
     disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 2 # Improves performance and reduces hash cache size.
     autoFlush: 1 # Corrects shadows (Currently still broken even with this).
+    cpuCLUTRender: 2 # Fixes light flicker.
 SLES-53906:
   name: "50 Cent - Bulletproof"
   region: "PAL-F"
@@ -23969,6 +23999,7 @@ SLES-54627:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLES-54628:
   name: "Skate Attack [Promo]"
   region: "PAL-E"
@@ -24148,6 +24179,7 @@ SLES-54681:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLES-54683:
   name: "Medal of Honor - Vanguard"
   region: "PAL-M9"
@@ -25050,6 +25082,7 @@ SLES-54992:
   region: "PAL-M6"
   gsHWFixes:
     autoFlush: 1 # Fixes lights not appearing.
+    cpuCLUTRender: 1 # Fixes lights going through darts players.
 SLES-54994:
   name: "Pippa Funnell - Ranch Rescue"
   region: "PAL-M11"
@@ -26097,6 +26130,7 @@ SLES-55349:
   gsHWFixes:
     textureInsideRT: 1 # Fixes sun glare.
     halfPixelOffset: 2 # Fixes blurriness.
+    cpuCLUTRender: 1 # Fixes sun penetration.
   memcardFilters:
     - "SLES-55349"
     - "SLES-55350"
@@ -26115,6 +26149,7 @@ SLES-55350:
   gsHWFixes:
     textureInsideRT: 1 # Fixes sun glare.
     halfPixelOffset: 2 # Fixes blurriness.
+    cpuCLUTRender: 1 # Fixes sun penetration.
   memcardFilters:
     - "SLES-55349"
     - "SLES-55350"
@@ -26133,6 +26168,7 @@ SLES-55351:
   gsHWFixes:
     textureInsideRT: 1 # Fixes sun glare.
     halfPixelOffset: 2 # Fixes blurriness.
+    cpuCLUTRender: 1 # Fixes sun penetration.
   memcardFilters:
     - "SLES-55349"
     - "SLES-55350"
@@ -26152,6 +26188,7 @@ SLES-55352:
   gsHWFixes:
     textureInsideRT: 1 # Fixes sun glare.
     halfPixelOffset: 2 # Fixes blurriness.
+    cpuCLUTRender: 1 # Fixes sun penetration.
   memcardFilters:
     - "SLES-55349"
     - "SLES-55350"
@@ -26170,6 +26207,7 @@ SLES-55353:
   gsHWFixes:
     textureInsideRT: 1 # Fixes sun glare.
     halfPixelOffset: 2 # Fixes blurriness.
+    cpuCLUTRender: 1 # Fixes sun penetration.
   memcardFilters:
     - "SLES-55349"
     - "SLES-55350"
@@ -27453,6 +27491,7 @@ SLKA-25039:
   roundModes:
     vu1RoundMode: 1 # Bright lights in cars.
   gsHWFixes:
+    cpuCLUTRender: 1 # Fixes bloom and sun rendering in front of everything.
     autoFlush: 1 # Fixes bloom and sun rendering in front of everything.
     halfPixelOffset: 2 # Aligns bloom effect.
 SLKA-25041:
@@ -28077,6 +28116,7 @@ SLKA-25206:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLKA-25207:
   name: "Sakura Taisen V - Episode 0 - Samurai Girl of Wild"
   region: "NTSC-K"
@@ -28312,6 +28352,7 @@ SLKA-25260:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLKA-25261:
   name: "Tsukiyo ni Saraba"
   region: "NTSC-K"
@@ -28478,6 +28519,7 @@ SLKA-25304:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLKA-25305:
   name: "Taito Memories - Gekan"
   region: "NTSC-K"
@@ -29245,6 +29287,7 @@ SLPM-55004:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLPM-55005:
   name: "Mana Khemia 2 - Ochita Gakuen to Renkinjutsushi Tachi"
   region: "NTSC-J"
@@ -29361,6 +29404,7 @@ SLPM-55036:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLPM-55037:
   name: "Medal of Honor - European Assault [EA:SY! 1980]"
   region: "NTSC-J"
@@ -29653,6 +29697,7 @@ SLPM-55127:
   gsHWFixes:
     textureInsideRT: 1 # Fixes sun glare.
     halfPixelOffset: 2 # Fixes blurriness.
+    cpuCLUTRender: 1 # Fixes sun penetration.
   memcardFilters:
     - "SLPM-55127"
     # Checks from Carbon are left in the code, unused.
@@ -30026,6 +30071,7 @@ SLPM-55244:
   gsHWFixes:
     textureInsideRT: 1 # Fixes sun glare.
     halfPixelOffset: 2 # Fixes blurriness.
+    cpuCLUTRender: 1 # Fixes sun penetration.
   memcardFilters:
     - "SLPM-55244"
     # Checks from Carbon are left in the code, unused.
@@ -30601,6 +30647,7 @@ SLPM-60246:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLPM-60247:
   name: "Gradius V [Trial]"
   region: "NTSC-J"
@@ -34687,6 +34734,7 @@ SLPM-65205:
   region: "NTSC-J"
   gsHWFixes:
     autoFlush: 1 # Fixes lens flares.
+    cpuCLUTRender: 1 # Fixes lens flares going through objects.
 SLPM-65206:
   name: "King of Colosseum - Green"
   region: "NTSC-J"
@@ -36642,6 +36690,7 @@ SLPM-65719:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLPM-65720:
   name: "Shin Sangoku Musou 2 - Moushouden [Koei the Best]"
   region: "NTSC-J"
@@ -36686,6 +36735,7 @@ SLPM-65729:
   gsHWFixes:
     preloadFrameData: 1 # Fixes licences.
     halfPixelOffset: 2 # Fixes double image.
+    cpuCLUTRender: 1 # Fixes sun penetrating buildings.
     autoFlush: 1 # Fixes sun occlusion.
 SLPM-65730:
   name: "Rockman X8"
@@ -37551,6 +37601,7 @@ SLPM-65958:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLPM-65959:
   name: "Standard Daisenryaku - Ushinawareta Shouri"
   region: "NTSC-J"
@@ -38107,6 +38158,7 @@ SLPM-66098:
   gsHWFixes:
     preloadFrameData: 1 # Fixes licences.
     halfPixelOffset: 2 # Fixes double image.
+    cpuCLUTRender: 1 # Fixes sun penetrating buildings.
     autoFlush: 1 # Fixes sun occlusion.
 SLPM-66099:
   name: "Harukanaru Toki no Naka de 3 - Izayoiki [Premium Box]"
@@ -38159,6 +38211,7 @@ SLPM-66108:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
   memcardFilters:
     - "SLAJ-25066"
     - "SLPM-66108"
@@ -39018,6 +39071,8 @@ SLPM-66301:
 SLPM-66302:
   name: "CLANNAD"
   region: "NTSC-J"
+  gsHWFixes:
+    cpuCLUTRender: 1 # Fixes colours.
 SLPM-66303:
   name: "Shin Sangoku Musou 2 [Shin Sangoku Musou Series Collection Joukan]"
   region: "NTSC-J"
@@ -39732,6 +39787,7 @@ SLPM-66473:
   gsHWFixes:
     cpuSpriteRenderBW: 1 # Fixes textures.
     preloadFrameData: 1 # Fixes numberplates and ensures above targets are valid.
+    cpuCLUTRender: 1 # Fixes light occlusion.
     halfPixelOffset: 2 # Reduces post misalignment.
     autoFlush: 1 # Fixes shadow alignment.
 SLPM-66474:
@@ -40470,6 +40526,7 @@ SLPM-66652:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
   memcardFilters:
     - "SLAJ-25066"
     - "SLPM-66108"
@@ -40856,6 +40913,7 @@ SLPM-66739:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLPM-66740:
   name: "Sentou Kokka Kai - Legend [DX Pack]"
   region: "NTSC-J"
@@ -41677,6 +41735,7 @@ SLPM-66962:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLPM-66963:
   name: "Medal of Honor - Frontline [EA:SY! 1980]"
   region: "NTSC-J"
@@ -42453,6 +42512,7 @@ SLPM-74243:
   gsHWFixes:
     cpuSpriteRenderBW: 1 # Fixes textures.
     preloadFrameData: 1 # Fixes numberplates and ensures above targets are valid.
+    cpuCLUTRender: 1 # Fixes light occlusion.
     halfPixelOffset: 2 # Reduces post misalignment.
     autoFlush: 1 # Fixes shadow alignment.
 SLPM-74244:
@@ -45779,6 +45839,7 @@ SLPS-25351:
   roundModes:
     vu1RoundMode: 1 # Bright lights in cars.
   gsHWFixes:
+    cpuCLUTRender: 1 # Fixes bloom and sun rendering in front of everything.
     autoFlush: 1 # Fixes bloom and sun rendering in front of everything.
     halfPixelOffset: 2 # Aligns bloom effect.
 SLPS-25352:
@@ -50419,6 +50480,7 @@ SLUS-20331:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
+    cpuCLUTRender: 2 # Fixes light bleed through objects.
     halfPixelOffset: 1 # Fixes light bleed through objects.
     autoFlush: 1 # Fixes light bloom intensity.
 SLUS-20332:
@@ -50445,6 +50507,7 @@ SLUS-20336:
   compat: 5
   gsHWFixes:
     autoFlush: 1 # Fixes lens flares.
+    cpuCLUTRender: 1 # Fixes lens flares going through objects.
 SLUS-20337:
   name: "X2 - Wolverine's Revenge"
   region: "NTSC-U"
@@ -51274,6 +51337,7 @@ SLUS-20497:
   roundModes:
     vu1RoundMode: 1 # Bright lights in cars.
   gsHWFixes:
+    cpuCLUTRender: 1 # Fixes bloom and sun rendering in front of everything.
     autoFlush: 1 # Fixes bloom and sun rendering in front of everything.
     halfPixelOffset: 2 # Aligns bloom effect.
 SLUS-20498:
@@ -51368,6 +51432,7 @@ SLUS-20517:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes ghosting.
     alignSprite: 1 # Fixes vertical lines.
+    cpuCLUTRender: 1 # Fixes broken water rendering.
 SLUS-20519:
   name: "Tak and the Power of Juju"
   region: "NTSC-U"
@@ -51528,6 +51593,7 @@ SLUS-20550:
   gsHWFixes:
     preloadFrameData: 1 # Fixes licences.
     halfPixelOffset: 2 # Fixes double image.
+    cpuCLUTRender: 1 # Fixes sun penetrating buildings.
     autoFlush: 1 # Fixes sun occlusion.
 SLUS-20552:
   name: "Grand Theft Auto - Vice City"
@@ -54270,6 +54336,7 @@ SLUS-21050:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLUS-21051:
   name: "FIFA 2005"
   region: "NTSC-U"
@@ -54473,6 +54540,7 @@ SLUS-21095:
     disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 2 # Improves performance and reduces hash cache size.
     autoFlush: 1 # Corrects shadows (Currently still broken even with this).
+    cpuCLUTRender: 2 # Fixes light flicker.
 SLUS-21096:
   name: "Ape Escape - Pumped & Primed"
   region: "NTSC-U"
@@ -54540,6 +54608,7 @@ SLUS-21106:
   gsHWFixes:
     cpuSpriteRenderBW: 1 # Fixes textures.
     preloadFrameData: 1 # Fixes numberplates and ensures above targets are valid.
+    cpuCLUTRender: 1 # Fixes light occlusion.
     halfPixelOffset: 2 # Reduces post misalignment.
     autoFlush: 1 # Fixes shadow alignment.
 SLUS-21107:
@@ -55328,6 +55397,7 @@ SLUS-21242:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
   memcardFilters: # Reads Burnout 3 and NFL 06 saves for unlockables.
     - "SLUS-21242"
     - "SLUS-21050"
@@ -57333,6 +57403,7 @@ SLUS-21596:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLUS-21597:
   name: "Medal of Honor - Vanguard"
   region: "NTSC-U"
@@ -58314,6 +58385,7 @@ SLUS-21773:
   compat: 5
   gsHWFixes:
     autoFlush: 1 # Fixes lights not appearing.
+    cpuCLUTRender: 1 # Fixes lights going through darts players.
 SLUS-21774:
   name: "Dynasty Warriors 6"
   region: "NTSC-U"
@@ -58419,6 +58491,7 @@ SLUS-21793:
     disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 2 # Improves performance and reduces hash cache size.
     autoFlush: 1 # Corrects shadows (Currently still broken even with this).
+    cpuCLUTRender: 2 # Fixes light flicker.
 SLUS-21794:
   name: "Go, Diego, Go! Great Dinosaur Rescue"
   region: "NTSC-U"
@@ -58458,6 +58531,7 @@ SLUS-21801:
   gsHWFixes:
     textureInsideRT: 1 # Fixes sun glare.
     halfPixelOffset: 2 # Fixes blurriness.
+    cpuCLUTRender: 1 # Fixes sun penetration.
   memcardFilters:
     - "SLUS-21801"
     # Checks from Carbon are left in the code, unused.
@@ -59232,6 +59306,7 @@ SLUS-28019:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes ghosting.
     alignSprite: 1 # Fixes vertical lines.
+    cpuCLUTRender: 1 # Fixes broken water rendering.
 SLUS-28020:
   name: "EverQuest Online Adventures [Beta Vol.1.0]"
   region: "NTSC-U"
@@ -59498,6 +59573,7 @@ SLUS-29038:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes ghosting.
     alignSprite: 1 # Fixes vertical lines.
+    cpuCLUTRender: 1 # Fixes broken water rendering.
 SLUS-29040:
   name: "Dr. Muto [Demo]"
   region: "NTSC-U"
@@ -59740,6 +59816,7 @@ SLUS-29113:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLUS-29116:
   name: "WWE SmackDown! vs. RAW [Public Beta Vol.1.0]"
   region: "NTSC-U"
@@ -59892,6 +59969,7 @@ SLUS-29153:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
+    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLUS-29154:
   name: "NHL 06 [Demo]"
   region: "NTSC-U"
