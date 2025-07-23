@@ -326,6 +326,8 @@ PAPX-90516:
     textureInsideRT: 1 # Fixes broken character models.
     autoFlush: 1 # Fixes lighting.
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 PAPX-90517:
   name: "Prince of Persia - The Sands of Time [Trial]"
   region: "NTSC-J"
@@ -1284,6 +1286,8 @@ SCAJ-20073:
     textureInsideRT: 1 # Fixes broken character models.
     autoFlush: 1 # Fixes lighting.
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCAJ-20074:
   name: "The King of Fighters 2002"
   region: "NTSC-Unk"
@@ -3010,6 +3014,8 @@ SCED-51700:
     textureInsideRT: 1 # Fixes broken character models.
     preloadFrameData: 1 # Fixes Sony splash at boot.
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCED-51728:
   name: "EverQuest Online Adventures [Demo]"
   region: "PAL-E"
@@ -3519,6 +3525,8 @@ SCED-52952:
     textureInsideRT: 1
     preloadFrameData: 1 # Fixes Sony splash at boot.
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCED-52969:
   name: "EyeToy - Play 2"
   region: "PAL-M12"
@@ -4844,6 +4852,8 @@ SCES-51608:
     textureInsideRT: 1 # Fixes broken character models.
     preloadFrameData: 1 # Fixes Sony splash at boot.
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCES-51610:
   name: "This is Football 2004 [Red Devils 2004]"
   region: "PAL-BE"
@@ -5204,6 +5214,8 @@ SCES-52460:
     textureInsideRT: 1
     preloadFrameData: 1 # Fixes Sony splash at boot.
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCES-52529:
   name: "Sly 2 - Band of Thieves"
   region: "PAL-M11"
@@ -5423,6 +5435,8 @@ SCES-53286:
     preloadFrameData: 1 # Fixes Sony splash at boot.
     halfPixelOffset: 2
     roundSprite: 1
+    skipDrawStart: 1
+    skipDrawEnd: 1
   memcardFilters: # Reads Ratchet Gladiator data.
     - "SCES-53286"
     - "SCES-53285"
@@ -6519,6 +6533,8 @@ SCKA-20010:
     textureInsideRT: 1 # Fixes broken character models.
     preloadFrameData: 1 # Fixes Sony splash at boot.
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCKA-20011:
   name: "Ratchet & Clank 2"
   region: "NTSC-K"
@@ -6722,6 +6738,8 @@ SCKA-20040:
     textureInsideRT: 1
     preloadFrameData: 1 # Fixes Sony splash at boot.
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCKA-20041:
   name: "EyeToy - Play 2"
   region: "NTSC-K"
@@ -7942,6 +7960,8 @@ SCPS-15057:
     textureInsideRT: 1
     autoFlush: 1
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCPS-15058:
   name: "Arc the Lad - Generation"
   region: "NTSC-J"
@@ -10089,6 +10109,8 @@ SCUS-97265:
     textureInsideRT: 1 # Fixes broken character models.
     preloadFrameData: 1 # Fixes Sony splash at boot.
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCUS-97266:
   name: "Final Fantasy XI [Disc 1 of 2]"
   region: "NTSC-U"
@@ -10127,6 +10149,8 @@ SCUS-97273:
     textureInsideRT: 1 # Fixes broken character models.
     preloadFrameData: 1 # Fixes Sony splash at boot.
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCUS-97274:
   name: "Jak II [Video Demo]"
   region: "NTSC-U"
@@ -10270,6 +10294,8 @@ SCUS-97330:
     textureInsideRT: 1
     preloadFrameData: 1 # Fixes Sony splash at boot.
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCUS-97331:
   name: "Official U.S. PlayStation Magazine Demo Disc 078"
   region: "NTSC-U"
@@ -10399,6 +10425,8 @@ SCUS-97374:
     textureInsideRT: 1 # Fixes broken character models.
     preloadFrameData: 1 # Fixes Sony splash at boot.
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCUS-97377:
   name: "Syphon Filter - The Omega Strain [Regular Demo]"
   region: "NTSC-U"
@@ -10540,6 +10568,8 @@ SCUS-97412:
     textureInsideRT: 1
     preloadFrameData: 1 # Fixes Sony splash at boot.
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCUS-97413:
   name: "Ratchet & Clank - Up Your Arsenal [Public Beta v1.0]"
   region: "NTSC-U"
@@ -10609,6 +10639,8 @@ SCUS-97429:
     autoFlush: 1 # Fixes lighting.
     preloadFrameData: 1 # Fixes Sony splash at boot.
     roundSprite: 1
+    skipDrawStart: 1
+    skipDrawEnd: 1
   memcardFilters:
     - "SCUS-97429"
     - "SCUS-97465"
@@ -10892,6 +10924,8 @@ SCUS-97486:
     autoFlush: 1 # Fixes lighting.
     preloadFrameData: 1 # Fixes Sony splash at boot.
     roundSprite: 1
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCUS-97487:
   name: "Ratchet - Deadlocked [Public Beta v.1]"
   region: "NTSC-U"
@@ -10912,6 +10946,8 @@ SCUS-97488:
     autoFlush: 1 # Fixes lighting.
     preloadFrameData: 1 # Fixes Sony splash at boot.
     roundSprite: 1
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCUS-97489:
   name: "SOCOM 3 - U.S. Navy SEALs [Public Beta v.1]"
   region: "NTSC-U"
@@ -11012,6 +11048,8 @@ SCUS-97509:
     textureInsideRT: 1 # Fixes broken character models.
     preloadFrameData: 1 # Fixes Sony splash at boot.
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCUS-97510:
   name: "ATV Offroad Fury 2 [Greatest Hits]"
   region: "NTSC-U"
@@ -11061,6 +11099,8 @@ SCUS-97516:
     textureInsideRT: 1
     preloadFrameData: 1 # Fixes Sony splash at boot.
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCUS-97517:
   name: "Killzone [Greatest Hits]"
   region: "NTSC-U"
@@ -11193,6 +11233,8 @@ SCUS-97555:
   gsHWFixes:
     mipmap: 1
     textureInsideRT: 1
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCUS-97556:
   name: "MLB '07 - The Show"
   region: "NTSC-U"
@@ -11727,6 +11769,8 @@ SLAJ-25080:
     cpuCLUTRender: 1 # Fixes light occlusion.
     textureInsideRT: 1
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SLAJ-25081:
   name: "FIFA World Cup - Germany 2006"
   region: "NTSC-Unk"
@@ -14035,6 +14079,7 @@ SLES-50672:
   region: "PAL-M5"
   compat: 5
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     roundSprite: 1
@@ -14652,7 +14697,6 @@ SLES-50876:
     autoFlush: 1
     halfPixelOffset: 2 # Fixes misaligned lighting.
     cpuCLUTRender: 1 # Fixes janky coloured cars.
-    textureInsideRT: 1
 SLES-50877:
   name: "TimeSplitters 2"
   region: "PAL-M5"
@@ -16178,6 +16222,7 @@ SLES-51525:
   name: "Fallout - Brotherhood of Steel"
   region: "PAL-M3"
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes perfomrance issues.
     textureInsideRT: 1
     roundSprite: 1
@@ -16186,6 +16231,7 @@ SLES-51526:
   name: "Fallout - Brotherhood of Steel"
   region: "PAL-M3"
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performace issues.
     textureInsideRT: 1
     roundSprite: 1
@@ -17644,7 +17690,6 @@ SLES-52153:
     autoFlush: 1
     halfPixelOffset: 2 # Fixes misaligned lighting.
     cpuCLUTRender: 1 # Fixes janky coloured cars.
-    textureInsideRT: 1
 SLES-52155:
   name: "EyeToy - L'Eredita"
   region: "PAL-I"
@@ -17683,6 +17728,7 @@ SLES-52187:
   compat: 5
   gsHWFixes:
     roundSprite: 1 # Fixes lines in sprites but still some lines left.
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -17692,6 +17738,7 @@ SLES-52188:
   compat: 5
   gsHWFixes:
     roundSprite: 1 # Fixes lines in sprites but still some lines left.
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -18000,6 +18047,7 @@ SLES-52325:
   gameFixes:
     - BlitInternalFPSHack # Fixes internal fps detection in some areas.
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     halfPixelOffset: 2
@@ -18101,6 +18149,7 @@ SLES-52373:
   gameFixes:
     - BlitInternalFPSHack # Fixes internal fps detection in some areas.
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
     halfPixelOffset: 2
@@ -18174,6 +18223,7 @@ SLES-52392:
   name: "Combat Elite - WWII Paratroopers [Preview]"
   region: "PAL-E"
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
 SLES-52393:
   name: "Pinball Fun"
@@ -19565,6 +19615,7 @@ SLES-52894:
   name: "The Bard's Tale"
   region: "PAL-E"
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -20118,6 +20169,7 @@ SLES-53039:
   region: "PAL-M4"
   compat: 5
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     halfPixelOffset: 2
@@ -20460,6 +20512,7 @@ SLES-53154:
   name: "The Bard's Tale"
   region: "PAL-M8"
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -22744,6 +22797,8 @@ SLES-53967:
     cpuCLUTRender: 1 # Fixes light occlusion.
     textureInsideRT: 1
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SLES-53968:
   name: "Parrain, Le"
   region: "PAL-F"
@@ -24059,6 +24114,7 @@ SLES-54423:
   clampModes:
     vuClampMode: 2 # Fixes ingame SPS for the capes.
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performamce issues.
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -28818,7 +28874,6 @@ SLKA-25196:
     autoFlush: 1
     halfPixelOffset: 2 # Fixes misaligned lighting.
     cpuCLUTRender: 1 # Fixes janky coloured cars.
-    textureInsideRT: 1
 SLKA-25198:
   name: "Tenchu Kurenai"
   region: "NTSC-K"
@@ -29040,6 +29095,7 @@ SLKA-25246:
   name: "The Bard's Tale"
   region: "NTSC-K"
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -37639,7 +37695,6 @@ SLPM-65741:
     autoFlush: 1
     halfPixelOffset: 2 # Fixes misaligned lighting.
     cpuCLUTRender: 1 # Fixes janky coloured cars.
-    textureInsideRT: 1
 SLPM-65742:
   name: "Cool Girl [KONAMI The BEST] [Disc 1 of 2]"
   region: "NTSC-J"
@@ -38039,6 +38094,7 @@ SLPM-65845:
   compat: 5
   gsHWFixes:
     roundSprite: 1 # Fixes lines in sprites but still some lines left.
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -38296,6 +38352,7 @@ SLPM-65915:
   name: "Fallout BROTHERHOOD OF STEEL"
   region: "NTSC-J"
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     roundSprite: 1
@@ -41695,6 +41752,8 @@ SLPM-66710:
     cpuCLUTRender: 1 # Fixes light occlusion.
     textureInsideRT: 1
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SLPM-66712:
   name: "Rozen Maiden - Gebetgarten [Standard Edition]"
   region: "NTSC-J"
@@ -42662,6 +42721,8 @@ SLPM-66966:
     cpuCLUTRender: 1 # Fixes light occlusion.
     textureInsideRT: 1
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SLPM-66967:
   name: "Aria - The Natural - Tooi Yume no Mirage [Alchemist Best Collection]"
   region: "NTSC-J"
@@ -45985,6 +46046,7 @@ SLPS-25139:
   region: "NTSC-J"
   compat: 5
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
     roundSprite: 1
@@ -46588,6 +46650,7 @@ SLPS-25291:
   region: "NTSC-J"
   compat: 5
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes perforamnce issues.
     textureInsideRT: 1
     roundSprite: 1
@@ -50344,6 +50407,7 @@ SLUS-20035:
   gameFixes:
     - SoftwareRendererFMVHack # Fixes FMVs.
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     roundSprite: 1
@@ -52663,6 +52727,7 @@ SLUS-20539:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
     roundSprite: 1
@@ -52829,6 +52894,7 @@ SLUS-20565:
   gameFixes:
     - BlitInternalFPSHack # Fixes internal fps detection in some areas.
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -52958,7 +53024,6 @@ SLUS-20587:
     autoFlush: 1
     halfPixelOffset: 2 # Fixes misaligned lighting.
     cpuCLUTRender: 1 # Fixes janky coloured cars.
-    textureInsideRT: 1
 SLUS-20588:
   name: "Activision Anthology"
   region: "NTSC-U"
@@ -53410,6 +53475,7 @@ SLUS-20675:
     - SoftwareRendererFMVHack # Fixes FMVs.
   gsHWFixes:
     roundSprite: 1 # Fixes lines in sprites but still some lines left.
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -53607,6 +53673,7 @@ SLUS-20715:
   name: "Combat Elite - WWII Paratroopers"
   region: "NTSC-U"
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     halfPixelOffset: 2
@@ -54092,6 +54159,7 @@ SLUS-20803:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -55048,6 +55116,7 @@ SLUS-20973:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     halfPixelOffset: 2
@@ -57078,6 +57147,7 @@ SLUS-21304:
   clampModes:
     vuClampMode: 2 # Ingame capes become SPS mess with lower than extra VU clamp.
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -57640,6 +57710,8 @@ SLUS-21385:
     cpuCLUTRender: 1 # Fixes light occlusion.
     textureInsideRT: 1
     halfPixelOffset: 2
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SLUS-21386:
   name: "Tales of the Abyss"
   region: "NTSC-U"
@@ -60715,6 +60787,7 @@ SLUS-28054:
   name: "Combat Elite - WWII Paratroopers [Trade Demo]"
   region: "NTSC-U"
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes performance issues.
     textureInsideRT: 1
     halfPixelOffset: 2
@@ -61063,6 +61136,7 @@ SLUS-29088:
   gameFixes:
     - BlitInternalFPSHack # Fixes internal fps detection in some areas.
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1
     textureInsideRT: 1
     gpuPaletteConversion: 1
@@ -61174,6 +61248,7 @@ SLUS-29126:
   region: "NTSC-U"
   compat: 4
   gsHWFixes:
+    texturePreloading: 1 # Performs much better with partial preload.
     disablePartialInvalidation: 1 # Fixes perfromance issues.
     textureInsideRT: 1
     halfPixelOffset: 2
@@ -61610,6 +61685,8 @@ TCES-53286:
     autoFlush: 1 # Fixes lighting.
     preloadFrameData: 1 # Fixes Sony splash at boot.
     roundSprite: 1
+    skipDrawStart: 1
+    skipDrawEnd: 1
 TCPS-10058:
   name: "Densha de Go! Shinkansen Sanyou Shinkansen-hen [with Controller]"
   region: "NTSC-J"
@@ -61853,9 +61930,6 @@ SLES-51541:
     eeClampMode: 2 # Fixes Game freezes during "Reuniting The Families" mission.
   gsHWFixes:
     autoFlush: 1
-    halfPixelOffset: 2
-    skipDrawStart: 7
-    skipDrawEnd: 3
 SLES-51752:
   name: "Tony Hawks Underground"
   region: "PAL-Unk"
