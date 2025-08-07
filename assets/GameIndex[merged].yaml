@@ -1518,11 +1518,19 @@ SCAJ-20111:
 SCAJ-20112:
   name: "Tales of Rebirth"
   region: "NTSC-Unk"
+  compat: 5
   speedHacks:
     mvuFlagSpeedHack: 0 # Fixes graphical corruptions.
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+  patches:
+    default:
+      content: |-
+        author=Ethanol
+        comment=Kills the sun (a bit)
+        patch=1,EE,D0237070,extended,01000006
+        patch=1,EE,202F01A8,extended,0000102D
 SCAJ-20113:
   name: "Dragon Quest & Final Fantasy in Itadaki Street"
   region: "NTSC-Unk"
@@ -22928,6 +22936,9 @@ SLES-53996:
   name: "Army Men - Major Malfunction"
   region: "PAL-E"
   compat: 5
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes misaligned bloom.
+    textureInsideRT: 1 # Fixes bottom half rendering and corrupted shadows.
 SLES-53998:
   name: "OutRun 2006 - Coast 2 Coast"
   region: "PAL-M5"
@@ -47387,6 +47398,13 @@ SLPS-25450:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+  patches:
+    default:
+      content: |-
+        author=Ethanol
+        comment=Kills the sun (a bit)
+        patch=1,EE,D0237070,extended,01000006
+        patch=1,EE,202F01A8,extended,0000102D
 SLPS-25451:
   name: "Hana to Taiyou to Ame to [Super Best Collection]"
   region: "NTSC-J"
