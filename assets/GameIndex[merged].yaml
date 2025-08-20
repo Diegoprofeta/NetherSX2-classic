@@ -1093,6 +1093,7 @@ SCAJ-20028:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
 SCAJ-20029:
   name: "R-Type Final"
   region: "NTSC-Unk"
@@ -1524,6 +1525,7 @@ SCAJ-20112:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
   patches:
     default:
       content: |-
@@ -1750,6 +1752,7 @@ SCAJ-20145:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
 SCAJ-20146:
   name: "Wang Da Yu Ju Xiang"
   region: "NTSC-C"
@@ -1996,6 +1999,7 @@ SCAJ-20182:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
 SCAJ-20183:
   name: "Wild Arms - The Vth Vanguard"
   region: "NTSC-J"
@@ -2041,6 +2045,7 @@ SCAJ-20193:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
 SCAJ-20194:
   name: "Minna no Golf 4 [PlayStation 2 the Best]"
   region: "NTSC-Unk"
@@ -6532,6 +6537,7 @@ SCKA-20008:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
 SCKA-20009:
   name: "R-Type Final"
   region: "NTSC-K"
@@ -6831,6 +6837,7 @@ SCKA-20050:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
 SCKA-20051:
   name: "Minna Daisuki Katamari Damacy"
   region: "NTSC-K"
@@ -6863,6 +6870,7 @@ SCKA-20054:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
 SCKA-20055:
   name: "Mystic Nights"
   region: "NTSC-K"
@@ -7174,6 +7182,7 @@ SCKA-20100:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
 SCKA-20101:
   name: "Seiken Densetsu 4"
   region: "NTSC-K"
@@ -7249,6 +7258,7 @@ SCKA-20119:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
 SCKA-20120:
   name: "Ratchet & Clank - Size Matters"
   region: "NTSC-K"
@@ -7285,6 +7295,7 @@ SCKA-20129:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
 SCKA-20130:
   name: "Minna no Tennis"
   region: "NTSC-K"
@@ -9264,6 +9275,7 @@ SCPS-55050:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
 SCPS-55901:
   name: "Xenosaga Episode 1 - Der Wille zur Macht [Asia Version]"
   region: "NTSC-J"
@@ -46273,6 +46285,7 @@ SLPS-25172:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
 SLPS-25173:
   name: "Omoide ni Kawaru Kimi - Memories Off"
   region: "NTSC-J"
@@ -47405,6 +47418,7 @@ SLPS-25450:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
   patches:
     default:
       content: |-
@@ -47725,6 +47739,7 @@ SLPS-25533:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
 SLPS-25534:
   name: "Twinkle Star Sprites - La Petite Princesse"
   region: "NTSC-J"
@@ -48525,6 +48540,7 @@ SLPS-25715:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
 SLPS-25716:
   name: "Digimon Savers - Another Mission"
   region: "NTSC-J"
@@ -49017,6 +49033,7 @@ SLPS-25841:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
   memcardFilters: # Allows import of non-DC Tales of Destiny data.
     - "SLPS-25841"
     - "SLPS-25842"
@@ -49030,6 +49047,7 @@ SLPS-25842:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
   memcardFilters:
     - "SLPS-25841"
     - "SLPS-25842"
@@ -49673,6 +49691,7 @@ SLPS-72502:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
 SLPS-73001:
   name: "Pilot ni Narou! 2"
   region: "NTSC-J"
@@ -49865,6 +49884,7 @@ SLPS-73219:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
 SLPS-73220:
   name: "Ultraman [PlayStation 2 the Best]"
   region: "NTSC-J"
@@ -50060,6 +50080,7 @@ SLPS-73242:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
 SLPS-73243:
   name: "Namco X Capcom [PlayStation 2 the Best]"
   region: "NTSC-J"
@@ -56516,6 +56537,7 @@ SLUS-21201:
   gsHWFixes:
     disablePartialInvalidation: 1 # Fixes some performance loss caused by excessive junk texture generation
     preloadFrameData: 1 # Reduces performance drops caused by effects
+    texturePreloading: 1 # Performs much better with partial preload
 SLUS-21202:
   name: "Romance of the Three Kingdoms X"
   region: "NTSC-U"
