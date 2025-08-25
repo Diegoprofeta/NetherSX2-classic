@@ -2374,6 +2374,7 @@ SCED-50642:
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
+    preloadFrameData: 1 # Fixes an issue that causes FMVs to flicker black when subtitles appear on screen.
 SCED-50660:
   name: "Dropship - United Peace Force"
   region: "PAL-A"
@@ -4180,6 +4181,7 @@ SCES-50490:
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
+    preloadFrameData: 1 # Fixes an issue that causes FMVs to flicker black when subtitles appear on screen.
 SCES-50491:
   name: "Final Fantasy X"
   region: "PAL-F"
@@ -4193,6 +4195,7 @@ SCES-50491:
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
+    preloadFrameData: 1 # Fixes an issue that causes FMVs to flicker black when subtitles appear on screen.
 SCES-50492:
   name: "Final Fantasy X"
   region: "PAL-G"
@@ -4207,6 +4210,7 @@ SCES-50492:
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
+    preloadFrameData: 1 # Fixes an issue that causes FMVs to flicker black when subtitles appear on screen.
 SCES-50493:
   name: "Final Fantasy X"
   region: "PAL-I"
@@ -4220,6 +4224,7 @@ SCES-50493:
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
+    preloadFrameData: 1 # Fixes an issue that causes FMVs to flicker black when subtitles appear on screen.
 SCES-50494:
   name: "Final Fantasy X"
   region: "PAL-S"
@@ -4233,6 +4238,7 @@ SCES-50494:
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
+    preloadFrameData: 1 # Fixes an issue that causes FMVs to flicker black when subtitles appear on screen.
 SCES-50499:
   name: "Ecco the Dolphin - Defender of the Future"
   region: "PAL-M5"
@@ -23702,8 +23708,10 @@ SLES-54508:
   name: "National Geographic - Safari Adventures Africa"
   region: "PAL-M6"
 SLES-54510:
-  name: "Meet the Robinsons"
+  name: "Walt Disney Pictures Presents Meet the Robinsons"
   region: "PAL-M3"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes bloom alignment.
 SLES-54511:
   name: "UEFA Champions League 2006-2007"
   region: "PAL-E"
@@ -24186,8 +24194,10 @@ SLES-54677:
   region: "PAL-E"
   compat: 5
 SLES-54679:
-  name: "Metal Slug - Anthology"
+  name: "Walt Disney Pictures Presents Meet the Robinsons"
   region: "PAL-M3"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes bloom alignment.
 SLES-54681:
   name: "Burnout Dominator"
   region: "PAL-E"
@@ -28182,6 +28192,7 @@ SLKA-25214:
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
+    preloadFrameData: 1 # Fixes an issue that causes FMVs to flicker black when subtitles appear on screen.
 SLKA-25215:
   name: "Shining Wind"
   region: "NTSC-K"
@@ -34444,6 +34455,7 @@ SLPM-65115:
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
+    preloadFrameData: 1 # Fixes an issue that causes FMVs to flicker black when subtitles appear on screen.
 SLPM-65116:
   name: "Lilie no Atelier Plus - Salburg no Renkinjutsushi 3"
   region: "NTSC-J"
@@ -38326,6 +38338,7 @@ SLPM-66124:
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
+    preloadFrameData: 1 # Fixes an issue that causes FMVs to flicker black when subtitles appear on screen.
 SLPM-66125:
   name: "Final Fantasy X-2 [Ultimate Hits]"
   region: "NTSC-J"
@@ -40683,6 +40696,7 @@ SLPM-66677:
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
+    preloadFrameData: 1 # Fixes an issue that causes FMVs to flicker black when subtitles appear on screen.
 SLPM-66678:
   name: "Final Fantasy X-2 International + Last Mission [Ultimate Hits]"
   region: "NTSC-J"
@@ -41294,8 +41308,10 @@ SLPM-66829:
   name: "MAJOR LEAGUE BASEBALL 2K7"
   region: "NTSC-J"
 SLPM-66830:
-  name: "Lewis and the Future Thief"
+  name: "Walt Disney Pictures Presents Lewis to Mirai Dorobou - Wilbur no Kiken na Jikan Ryokou"
   region: "NTSC-J"
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes bloom alignment.
 SLPM-66832:
   name: "Tennis no Oujisama - Doki Doki Survival - Umibe no Secret"
   region: "NTSC-J"
@@ -42029,6 +42045,7 @@ SLPM-67513:
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
+    preloadFrameData: 1 # Fixes an issue that causes FMVs to flicker black when subtitles appear on screen.
 SLPM-67514:
   name: "Kessen"
   region: "NTSC-K"
@@ -44705,6 +44722,7 @@ SLPS-25050:
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
+    preloadFrameData: 1 # Fixes an issue that causes FMVs to flicker black when subtitles appear on screen.
 SLPS-25051:
   name: "Missing Blue [Standard Edition]"
   region: "NTSC-J"
@@ -44753,9 +44771,13 @@ SLPS-25059:
 SLPS-25060:
   name: "Mobile Suit Gundam - Meguriai Sora [Limited Edition]"
   region: "NTSC-J"
+  memcardFilters:
+    - "SLPS-25062"
 SLPS-25061:
   name: "Mobile Suit Gundam Ver.1.5 [Limited Edition]"
   region: "NTSC-J"
+  memcardFilters:
+    - "SLPS-25063"
 SLPS-25062:
   name: "Kidou Senshi Gundam - Meguriai Sora"
   region: "NTSC-J"
@@ -44860,6 +44882,7 @@ SLPS-25088:
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
+    preloadFrameData: 1 # Fixes an issue that causes FMVs to flicker black when subtitles appear on screen.
 SLPS-25089:
   name: "SALT LAKE 2002"
   region: "NTSC-J"
@@ -48490,6 +48513,7 @@ SLPS-72501:
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
+    preloadFrameData: 1 # Fixes an issue that causes FMVs to flicker black when subtitles appear on screen.
 SLPS-72502:
   name: "Tales of Destiny 2 [MEGA HITS!]"
   region: "NTSC-J"
@@ -50420,6 +50444,7 @@ SLUS-20312:
   gsHWFixes:
     roundSprite: 2 # Fixes font artifacts.
     autoFlush: 1 # Fixes blur effect on attacks.
+    preloadFrameData: 1 # Fixes an issue that causes FMVs to flicker black when subtitles appear on screen.
 SLUS-20313:
   name: "Wave Rally"
   region: "NTSC-U"
@@ -56819,9 +56844,11 @@ SLUS-21452:
     roundSprite: 1 # Fixes lines in transitions.
     autoFlush: 1 # Fixes shadow rendering in certain scenarios when using DirectX.
 SLUS-21453:
-  name: "Meet the Robinsons"
+  name: "Walt Disney Pictures Presents Meet the Robinsons"
   region: "NTSC-U"
   compat: 5
+  gsHWFixes:
+    halfPixelOffset: 2 # Fixes bloom alignment.
 SLUS-21454:
   name: "DreamWorks Shrek the Third"
   region: "NTSC-U"
