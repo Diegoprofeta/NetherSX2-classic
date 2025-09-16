@@ -28063,6 +28063,8 @@ SLES-82042:
     - BlitInternalFPSHack # Fixes internal FPS detection.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SLES-82043:
   name: "Metal Gear Solid 3 - Subsistence [Disc 2 of 3]"
   region: "PAL-E-F"
@@ -28079,6 +28081,8 @@ SLES-82044:
     - BlitInternalFPSHack # Fixes internal FPS detection.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SLES-82045:
   name: "Metal Gear Solid 3 - Subsistence [Disc 2 of 3]"
   region: "PAL-I"
@@ -28095,6 +28099,8 @@ SLES-82046:
     - BlitInternalFPSHack # Fixes internal FPS detection.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SLES-82047:
   name: "Metal Gear Solid 3 - Subsistence [Disc 2 of 3]"
   region: "PAL-G"
@@ -28111,6 +28117,8 @@ SLES-82048:
     - BlitInternalFPSHack # Fixes internal FPS detection.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SLES-82049:
   name: "Metal Gear Solid 3 - Subsistence [Disc 2 of 3]"
   region: "PAL-S"
@@ -29716,6 +29724,8 @@ SLKA-25353:
     - BlitInternalFPSHack # Fixes internal FPS detection.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SLKA-25354:
   name: "Metal Gear Solid 3 - Subsistence [Disc 2 of 3]"
   region: "NTSC-K"
@@ -39438,6 +39448,8 @@ SLPM-66117:
     - BlitInternalFPSHack # Fixes internal FPS detection.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SLPM-66118:
   name: "Metal Gear Solid 3 - Subsistence [with Headset] [Disc 2 of 3]"
   region: "NTSC-J"
@@ -39886,6 +39898,8 @@ SLPM-66220:
     - BlitInternalFPSHack # Fixes internal FPS detection.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
+    skipDrawStart: 1
+    skipDrawEnd: 1
   memcardFilters:
     - "SLPM-66117"
 SLPM-66221:
@@ -39913,6 +39927,8 @@ SLPM-66223:
     - BlitInternalFPSHack # Fixes internal FPS detection.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
+    skipDrawStart: 1
+    skipDrawEnd: 1
   memcardFilters:
     - "SLPM-66117"
 SLPM-66224:
@@ -57848,6 +57864,8 @@ SLUS-21359:
     - BlitInternalFPSHack # Fixes internal FPS detection.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SLUS-21360:
   name: "Metal Gear Solid 3 - Subsistence [Disc 3 of 3]"
   region: "NTSC-U"
@@ -62247,6 +62265,8 @@ TLES-82043:
     - InstantDMAHack # Fixes missing text in key item acquisition dialogue box.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
+    skipDrawStart: 1
+    skipDrawEnd: 1
 SCUS-21494:
   name: "Need for Speed - Carbon Collector's Edition"
   region: "NTSC-U"
