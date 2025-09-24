@@ -38,7 +38,7 @@ One you've used one of the above methods to create your NetherSX2 apk, it's time
 
 ## Downloads
 ### Stable
-* [NetherSX2-v2.0-3668.apk](https://github.com/Trixarian/NetherSX2-classic/releases/download/2.0/NetherSX2-v2.0-3668.apk)
+* [NetherSX2-v2.1-3668.apk](https://github.com/Trixarian/NetherSX2-classic/releases/download/2.1/NetherSX2-v2.1-3668.apk)
 
 ### Development Builds
 * [NetherSX2-v2.0.6-3668.apk](https://github.com/Trixarian/test-builds/releases/download/v2.0.6/NetherSX2-v2.0.6-3668.apk)
