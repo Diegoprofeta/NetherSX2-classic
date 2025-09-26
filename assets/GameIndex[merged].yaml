@@ -18698,8 +18698,6 @@ SLES-52541:
   gsHWFixes:
     autoFlush: 1
     halfPixelOffset: 2
-    skipDrawStart: 7
-    skipDrawEnd: 3
 SLES-52542:
   name: "All Music Dance!"
   region: "PAL-I"
@@ -19833,8 +19831,6 @@ SLES-52927:
   gsHWFixes:
     autoFlush: 1
     halfPixelOffset: 2
-    skipDrawStart: 7
-    skipDrawEnd: 3
 SLES-52931:
   name: "Legend of Kay"
   region: "PAL-M5"
@@ -28063,8 +28059,8 @@ SLES-82042:
     - BlitInternalFPSHack # Fixes internal FPS detection.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
-    skipDrawStart: 1
-    skipDrawEnd: 1
+    skipDrawStart: 2
+    skipDrawEnd: 2
 SLES-82043:
   name: "Metal Gear Solid 3 - Subsistence [Disc 2 of 3]"
   region: "PAL-E-F"
@@ -28081,8 +28077,8 @@ SLES-82044:
     - BlitInternalFPSHack # Fixes internal FPS detection.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
-    skipDrawStart: 1
-    skipDrawEnd: 1
+    skipDrawStart: 2
+    skipDrawEnd: 2
 SLES-82045:
   name: "Metal Gear Solid 3 - Subsistence [Disc 2 of 3]"
   region: "PAL-I"
@@ -28099,8 +28095,8 @@ SLES-82046:
     - BlitInternalFPSHack # Fixes internal FPS detection.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
-    skipDrawStart: 1
-    skipDrawEnd: 1
+    skipDrawStart: 2
+    skipDrawEnd: 2
 SLES-82047:
   name: "Metal Gear Solid 3 - Subsistence [Disc 2 of 3]"
   region: "PAL-G"
@@ -28117,8 +28113,8 @@ SLES-82048:
     - BlitInternalFPSHack # Fixes internal FPS detection.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
-    skipDrawStart: 1
-    skipDrawEnd: 1
+    skipDrawStart: 2
+    skipDrawEnd: 2
 SLES-82049:
   name: "Metal Gear Solid 3 - Subsistence [Disc 2 of 3]"
   region: "PAL-S"
@@ -29724,8 +29720,8 @@ SLKA-25353:
     - BlitInternalFPSHack # Fixes internal FPS detection.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
-    skipDrawStart: 1
-    skipDrawEnd: 1
+    skipDrawStart: 2
+    skipDrawEnd: 2
 SLKA-25354:
   name: "Metal Gear Solid 3 - Subsistence [Disc 2 of 3]"
   region: "NTSC-K"
@@ -30647,8 +30643,6 @@ SLPM-55092:
   gsHWFixes:
     autoFlush: 1
     halfPixelOffset: 2
-    skipDrawStart: 7
-    skipDrawEnd: 3
 SLPM-55093:
   name: "Galaxy Angel II - Mugen Kairou no Kagi [Disc 1 of 2]"
   region: "NTSC-J"
@@ -31278,8 +31272,6 @@ SLPM-55292:
   gsHWFixes:
     autoFlush: 1
     halfPixelOffset: 2
-    skipDrawStart: 7
-    skipDrawEnd: 3
 SLPM-55293:
   name: "Grand Theft Auto III [Rockstar Classics]"
   region: "NTSC-J"
@@ -38881,8 +38873,6 @@ SLPM-65984:
   gsHWFixes:
     autoFlush: 1
     halfPixelOffset: 2
-    skipDrawStart: 7
-    skipDrawEnd: 3
 SLPM-65985:
   name: "Iris no Atelier - Eternal Mana 2"
   region: "NTSC-J"
@@ -39448,8 +39438,8 @@ SLPM-66117:
     - BlitInternalFPSHack # Fixes internal FPS detection.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
-    skipDrawStart: 1
-    skipDrawEnd: 1
+    skipDrawStart: 2
+    skipDrawEnd: 2
 SLPM-66118:
   name: "Metal Gear Solid 3 - Subsistence [with Headset] [Disc 2 of 3]"
   region: "NTSC-J"
@@ -39898,8 +39888,8 @@ SLPM-66220:
     - BlitInternalFPSHack # Fixes internal FPS detection.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
-    skipDrawStart: 1
-    skipDrawEnd: 1
+    skipDrawStart: 2
+    skipDrawEnd: 2
   memcardFilters:
     - "SLPM-66117"
 SLPM-66221:
@@ -39927,8 +39917,8 @@ SLPM-66223:
     - BlitInternalFPSHack # Fixes internal FPS detection.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
-    skipDrawStart: 1
-    skipDrawEnd: 1
+    skipDrawStart: 2
+    skipDrawEnd: 2
   memcardFilters:
     - "SLPM-66117"
 SLPM-66224:
@@ -42348,8 +42338,6 @@ SLPM-66788:
   gsHWFixes:
     autoFlush: 1
     halfPixelOffset: 2
-    skipDrawStart: 7
-    skipDrawEnd: 3
 SLPM-66789:
   name: "Grand Theft Auto III [Best Price]"
   region: "NTSC-J"
@@ -55271,8 +55259,6 @@ SLUS-20946:
   gsHWFixes:
     autoFlush: 1
     halfPixelOffset: 2
-    skipDrawStart: 7
-    skipDrawEnd: 3
 SLUS-20947:
   name: "WinBack 2 - Project Poseidon"
   region: "NTSC-U"
@@ -57639,7 +57625,6 @@ SLUS-21327:
   compat: 5
   gameFixes:
     - SoftwareRendererFMVHack # Flickering in FMV.
-    - SoftwareRendererFMVHack
   gsHWFixes:
     roundSprite: 1 # Fixes font artifacts for health and other sprites.
     texturePreloading: 0 # Improves performance and prevents it disabling itself regardless.
@@ -57864,8 +57849,8 @@ SLUS-21359:
     - BlitInternalFPSHack # Fixes internal FPS detection.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes blurriness.
-    skipDrawStart: 1
-    skipDrawEnd: 1
+    skipDrawStart: 2
+    skipDrawEnd: 2
 SLUS-21360:
   name: "Metal Gear Solid 3 - Subsistence [Disc 3 of 3]"
   region: "NTSC-U"
