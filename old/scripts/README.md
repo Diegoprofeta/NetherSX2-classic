@@ -14,17 +14,25 @@ They aim to do the following:
 * Add additional AetherSX2/NetherSX2 spesific fixes to the GameDB
 * Resign the APK to prevent Google Play Store Auto-Update from installing 3064 over it
 
+## Prerequisites
+* Windows Vista or higher
+* [The Java(TM) SE Development Kit](https://www.oracle.com/java/technologies/downloads/#jdk21-windows)
+
+The rest comes prepackaged for your convenience
+
+## Using these scripts
+1. Run patch-apk.bat to patch your self-provided copy of the AetherSX2 3668 apk or to download a copy for you
+2. Allow it to finish patching, building and signing your copy of NetherSX2-classic
+3. Copy the 13930-v1.5-3668-mod[patched].apk file to your phone and install it using your File Manager
+
+And there you go, you should now have an updated and bug fixed copy of NetherSX2-classic on your phone!
+
 ## Installing NetherSX2
-Once you've grabbed a copy of the [NetherSX2 Classic APK](https://github.com/Trixarian/NetherSX2-classic/releases/download/2.1/NetherSX2-v2.1-3668.apk), it's time to install it on to your device
+One you've used one of the above methods to create your NetherSX2 apk, it's time to install it on your phone
 
-If you were using a copy of NetherSX2 1.9a or above: 
-0. (Optional) Backup your files in case something goes wrong. The easiest method is to use the AetherSX2's built in Transfer Data function by using it's Export feature to move your files to an external folder. This will backup your bios files, memcards, save states, game settings, covers and texture packs
-1. Install the apk normally to update to the latest version and keep your current settings
-
-If you were using AetherSX2 or a copy of NetherSX2 older than 1.9a:
 1. Backup your files. The easiest method is to use the AetherSX2's built in Transfer Data function by using it's Export feature to move your files to an external folder. This will backup your bios files, memcards, save states, game settings, covers and texture packs
 2. After backing up your files, you need to remove any previous copies of AetherSX2 or NetherSX2. Do this by Uninstalling the app normally. Be sure NOT to keep any files if prompted
-3. With the Backup and Uninstalls done, all that remains is to navigate to where you put your NetherSX2 apk with your File Manager (named Files or File Manager depending on your device) and tapping it to install it to your device
+3. With the Backup and Uninstalls done, all that remains is to navigate to where you put your NetherSX2 apk with your File Manager (named Files or File Manager depending on your phone) and tapping it to install it to your phone
 4. Once installed, run the app and configure it normally. Once at the Game List screen, you can access the Transfer Data/Backup Data feature and Import the files you exported earlier by navigating to the folder you put all your backed up files. This should import your bios files, memcards, save states, game settings, covers and texture packs
 5. Now spend some time redoing the Global App Settings and you should be ready to go
 
@@ -38,6 +46,8 @@ If you were using AetherSX2 or a copy of NetherSX2 older than 1.9a:
 ## Credits
 * PCSX2: <https://github.com/PCSX2/pcsx2> 
 * EZOnTheEyes: <https://www.youtube.com/@EZOnTheEyes>
-* Saramagrean: <https://github.com/Saramagrean/NetherSX2-cheats>
+* Xdelta-GPL: <https://github.com/jmacd/xdelta-gpl>
+* cmdcolor: <https://github.com/alecmev/cmdcolor>
+* md5sums: http://www.pc-tools.net/win32/md5sums
 * Android Keystore: <https://github.com/jorfao/pkStore>
-* SDL_GameControllerDB: <https://github.com/mdqinc/SDL_GameControllerDB>
+* Alternate Keystore: <https://github.com/tytydraco/public-keystore>
