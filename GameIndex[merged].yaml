@@ -1338,7 +1338,6 @@ SCAJ-20079:
   clampModes:
     vu1ClampMode: 3
   roundModes:
-    vuRoundMode: 0 # Fixes SPS.
     vu1RoundMode: 0
   speedHacks:
     mvuFlagSpeedHack: 0 # Fixes performance and falling through floor and other gameplay.
@@ -1674,7 +1673,6 @@ SCAJ-20135:
   clampModes:
     vu1ClampMode: 3
   roundModes:
-    vuRoundMode: 0 # Fixes SPS.
     vu1RoundMode: 0
   speedHacks:
     mvuFlagSpeedHack: 0 # Fixes performance and falling through floor and other gameplay.
@@ -2946,7 +2944,6 @@ SCED-51568:
   clampModes:
     vu1ClampMode: 0
   roundModes:
-    vuRoundMode: 0 # Fixes SPS (Primal).
     vu1RoundMode: 1
 SCED-51569:
   name: "Official PlayStation 2 Magazine Demo 34"
@@ -4737,7 +4734,6 @@ SCES-51135:
   region: "PAL-M5"
   compat: 5
   clampModes:
-    vuClampMode: 0 # Fix other SPS.
     vu1ClampMode: 0
   roundModes:
     eeRoundMode: 0 # Fixes textures on the doors.
@@ -4942,7 +4938,6 @@ SCES-51685:
   name: "Primal"
   region: "PAL-E-R"
   clampModes:
-    vuClampMode: 0 # Fix other SPS.
     vu1ClampMode: 0
   roundModes:
     eeRoundMode: 0 # Fixes textures on the doors.
@@ -6658,7 +6653,6 @@ SCKA-20025:
   clampModes:
     vu1ClampMode: 3
   roundModes:
-    vuRoundMode: 0 # Fixes SPS.
     vu1RoundMode: 0
   speedHacks:
     mvuFlagSpeedHack: 0 # Fixes performance and falling through floor and other gameplay.
@@ -6862,7 +6856,6 @@ SCKA-20051:
   clampModes:
     vu1ClampMode: 3
   roundModes:
-    vuRoundMode: 0 # Fixes SPS.
     vu1RoundMode: 0
   speedHacks:
     mvuFlagSpeedHack: 0 # Fixes performance and falling through floor and other gameplay.
@@ -7978,7 +7971,6 @@ SCPS-15052:
   name: "Saints - Seinaru Mamono"
   region: "NTSC-J"
   clampModes:
-    vuClampMode: 0 # Fix other SPS.
     vu1ClampMode: 0
   roundModes:
     eeRoundMode: 0 # Fixes textures on the doors.
@@ -9470,7 +9462,6 @@ SCUS-21295:
   region: "NTSC-U"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Mostly aligns post-processing.
@@ -9686,7 +9677,6 @@ SCUS-97142:
   region: "NTSC-U"
   compat: 5
   clampModes:
-    vuClampMode: 0 # Fix other SPS.
     vu1ClampMode: 0
   roundModes:
     eeRoundMode: 0 # Fixes textures on the doors.
@@ -10018,7 +10008,6 @@ SCUS-97225:
   name: "Primal [Demo]"
   region: "NTSC-U"
   clampModes:
-    vuClampMode: 0 # Fix other SPS.
     vu1ClampMode: 0
   roundModes:
     eeRoundMode: 0 # Fixes textures on the doors.
@@ -11728,7 +11717,6 @@ SLAJ-25053:
     vuClampMode: 3 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
 SLAJ-25055:
   name: "Def Jam - Fight for NY"
   region: "NTSC-Unk"
@@ -11764,7 +11752,6 @@ SLAJ-25066:
     vuClampMode: 0 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
   memcardFilters:
     - "SLAJ-25066"
     - "SLPM-66108"
@@ -11895,7 +11882,6 @@ SLAJ-25094:
     vuClampMode: 3 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
 SLAJ-25095:
   name: "Medal of Honor - Vanguard"
   region: "NTSC-HK"
@@ -12054,7 +12040,6 @@ SLED-51211:
   roundModes:
     vu1RoundMode: 1
   gsHWFixes:
-    cpuCLUTRender: 1 # Fixes bloom and sun rendering in front of everything.
     autoFlush: 1 # Fixes bloom and sun rendering in front of everything.
     halfPixelOffset: 2 # Aligns bloom effect.
 SLED-51212:
@@ -12078,7 +12063,6 @@ SLED-51281:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes ghosting.
     alignSprite: 1 # Fixes vertical lines.
-    cpuCLUTRender: 1
 SLED-51338:
   name: "Tom Clancy's Ghost Recon"
   region: "PAL-Unk"
@@ -12134,7 +12118,6 @@ SLED-51902:
   gsHWFixes:
     preloadFrameData: 1 # Fixes licences.
     halfPixelOffset: 2 # Fixes double image.
-    cpuCLUTRender: 1 # Fixes sun penetrating buildings.
     autoFlush: 1 # Fixes sun occlusion.
 SLED-51921:
   name: "Final Fantasy X-2 [Demo]"
@@ -12271,7 +12254,6 @@ SLED-52597:
     vuClampMode: 3 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
 SLED-52736:
   name: "Need for Speed - Underground 2 [Demo]"
   region: "PAL-E"
@@ -12461,7 +12443,6 @@ SLED-53637:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
-    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLED-53650:
   name: "Need for Speed - Most Wanted"
   region: "PAL-E"
@@ -14528,20 +14509,17 @@ SLES-50812:
   region: "PAL-E"
   gsHWFixes:
     autoFlush: 1 # Fixes lens flares.
-    cpuCLUTRender: 1 # Fixes lens flares going through objects.
 SLES-50813:
   name: "Spider-Man"
   region: "PAL-F"
   gsHWFixes:
     autoFlush: 1 # Fixes lens flares.
-    cpuCLUTRender: 1 # Fixes lens flares going through objects.
 SLES-50814:
   name: "Spider-Man"
   region: "PAL-G"
   compat: 5
   gsHWFixes:
     autoFlush: 1 # Fixes lens flares.
-    cpuCLUTRender: 1 # Fixes lens flares going through objects.
 SLES-50815:
   name: "Blood Omen 2 - The Legacy of Kain Series"
   region: "PAL-G"
@@ -14958,7 +14936,6 @@ SLES-50965:
   region: "PAL-S"
   gsHWFixes:
     autoFlush: 1 # Fixes lens flares.
-    cpuCLUTRender: 1 # Fixes lens flares going through objects.
 SLES-50972:
   name: "Barbarian"
   region: "PAL-M5"
@@ -15098,7 +15075,6 @@ SLES-51044:
   roundModes:
     vu1RoundMode: 1
   gsHWFixes:
-    cpuCLUTRender: 1 # Fixes bloom and sun rendering in front of everything.
     autoFlush: 1 # Fixes bloom and sun rendering in front of everything.
     halfPixelOffset: 2 # Aligns bloom effect.
 SLES-51045:
@@ -15316,19 +15292,16 @@ SLES-51130:
   region: "PAL-E"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
 SLES-51131:
   name: "Tony Hawk's Pro Skater 4"
   region: "PAL-F"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
 SLES-51132:
   name: "Tony Hawk's Pro Skater 4"
   region: "PAL-G"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
 SLES-51133:
   name: "Red Faction II"
@@ -15521,7 +15494,6 @@ SLES-51209:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes ghosting.
     alignSprite: 1 # Fixes vertical lines.
-    cpuCLUTRender: 1
 SLES-51214:
   name: "Harry Potter og Hemmelighedernes Kammer"
   region: "PAL-D"
@@ -16690,13 +16662,11 @@ SLES-51720:
   name: "Disney's Extreme Skate Adventure"
   region: "PAL-E"
   roundModes:
-    vuRoundMode: 0
     vu1RoundMode: 0
 SLES-51721:
   name: "Disney's Extreme Skate Adventure"
   region: "PAL-M4"
   roundModes:
-    vuRoundMode: 0
     vu1RoundMode: 0
 SLES-51723:
   name: "The Hobbit"
@@ -16734,7 +16704,6 @@ SLES-51753:
   gsHWFixes:
     preloadFrameData: 1 # Fixes licences.
     halfPixelOffset: 2 # Fixes double image.
-    cpuCLUTRender: 1 # Fixes sun penetrating buildings.
     autoFlush: 1 # Fixes sun occlusion.
 SLES-51754:
   name: "True Crime - Streets of LA"
@@ -16743,7 +16712,6 @@ SLES-51754:
   gsHWFixes:
     preloadFrameData: 1 # Fixes licences.
     halfPixelOffset: 2 # Fixes double image.
-    cpuCLUTRender: 1 # Fixes sun penetrating buildings.
     autoFlush: 1 # Fixes sun occlusion.
 SLES-51755:
   name: "Disney/Pixar Finding Nemo"
@@ -16995,7 +16963,6 @@ SLES-51848:
   region: "PAL-E"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Mostly aligns post-processing.
@@ -17007,7 +16974,6 @@ SLES-51851:
   name: "Tony Hawk's Underground"
   region: "PAL-F"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Mostly aligns post-processing.
@@ -17017,7 +16983,6 @@ SLES-51852:
   region: "PAL-G"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Mostly aligns post-processing.
@@ -17026,7 +16991,6 @@ SLES-51853:
   name: "Tony Hawk's Underground"
   region: "PAL-F"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Mostly aligns post-processing.
@@ -17035,7 +16999,6 @@ SLES-51854:
   name: "Tony Hawk's Underground"
   region: "PAL-S"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Mostly aligns post-processing.
@@ -17823,7 +17786,6 @@ SLES-52179:
   compat: 5
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth line and edge garbage.
-    cpuCLUTRender: 2 # Fixes broken effects.
 SLES-52187:
   name: "Baldur's Gate - Dark Alliance II"
   region: "PAL-M3"
@@ -18077,13 +18039,11 @@ SLES-52289:
   name: "MTX Mototrax"
   region: "PAL-E"
   roundModes:
-    vuRoundMode: 0 # Fixes glitchy graphics ingame.
     vu1RoundMode: 0
 SLES-52290:
   name: "MTX Mototrax"
   region: "PAL-F"
   roundModes:
-    vuRoundMode: 0 # Fixes glitchy graphics ingame.
     vu1RoundMode: 0
 SLES-52291:
   name: "Countryside Bears"
@@ -18844,7 +18804,6 @@ SLES-52584:
     vuClampMode: 3 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
 SLES-52585:
   name: "Burnout 3 - Takedown"
   region: "PAL-F-G-I"
@@ -18852,7 +18811,6 @@ SLES-52585:
     vuClampMode: 3 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
 SLES-52587:
   name: "Army Men - Sarge's War"
   region: "PAL-M5"
@@ -18936,7 +18894,6 @@ SLES-52621:
   name: "Tony Hawk's Underground 2"
   region: "PAL-E"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     preloadFrameData: 1 # Fixes missing loading screens.
@@ -18946,7 +18903,6 @@ SLES-52622:
   name: "Tony Hawk's Underground 2"
   region: "PAL-M4"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     preloadFrameData: 1 # Fixes missing loading screens.
@@ -19956,7 +19912,6 @@ SLES-52968:
   roundModes:
     vu1RoundMode: 1
   gsHWFixes:
-    cpuCLUTRender: 1 # Fixes bloom and sun rendering in front of everything.
     autoFlush: 1 # Fixes bloom and sun rendering in front of everything.
     halfPixelOffset: 2 # Aligns bloom effect.
 SLES-52973:
@@ -20471,7 +20426,6 @@ SLES-53099:
   name: "Pilot Down - Behind Enemy Lines"
   region: "PAL-M5"
   roundModes:
-    vuRoundMode: 0
     vu1RoundMode: 0
   gameFixes:
     - DMABusyHack # Game has weird DMA handling, this allows required DMA's to finish.
@@ -20982,7 +20936,6 @@ SLES-53350:
   region: "PAL-M5"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Prevents only backgrounds from appearing in Sonic R's multiplayer modes.
     vu1RoundMode: 0
   gsHWFixes:
     cpuCLUTRender: 2 # Fixes CLUT colour in Sonic Fighters.
@@ -21103,7 +21056,6 @@ SLES-53390:
   region: "PAL-E"
   compat: 5
   clampModes:
-    vuClampMode: 0 # Fixes Spider-Man's eye texture colour.
     vu1ClampMode: 0
   gsHWFixes:
     cpuSpriteRenderBW: 2 # Fixes textures.
@@ -21112,7 +21064,6 @@ SLES-53391:
   name: "Ultimate Spider-Man"
   region: "PAL-M5"
   clampModes:
-    vuClampMode: 0 # Fixes Spider-Man's eye texture colour.
     vu1ClampMode: 0
   gsHWFixes:
     cpuSpriteRenderBW: 2 # Fixes textures.
@@ -21463,7 +21414,6 @@ SLES-53506:
     vuClampMode: 0 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
   memcardFilters:
     - "SLES-53506"
     - "SLES-53507"
@@ -21478,7 +21428,6 @@ SLES-53507:
     vuClampMode: 0 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
   memcardFilters:
     - "SLES-53506"
     - "SLES-53507"
@@ -21509,7 +21458,6 @@ SLES-53523:
   name: "Gun"
   region: "PAL-M4"
   roundModes:
-    vuRoundMode: 0 # Fixes textures and crashes.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Fixes bloom misalignment.
@@ -21603,7 +21551,6 @@ SLES-53534:
   region: "PAL-E"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Mostly aligns post-processing.
@@ -21613,7 +21560,6 @@ SLES-53535:
   name: "Tony Hawk's American Wasteland"
   region: "PAL-M4"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Mostly aligns post-processing.
@@ -22019,7 +21965,6 @@ SLES-53647:
   name: "Gun"
   region: "PAL-G"
   roundModes:
-    vuRoundMode: 0 # Fixes textures and crashes.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Fixes bloom misalignment.
@@ -22076,7 +22021,6 @@ SLES-53672:
   name: "Ultimate Spider-Man [Limited]"
   region: "PAL-E"
   clampModes:
-    vuClampMode: 0 # Fixes Fixes Spider-Man's eye texture colour.
     vu1ClampMode: 0
   gsHWFixes:
     cpuSpriteRenderBW: 2 # Fixes textures.
@@ -22599,7 +22543,6 @@ SLES-53828:
   clampModes:
     vu1ClampMode: 3
   roundModes:
-    vuRoundMode: 0 # Fixes SPS.
     vu1RoundMode: 0
   speedHacks:
     mvuFlagSpeedHack: 0 # Fixes performance and falling through floor and other gameplay.
@@ -22774,7 +22717,6 @@ SLES-53904:
     autoFlush: 1
     disablePartialInvalidation: 1
     halfPixelOffset: 2
-    cpuCLUTRender: 2
     gpuPaletteConversion: 2
 SLES-53906:
   name: "50 Cent - Bulletproof"
@@ -24155,7 +24097,6 @@ SLES-54389:
   region: "PAL-E"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Mostly aligns post-processing.
@@ -24165,7 +24106,6 @@ SLES-54390:
   region: "PAL-M4"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Mostly aligns post-processing.
@@ -24870,7 +24810,6 @@ SLES-54627:
     vuClampMode: 3 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
 SLES-54628:
   name: "Skate Attack [Promo]"
   region: "PAL-E"
@@ -25053,7 +24992,6 @@ SLES-54681:
     vuClampMode: 3 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
 SLES-54683:
   name: "Medal of Honor - Vanguard"
   region: "PAL-M9"
@@ -25107,7 +25045,6 @@ SLES-54714:
   name: "Tony Hawk's Downhill Jam"
   region: "PAL-E"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     wildArmsHack: 1 # Reduces post-processing misalignment.
@@ -25117,7 +25054,6 @@ SLES-54715:
   name: "Tony Hawk's Downhill Jam"
   region: "PAL-M4"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     wildArmsHack: 1 # Reduces post-processing misalignment.
@@ -25293,7 +25229,6 @@ SLES-54770:
   clampModes:
     eeClampMode: 3 # Fixes objects spawning.
   roundModes:
-    vuRoundMode: 0 # Fixes black zones.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Fixes misaligned bloom.
@@ -25303,7 +25238,6 @@ SLES-54771:
   clampModes:
     eeClampMode: 3 # Fixes objects spawning.
   roundModes:
-    vuRoundMode: 0 # Fixes black zones.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Fixes misaligned bloom.
@@ -25316,7 +25250,6 @@ SLES-54774:
   clampModes:
     eeClampMode: 3 # Fixes objects spawning.
   roundModes:
-    vuRoundMode: 0 # Fixes black zones.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Fixes misaligned bloom.
@@ -25617,7 +25550,6 @@ SLES-54878:
   name: "Naruto - Ultimate Ninja 2"
   region: "PAL-M5"
   clampModes:
-    vuClampMode: 0 # Fixes glow effects.
     vu0ClampMode: 0
     vu1ClampMode: 3
   gsHWFixes:
@@ -25888,7 +25820,6 @@ SLES-54962:
   name: "Guitar Hero III - Legends of Rock"
   region: "PAL-E"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     textureInsideRT: 1 # Crowd textures.
@@ -25899,7 +25830,6 @@ SLES-54963:
   region: "PAL-E"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Mostly aligns post-processing.
@@ -25908,7 +25838,6 @@ SLES-54964:
   name: "Tony Hawk's Proving Ground"
   region: "PAL-M4"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Mostly aligns post-processing.
@@ -25934,7 +25863,6 @@ SLES-54974:
   name: "Guitar Hero III - Legends of Rock"
   region: "PAL-M4"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     textureInsideRT: 1 # Crowd textures.
@@ -26441,7 +26369,6 @@ SLES-55109:
   name: "The Spiderwick Chronicles"
   region: "PAL-E"
   roundModes:
-    vuRoundMode: 0 # Fixes invisible wall collision in bedroom.
     vu0RoundMode: 0
   gsHWFixes:
     textureInsideRT: 1 # Fixes half screen.
@@ -26639,7 +26566,6 @@ SLES-55191:
   name: "Guitar Hero - Aerosmith"
   region: "PAL-E"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     textureInsideRT: 1 # Crowd textures.
@@ -26699,7 +26625,6 @@ SLES-55200:
   name: "Guitar Hero - Aerosmith"
   region: "PAL-M4"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     textureInsideRT: 1 # Crowd textures.
@@ -27065,7 +26990,6 @@ SLES-55349:
     skipDrawStart: 1 # Removes even more blurriness and garbage texture like on top left.
     skipDrawEnd: 1 # Removes even more blurriness and garbage texture like on top left.
     textureInsideRT: 1
-    cpuCLUTRender: 1
   memcardFilters:
     - "SLES-55349"
     - "SLES-55350"
@@ -27086,7 +27010,6 @@ SLES-55350:
     skipDrawStart: 1 # Removes even more blurriness and garbage texture like on top left.
     skipDrawEnd: 1 # Removes even more blurriness and garbage texture like on top left.
     textureInsideRT: 1
-    cpuCLUTRender: 1
   memcardFilters:
     - "SLES-55349"
     - "SLES-55350"
@@ -27107,7 +27030,6 @@ SLES-55351:
     skipDrawStart: 1 # Removes even more blurriness and garbage texture like on top left.
     skipDrawEnd: 1 # Removes even more blurriness and garbage texture like on top left.
     textureInsideRT: 1
-    cpuCLUTRender: 1
   memcardFilters:
     - "SLES-55349"
     - "SLES-55350"
@@ -27129,7 +27051,6 @@ SLES-55352:
     skipDrawStart: 1 # Removes even more blurriness and garbage texture like on top left.
     skipDrawEnd: 1 # Removes even more blurriness and garbage texture like on top left.
     textureInsideRT: 1
-    cpuCLUTRender: 1
   memcardFilters:
     - "SLES-55349"
     - "SLES-55350"
@@ -27150,7 +27071,6 @@ SLES-55353:
     skipDrawStart: 1 # Removes even more blurriness and garbage texture like on top left.
     skipDrawEnd: 1 # Removes even more blurriness and garbage texture like on top left.
     textureInsideRT: 1
-    cpuCLUTRender: 1
   memcardFilters:
     - "SLES-55349"
     - "SLES-55350"
@@ -27175,7 +27095,6 @@ SLES-55355:
   name: "Guitar Hero World Tour"
   region: "PAL-M5"
   roundModes:
-    vuRoundMode: 0 # Fixes graphical issues ingame.
     vu1RoundMode: 0
   speedHacks:
     InstantVU1SpeedHack: 0 # Corrects note board position.
@@ -27429,7 +27348,6 @@ SLES-55472:
   name: "Guitar Hero - Metallica"
   region: "PAL-M5"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
 SLES-55474:
   name: "Shin Megami Tensei - Persona 4"
@@ -27592,7 +27510,6 @@ SLES-55533:
   name: "Guitar Hero 5"
   region: "PAL-M5"
   roundModes:
-    vuRoundMode: 0 # Fixes SPS and VU size spam.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Mostly aligns post-processing.
@@ -27661,7 +27578,6 @@ SLES-55579:
   region: "PAL-M7"
   compat: 5
   clampModes:
-    vuClampMode: 0
     vu0ClampMode: 0
   roundModes:
     eeRoundMode: 1
@@ -28439,7 +28355,6 @@ SLKA-25039:
   roundModes:
     vu1RoundMode: 1
   gsHWFixes:
-    cpuCLUTRender: 1 # Fixes bloom and sun rendering in front of everything.
     autoFlush: 1 # Fixes bloom and sun rendering in front of everything.
     halfPixelOffset: 2 # Aligns bloom effect.
 SLKA-25041:
@@ -29080,7 +28995,6 @@ SLKA-25206:
     vuClampMode: 3 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
 SLKA-25207:
   name: "Sakura Taisen V - Episode 0 - Samurai Girl of Wild"
   region: "NTSC-K"
@@ -29319,7 +29233,6 @@ SLKA-25260:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
     autoFlush: 1 # Fixes blur and obscures sun behind objects.
-    cpuCLUTRender: 1 # Fixes sun penetrating bridges (along with HPO special).
 SLKA-25261:
   name: "Tsukiyo ni Saraba"
   region: "NTSC-K"
@@ -29489,7 +29402,6 @@ SLKA-25304:
     vuClampMode: 0 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
 SLKA-25305:
   name: "Taito Memories - Hapyeon"
   region: "NTSC-K"
@@ -29760,7 +29672,6 @@ SLKA-25363:
   name: "Guitar Hero III - Legends of Rock"
   region: "NTSC-K"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     textureInsideRT: 1 # Crowd textures.
@@ -30751,7 +30662,6 @@ SLPM-55127:
     skipDrawStart: 1 # Removes even more blurriness and garbage texture like on top left.
     skipDrawEnd: 1 # Removes even more blurriness and garbage texture like on top left.
     textureInsideRT: 1
-    cpuCLUTRender: 1
   memcardFilters:
     - "SLPM-55127"
     # Checks from Carbon are left in the code, unused.
@@ -31127,7 +31037,6 @@ SLPM-55244:
     skipDrawStart: 1 # Removes even more blurriness and garbage texture like on top left.
     skipDrawEnd: 1 # Removes even more blurriness and garbage texture like on top left.
     textureInsideRT: 1
-    cpuCLUTRender: 1
   memcardFilters:
     - "SLPM-55244"
     # Checks from Carbon are left in the code, unused.
@@ -31676,7 +31585,6 @@ SLPM-60239:
   clampModes:
     vu1ClampMode: 3
   roundModes:
-    vuRoundMode: 0 # Fixes SPS.
     vu1RoundMode: 0
   speedHacks:
     mvuFlagSpeedHack: 0 # Fixes performance and falling through floor and other gameplay problems.
@@ -31704,7 +31612,6 @@ SLPM-60246:
     vuClampMode: 3 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
 SLPM-60247:
   name: "Gradius V [Trial]"
   region: "NTSC-J"
@@ -35844,7 +35751,6 @@ SLPM-65205:
   region: "NTSC-J"
   gsHWFixes:
     autoFlush: 1 # Fixes lens flares.
-    cpuCLUTRender: 1 # Fixes lens flares going through objects.
 SLPM-65206:
   name: "King of Colosseum - Green"
   region: "NTSC-J"
@@ -36729,7 +36635,6 @@ SLPM-65419:
   name: "Tony Hawk's Pro Skater 2003"
   region: "NTSC-J"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
 SLPM-65420:
   name: "Dabitsuku 3 - Let's Become a Derby Owner"
@@ -37831,7 +37736,6 @@ SLPM-65719:
     vuClampMode: 3 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
 SLPM-65720:
   name: "Shin Sangoku Musou 2 - Moushouden [Koei the Best]"
   region: "NTSC-J"
@@ -37876,7 +37780,6 @@ SLPM-65729:
   gsHWFixes:
     preloadFrameData: 1 # Fixes licences.
     halfPixelOffset: 2 # Fixes double image.
-    cpuCLUTRender: 1 # Fixes sun penetrating buildings.
     autoFlush: 1 # Fixes sun occlusion.
 SLPM-65730:
   name: "Rockman X8"
@@ -38752,7 +38655,6 @@ SLPM-65958:
     vuClampMode: 3 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
 SLPM-65959:
   name: "Standard Daisenryaku - Ushinawareta Shouri"
   region: "NTSC-J"
@@ -39223,7 +39125,6 @@ SLPM-66074:
   region: "NTSC-J"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Prevents only backgrounds from appearing in Sonic R's multiplayer modes.
     vu1RoundMode: 0
   gsHWFixes:
     cpuCLUTRender: 2 # Fixes CLUT colour in Sonic Fighters.
@@ -39333,7 +39234,6 @@ SLPM-66098:
   gsHWFixes:
     preloadFrameData: 1 # Fixes licences.
     halfPixelOffset: 2 # Fixes double image.
-    cpuCLUTRender: 1 # Fixes sun penetrating buildings.
     autoFlush: 1 # Fixes sun occlusion.
 SLPM-66099:
   name: "Harukanaru Toki no Naka de 3 - Izayoiki [Premium Box]"
@@ -39385,7 +39285,6 @@ SLPM-66108:
     vuClampMode: 0 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
   memcardFilters:
     - "SLAJ-25066"
     - "SLPM-66108"
@@ -40667,7 +40566,6 @@ SLPM-66404:
   name: "Ultimate Spider-Man"
   region: "NTSC-J"
   clampModes:
-    vuClampMode: 0 # Fixes Spider-Man's eye texture colour.
     vu1ClampMode: 0
   gsHWFixes:
     cpuSpriteRenderBW: 2 # Fixes textures.
@@ -41726,7 +41624,6 @@ SLPM-66652:
     vuClampMode: 0 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
   memcardFilters:
     - "SLAJ-25066"
     - "SLPM-66108"
@@ -42124,7 +42021,6 @@ SLPM-66739:
     vuClampMode: 3 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
 SLPM-66740:
   name: "Sentou Kokka Kai - Legend [DX Pack]"
   region: "NTSC-J"
@@ -42953,7 +42849,6 @@ SLPM-66962:
     vuClampMode: 3 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
 SLPM-66963:
   name: "Medal of Honor - Frontline [EA:SY! 1980]"
   region: "NTSC-J"
@@ -47159,7 +47054,6 @@ SLPS-25351:
   roundModes:
     vu1RoundMode: 1
   gsHWFixes:
-    cpuCLUTRender: 1 # Fixes bloom and sun rendering in front of everything.
     autoFlush: 1 # Fixes bloom and sun rendering in front of everything.
     halfPixelOffset: 2 # Aligns bloom effect.
 SLPS-25352:
@@ -47196,7 +47090,6 @@ SLPS-25360:
   clampModes:
     vu1ClampMode: 3
   roundModes:
-    vuRoundMode: 0 # Fixes SPS.
     vu1RoundMode: 0
   speedHacks:
     mvuFlagSpeedHack: 0 # Fixes performance and falling through floor and other gameplay.
@@ -47368,7 +47261,6 @@ SLPS-25398:
   name: "Naruto - Narutimett Hero 2"
   region: "NTSC-J"
   clampModes:
-    vuClampMode: 0 # Fixes glow effects.
     vu0ClampMode: 0
     vu1ClampMode: 3
   gsHWFixes:
@@ -47692,7 +47584,6 @@ SLPS-25467:
   clampModes:
     vu1ClampMode: 3
   roundModes:
-    vuRoundMode: 0 # Fixes SPS.
     vu1RoundMode: 0
   speedHacks:
     mvuFlagSpeedHack: 0 # Fixes performance and falling through floor and other gameplay.
@@ -49201,7 +49092,6 @@ SLPS-25840:
   name: "Guitar Hero III - Legends of Rock [with Guitar]"
   region: "NTSC-J"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     textureInsideRT: 1 # Crowd textures.
@@ -49422,7 +49312,6 @@ SLPS-25889:
   name: "Guitar Hero - Aerosmith [Only Soft]"
   region: "NTSC-J"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     textureInsideRT: 1 # Crowd textures.
@@ -49432,7 +49321,6 @@ SLPS-25890:
   name: "Guitar Hero III - Legends of Rock [Only Soft]"
   region: "NTSC-J"
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     textureInsideRT: 1 # Crowd textures.
@@ -50008,7 +49896,6 @@ SLPS-73210:
   clampModes:
     vu1ClampMode: 3
   roundModes:
-    vuRoundMode: 0 # Fixes SPS.
     vu1RoundMode: 0
   speedHacks:
     mvuFlagSpeedHack: 0 # Fixes performance and falling through floor and other gameplay.
@@ -50075,7 +49962,6 @@ SLPS-73221:
   name: "Naruto Narutimett Hero 2 [PlayStation 2 the Best]"
   region: "NTSC-J"
   clampModes:
-    vuClampMode: 0 # Fixes glow effects.
     vu0ClampMode: 0
     vu1ClampMode: 3
   gsHWFixes:
@@ -50229,7 +50115,6 @@ SLPS-73240:
   clampModes:
     vu1ClampMode: 3
   roundModes:
-    vuRoundMode: 0 # Fixes SPS.
     vu1RoundMode: 0
   speedHacks:
     mvuFlagSpeedHack: 0 # Fixes performance and falling through floor and other gameplay.
@@ -50241,7 +50126,6 @@ SLPS-73241:
   clampModes:
     vu1ClampMode: 3
   roundModes:
-    vuRoundMode: 0 # Fixes SPS.
     vu1RoundMode: 0
   speedHacks:
     mvuFlagSpeedHack: 0 # Fixes performance and falling through floor and other gameplay.
@@ -51986,7 +51870,6 @@ SLUS-20336:
   compat: 5
   gsHWFixes:
     autoFlush: 1 # Fixes lens flares.
-    cpuCLUTRender: 1 # Fixes lens flares going through objects.
 SLUS-20337:
   name: "X2 - Wolverine's Revenge"
   region: "NTSC-U"
@@ -52310,7 +52193,6 @@ SLUS-20399:
   region: "NTSC-U"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Fixes glitchy graphics ingame.
     vu1RoundMode: 0
   gsHWFixes:
     roundSprite: 2 # Fixes sprite ghosting.
@@ -52826,7 +52708,6 @@ SLUS-20497:
   roundModes:
     vu1RoundMode: 1
   gsHWFixes:
-    cpuCLUTRender: 1 # Fixes bloom and sun rendering in front of everything.
     autoFlush: 1 # Fixes bloom and sun rendering in front of everything.
     halfPixelOffset: 2 # Aligns bloom effect.
 SLUS-20498:
@@ -52855,7 +52736,6 @@ SLUS-20504:
   region: "NTSC-U"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
 SLUS-20505:
   name: "Mace Griffin - Bounty Hunter"
@@ -52921,7 +52801,6 @@ SLUS-20517:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes ghosting.
     alignSprite: 1 # Fixes vertical lines.
-    cpuCLUTRender: 1
 SLUS-20519:
   name: "Tak and the Power of Juju"
   region: "NTSC-U"
@@ -53086,7 +52965,6 @@ SLUS-20550:
   gsHWFixes:
     preloadFrameData: 1 # Fixes licences.
     halfPixelOffset: 2 # Fixes double image.
-    cpuCLUTRender: 1 # Fixes sun penetrating buildings.
     autoFlush: 1 # Fixes sun occlusion.
 SLUS-20552:
   name: "Grand Theft Auto - Vice City"
@@ -53422,7 +53300,6 @@ SLUS-20607:
   region: "NTSC-U"
   compat: 5
   roundModes:
-    vuRoundMode: 0
     vu1RoundMode: 0
 SLUS-20608:
   name: "Mobile Light Force 2"
@@ -54068,7 +53945,6 @@ SLUS-20731:
   region: "NTSC-U"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Mostly aligns post-processing.
@@ -54790,7 +54666,6 @@ SLUS-20870:
   region: "NTSC-U"
   compat: 5
   clampModes:
-    vuClampMode: 0 # Fixes wrong texture colour.
     vu1ClampMode: 0
   gsHWFixes:
     cpuSpriteRenderBW: 2 # Fixes textures.
@@ -55360,7 +55235,6 @@ SLUS-20965:
   region: "NTSC-U"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     preloadFrameData: 1 # Fixes missing loading screens.
@@ -55912,7 +55786,6 @@ SLUS-21050:
     vuClampMode: 3 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
 SLUS-21051:
   name: "FIFA 2005"
   region: "NTSC-U"
@@ -56117,7 +55990,6 @@ SLUS-21095:
     autoFlush: 1
     disablePartialInvalidation: 1
     halfPixelOffset: 2
-    cpuCLUTRender: 2
     gpuPaletteConversion: 2
 SLUS-21096:
   name: "Ape Escape - Pumped & Primed"
@@ -56376,7 +56248,6 @@ SLUS-21139:
   region: "NTSC-U"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Fixes textures and crashes.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Fixes bloom misalignment.
@@ -56773,7 +56644,6 @@ SLUS-21208:
   region: "NTSC-U"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Mostly aligns post-processing.
@@ -56907,7 +56777,6 @@ SLUS-21230:
   clampModes:
     vu1ClampMode: 3
   roundModes:
-    vuRoundMode: 0 # Fixes SPS.
     vu1RoundMode: 0
   speedHacks:
     mvuFlagSpeedHack: 0 # Fixes performance and falling through floor and other gameplay.
@@ -57005,7 +56874,6 @@ SLUS-21242:
     vuClampMode: 0 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
   memcardFilters: # Reads Burnout 3 and NFL 06 saves for unlockables.
     - "SLUS-21242"
     - "SLUS-21050"
@@ -57336,7 +57204,6 @@ SLUS-21285:
   name: "Ultimate Spider-Man [Limited Edition]"
   region: "NTSC-U"
   clampModes:
-    vuClampMode: 0 # Fixes Spider-Man's eyes texture.
     vu1ClampMode: 0
   gsHWFixes:
     cpuSpriteRenderBW: 2 # Fixes textures.
@@ -57399,7 +57266,6 @@ SLUS-21295:
   region: "NTSC-U"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Mostly aligns post-processing.
@@ -58388,7 +58254,6 @@ SLUS-21444:
   region: "NTSC-U"
   compat: 5
   roundModes:
-    vuRoundMode: 0
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Mostly aligns post-processing.
@@ -58452,7 +58317,6 @@ SLUS-21454:
   clampModes:
     eeClampMode: 3 # Fixes objects spawning.
   roundModes:
-    vuRoundMode: 0 # Fixes black zones.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Fixes misaligned bloom.
@@ -58467,7 +58331,6 @@ SLUS-21456:
   region: "NTSC-U"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     wildArmsHack: 1 # Reduces post-processing misalignment.
@@ -58960,7 +58823,6 @@ SLUS-21575:
   region: "NTSC-U"
   compat: 5
   clampModes:
-    vuClampMode: 0 # Fixes glow effects.
     vu0ClampMode: 0
     vu1ClampMode: 3
   gsHWFixes:
@@ -59074,7 +58936,6 @@ SLUS-21596:
     vuClampMode: 3 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
 SLUS-21597:
   name: "Medal of Honor - Vanguard"
   region: "NTSC-U"
@@ -59213,7 +59074,6 @@ SLUS-21616:
   region: "NTSC-U"
   compat: 5
   roundModes:
-    vuRoundMode: 0
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Mostly aligns post-processing.
@@ -59520,7 +59380,6 @@ SLUS-21672:
   region: "NTSC-U"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     textureInsideRT: 1 # Crowd textures.
@@ -59743,7 +59602,6 @@ SLUS-21716:
   region: "NTSC-U"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Fixes invisible wall collision in bedroom.
     vu0RoundMode: 0
   gsHWFixes:
     textureInsideRT: 1 # Fixes half screen.
@@ -59887,7 +59745,6 @@ SLUS-21740:
   region: "NTSC-U"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     textureInsideRT: 1 # Crowd textures.
@@ -60114,7 +59971,6 @@ SLUS-21781:
   region: "NTSC-U"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Fixes graphical issues ingame.
     vu1RoundMode: 0
   speedHacks:
     InstantVU1SpeedHack: 0 # Corrects note board position.
@@ -60176,7 +60032,6 @@ SLUS-21793:
     disablePartialInvalidation: 1 # Improves performance and reduces hash cache size.
     gpuPaletteConversion: 2 # Improves performance and reduces hash cache size.
     autoFlush: 1 # Corrects shadows (Currently still broken even with this).
-    cpuCLUTRender: 2 # Fixes light flicker.
 SLUS-21794:
   name: "Go, Diego, Go! Great Dinosaur Rescue"
   region: "NTSC-U"
@@ -60218,7 +60073,6 @@ SLUS-21801:
     skipDrawStart: 1 # Removes even more blurriness and garbage texture like on top left.
     skipDrawEnd: 1 # Removes even more blurriness and garbage texture like on top left.
     textureInsideRT: 1
-    cpuCLUTRender: 1
   memcardFilters:
     - "SLUS-21801"
     # Checks from Carbon are left in the code, unused.
@@ -60391,7 +60245,6 @@ SLUS-21843:
   region: "NTSC-U"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Crashes without.
     vu1RoundMode: 0
   gsHWFixes:
     cpuCLUTRender: 1 # Fixes bad colours during play.
@@ -60490,7 +60343,6 @@ SLUS-21865:
   region: "NTSC-U"
   compat: 5
   roundModes:
-    vuRoundMode: 0 # Fixes SPS and VU size spam.
     vu1RoundMode: 0
   gsHWFixes:
     halfPixelOffset: 2 # Mostly aligns post-processing.
@@ -60695,7 +60547,6 @@ SLUS-21902:
   region: "NTSC-U"
   compat: 5
   clampModes:
-    vuClampMode: 0
     vu0ClampMode: 0
   roundModes:
     eeRoundMode: 1
@@ -61002,7 +60853,6 @@ SLUS-28019:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes ghosting.
     alignSprite: 1 # Fixes vertical lines.
-    cpuCLUTRender: 1
 SLUS-28020:
   name: "EverQuest Online Adventures [Beta Vol.1.0]"
   region: "NTSC-U"
@@ -61284,7 +61134,6 @@ SLUS-29038:
   gsHWFixes:
     halfPixelOffset: 2 # Fixes ghosting.
     alignSprite: 1 # Fixes vertical lines.
-    cpuCLUTRender: 1
 SLUS-29040:
   name: "Dr. Muto [Demo]"
   region: "NTSC-U"
@@ -61529,7 +61378,6 @@ SLUS-29113:
     vuClampMode: 3 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
 SLUS-29116:
   name: "WWE SmackDown! vs. RAW [Public Beta Vol.1.0]"
   region: "NTSC-U"
@@ -61685,7 +61533,6 @@ SLUS-29153:
     vuClampMode: 0 # Fixes buggy lighting in the garage.
   gsHWFixes:
     halfPixelOffset: 2 # Fixes depth lines.
-    cpuCLUTRender: 1
 SLUS-29154:
   name: "NHL 06 [Demo]"
   region: "NTSC-U"
