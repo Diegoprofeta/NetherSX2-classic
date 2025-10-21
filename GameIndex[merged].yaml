@@ -354,6 +354,8 @@ PAPX-90523:
 PAPX-90524:
   name: "Wild Arms - The Vth Vanguard [Trial]"
   region: "NTSC-J"
+  clampModes:
+    vu1ClampMode: 3 # Fixes SPS on shell worm enemies.
   gsHWFixes:
     roundSprite: 1 # Fixes font sizes and lines in UI.
     textureInsideRT: 1 # Fixes sepia-tone flashback sequences.
@@ -1425,6 +1427,7 @@ SCAJ-20095:
   gameFixes:
     - EETimingHack
   gsHWFixes:
+    halfPixelOffset: 2 # Aligns shadows to prevent artefacts.
     disableDepthSupport: 1
 SCAJ-20096:
   name: "Guilty Gear Isuka"
@@ -2013,6 +2016,8 @@ SCAJ-20182:
 SCAJ-20183:
   name: "Wild Arms - The Vth Vanguard"
   region: "NTSC-J"
+  clampModes:
+    vu1ClampMode: 3 # Fixes SPS on shell worm enemies.
   gsHWFixes:
     roundSprite: 1 # Fixes font sizes.
     cpuFramebufferConversion: 1 # Fixes sepia-tone flashback sequences.
@@ -4894,7 +4899,7 @@ SCES-51611:
   name: "This is Football 2004"
   region: "PAL-M4"
 SCES-51612:
-  name: "This is Football 5"
+  name: "This Is Football 2004"
   region: "PAL-E-N"
 SCES-51613:
   name: "This is Football 2004"
@@ -8447,6 +8452,8 @@ SCPS-15117:
 SCPS-15118:
   name: "Wild ARMs - The Vth Vanguard"
   region: "NTSC-J"
+  clampModes:
+    vu1ClampMode: 3 # Fixes SPS on shell worm enemies.
   gsHWFixes:
     roundSprite: 1 # Fixes font sizes.
     cpuFramebufferConversion: 1 # Fixes sepia-tone flashback sequences.
@@ -8993,6 +9000,8 @@ SCPS-19332:
 SCPS-19333:
   name: "Wild ARMs - The Vth Vanguard [PlayStation 2 the Best]"
   region: "NTSC-J"
+  clampModes:
+    vu1ClampMode: 3 # Fixes SPS on shell worm enemies.
   gsHWFixes:
     roundSprite: 1 # Fixes font sizes and lines in UI.
     textureInsideRT: 1 # Fixes sepia-tone flashback sequences.
@@ -18173,6 +18182,8 @@ SLES-52342:
   name: "Worms Forts - Under Siege"
   region: "PAL-E-F"
   compat: 5
+  gameFixes:
+    - BlitInternalFPSHack # Fixes internal FPS detection.
 SLES-52343:
   name: "Midway Arcade Treasures"
   region: "PAL-E"
@@ -19304,6 +19315,8 @@ SLES-52733:
 SLES-52734:
   name: "Worms Forts - Under Siege"
   region: "PAL-M5"
+  gameFixes:
+    - BlitInternalFPSHack # Fixes internal FPS detection.
 SLES-52737:
   name: "Obscure"
   region: "PAL-E"
@@ -21290,6 +21303,7 @@ SLES-53458:
   region: "PAL-E"
   compat: 5
   gsHWFixes:
+    halfPixelOffset: 2 # Aligns shadows to prevent artefacts.
     disableDepthSupport: 1
 SLES-53459:
   name: "Marc Ecko's Getting Up - Contents Under Pressure"
@@ -25884,6 +25898,8 @@ SLES-54971:
 SLES-54972:
   name: "Wild Arms 5"
   region: "PAL-M3"
+  clampModes:
+    vu1ClampMode: 3 # Fixes SPS on shell worm enemies.
   gsHWFixes:
     cpuFramebufferConversion: 1 # Fixes sepia-tone flashback sequences.
     wildArmsHack: 1 # Fixes font artifacts and out-of-bound 2D textures.
@@ -29414,6 +29430,7 @@ SLKA-25300:
   gameFixes:
     - EETimingHack
   gsHWFixes:
+    halfPixelOffset: 2 # Aligns shadows to prevent artefacts.
     disableDepthSupport: 1
 SLKA-25301:
   name: "Digital Devil Saga - Avatar Tuner 2"
@@ -37315,6 +37332,7 @@ SLPM-65597:
   gameFixes:
     - EETimingHack
   gsHWFixes:
+    halfPixelOffset: 2 # Aligns shadows to prevent artefacts.
     disableDepthSupport: 1
 SLPM-65598:
   name: "Tenshou Gakuen Kensousoku"
@@ -40472,6 +40490,7 @@ SLPM-66372:
   gameFixes:
     - EETimingHack
   gsHWFixes:
+    halfPixelOffset: 2 # Aligns shadows to prevent artefacts.
     disableDepthSupport: 1
 SLPM-66373:
   name: "Digital Devil Saga - Avatar Tuner 2 [Atlus Best Collection]"
@@ -55363,6 +55382,7 @@ SLUS-20974:
   region: "NTSC-U"
   compat: 5
   gsHWFixes:
+    halfPixelOffset: 2 # Aligns shadows to prevent artefacts.
     disableDepthSupport: 1
 SLUS-20975:
   name: "One Piece - Grand Battle"
@@ -56042,6 +56062,8 @@ SLUS-21093:
   name: "Worms Forts - Under Siege"
   region: "NTSC-U"
   compat: 5
+  gameFixes:
+    - BlitInternalFPSHack # Fixes internal FPS detection.
 SLUS-21094:
   name: "Midway Arcade Treasures 3"
   region: "NTSC-U"
@@ -59130,6 +59152,8 @@ SLUS-21615:
   name: "Wild ARMs 5"
   region: "NTSC-U"
   compat: 5
+  clampModes:
+    vu1ClampMode: 3 # Fixes SPS on shell worm enemies.
   gsHWFixes:
     roundSprite: 1 # Fixes font sizes.
     cpuFramebufferConversion: 1 # Fixes sepia-tone flashback sequences.
@@ -60272,7 +60296,7 @@ SLUS-21831:
   region: "NTSC-U"
   compat: 5
 SLUS-21834:
-  name: "Goosebumps Horrorland - Happy Halloween"
+  name: "Goosebumps Horrorland"
   region: "NTSC-U"
   compat: 5
   clampModes:
@@ -61004,6 +61028,7 @@ SLUS-28049:
   name: "Shin Megami Tensei - Digital Devil Saga [Trade Demo]"
   region: "NTSC-U"
   gsHWFixes:
+    halfPixelOffset: 2 # Aligns shadows to prevent artefacts.
     disableDepthSupport: 1
 SLUS-28050:
   name: "Stella Deus - The Gate of Eternity [Trade Demo]"
@@ -61839,7 +61864,7 @@ TCES-10001:
   region: "PAL-E"
 TCES-51613:
   name: "This Is Football 2004 Beta Trial Code"
-  region: "PAL-E-S"
+  region: "PAL-E"
 TCES-51904:
   name: "SOCOM II - U.S. Navy SEALs Beta Trial Code"
   region: "PAL-M5"
